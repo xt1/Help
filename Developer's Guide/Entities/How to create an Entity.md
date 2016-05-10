@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 50
+<properties date="2016-05-10"
+SortOrder="50"
+/>
 
 We use the CreateNew() method to create a new instance of an Entity. It has to be saved using the Save() method for the data to be stored in the database. However it should be noted that with the use of the CreateNew() method, a new instance of the Entity is created with default values assigned to its properties. But it will not be saved, if you directly save it without making any changes to its properties. Therefore if the Entity is to be saved you need to assign some new values to its properties. The syntax for creating an Entity is as follows.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Entities;

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 61
+<properties date="2016-05-10"
+SortOrder="61"
+/>
 
 ServerSetup encrypts and saves the database user/password in the .MST
 
@@ -13,6 +14,6 @@ These credentials can access NS Web Services
 
 The following steps are recommended to increase security:
 
-1.        Deactivate the default system user in the SoAdmin client.
+1. Deactivate the default system user in the SoAdmin client.
 
-2.        Create a new pair of database- and system user specifically for Sales and Marketing Web and Customer Service
+2. Create a new pair of database- and system user specifically for Sales and Marketing Web and Customer Service

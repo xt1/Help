@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 41
+<properties date="2016-05-10"
+SortOrder="41"
+/>
 
 We have improved the documentation on the Row/Rows objects
 

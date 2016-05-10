@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 35
+<properties date="2016-05-10"
+SortOrder="35"
+/>
 
-The following demonstrates how to retrieve a Contact using the Database GetContact() method.
+The following demonstrates how to retrieve a Contact using the Database GetContact() method.
 
 ```
 using SuperOffice.COM.SuperOfficeDB;
@@ -26,4 +27,4 @@ else
 Console.WriteLine("Incorrect Username or Password");
 ```
 
-We can replace existing contact values, similar to when we first created a new Contact, and then save those changes using the contact Save() method. Notice how now it is not necessary to call the SetDefault() method - default values should already have been set.
+We can replace existing contact values, similar to when we first created a new Contact, and then save those changes using the contact Save() method. Notice how now it is not necessary to call the SetDefault() method - default values should already have been set.

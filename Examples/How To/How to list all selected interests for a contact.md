@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 3
+<properties date="2016-05-10"
+SortOrder="3"
+/>
 
 The following document tells us how we can make use of the NetServer 3.0 and list all selected interests for a specific Contact.
 
@@ -27,11 +28,11 @@ newContact.InterestHelper.SelectedRootItems;
 }
 ```
 
- 
+ 
 
 In the code above once we have created an instance of the Contact entity by using the Contact class we have use the Contact’s InterestHelper to retrieve the selected interests. As shown above we can retrieve the interest in two was, i.e. either by using the SelectHeadingItems property or SelectRootItems property as shown.
 
- 
+ 
 
 ------------------------------------------------------------------------
 

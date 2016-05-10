@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 8
+<properties date="2016-05-10"
+SortOrder="8"
+/>
 
 <img src="../Localization%20in%20NetServer_files/image001.gif" id="Picture 1" width="427" height="137" />
 
@@ -36,11 +37,11 @@ foreach (FormattedFields fs  in formatedAddress)
 }
 ```
 
- 
+ 
 
-We retrieve the contact with contact\_id=4 and then we format the address of the contact to the country that the contact belongs to. When you run this example you will see that the FormatContact method returns an object of FormattedAddress this is a structure that hold the formatted address for us. 
+We retrieve the contact with contact\_id=4 and then we format the address of the contact to the country that the contact belongs to. When you run this example you will see that the FormatContact method returns an object of FormattedAddress this is a structure that hold the formatted address for us. 
 
-Now let’s look how we can do this using Rows. 
+Now let’s look how we can do this using Rows. 
 
 ```
 using SuperOffice.CRM.Globalization;
@@ -71,9 +72,9 @@ streetAddress);
 }
 ```
 
- 
+ 
 
-You can see we have done the same thing using only rows. Here also the FormatContact method will convert the postal and street address passed to the method to the format of the country that the contact belongs to. In the example you can see that we have used a method called GetFromIdxAtypeIdxOwnerId in the address Row class in order to get the desired address type of the contact we want. 
+You can see we have done the same thing using only rows. Here also the FormatContact method will convert the postal and street address passed to the method to the format of the country that the contact belongs to. In the example you can see that we have used a method called GetFromIdxAtypeIdxOwnerId in the address Row class in order to get the desired address type of the contact we want. 
 
 Using the other overloaded method you can specify a country and pass in the postal and street address as parameters and get them formatted to the style of the specified country. Let’s see how we can use this method through an example.
 
@@ -103,7 +104,7 @@ AddressFormatter.FormatContact(36,
 }
 ```
 
- 
+ 
 
 This method is useful if you want to format the address of a contact to a particular country irrespective of the country that the contact belongs to. As the above example shows we have retrieved the postal and street address of a contact and using this overload of the method we are formatting the address to a format of a country that we specify.
 
@@ -126,7 +127,7 @@ using(SoSession session = SoSession.Authenticate("SAL0", ""))
 }
 ```
 
- 
+ 
 
 Here we use to first overload of the method. We first retrieve the person using the person ID and then simply pass that person entity to the method and the method will format the address of the person to the format of country that the person belongs to.
 
@@ -155,8 +156,8 @@ country
 }
 ```
 
- 
+ 
 
 Here we use the second overload of the method. We take a person row object of a person that we want and we have to retrieve the address row object of that person as well. To do this we use the method call GetFromIdxAtypeIdxOwnerId of the address row class. This method will help us retrieve the correct address type and the correct address of the person that we want. We can pass in the two row objects to the method and the method will format the address we specified according to the country that the person we specified belongs to.
 
- 
+ 

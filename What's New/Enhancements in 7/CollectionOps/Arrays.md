@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 43
+<properties date="2016-05-10"
+SortOrder="43"
+/>
 
 ```
 bool ArraysEquivalent<T> 
@@ -21,6 +22,6 @@ Consider using List&lt;&gt;; but sometimes you’re stuck with arrays…
 
 <img src="../EW%202010%20NetServer%20Enhancements_files/image009.jpg" id="Picture 9" width="406" height="90" />
 
- 
+ 
 
 See: CollectionOps

@@ -1,17 +1,18 @@
-Date: 2016-05-10
-SortOrder: 16
+<properties date="2016-05-10"
+SortOrder="16"
+/>
 
- 
+ 
 
 You may need to use Joins in database queries very often. The example below shows how the following SQL query is converted in to SuperOffice Objectified SQL.
 
-SELECT     COUNT(d.appointment\_id)
+SELECT     COUNT(d.appointment\_id)
 
-FROM         CRM5.document d
+FROM         CRM5.document d
 
 RIGHT OUTER JOIN CRM5.appointment a ON a.appointment\_id = d.appointment\_id RIGHT OUTER JOIN CRM5.text t ON d.text\_id = t.text\_id
 
- 
+ 
 
 ```
 using SuperOffice.Data;
@@ -56,6 +57,6 @@ using(SoSession newSession = SoSession.Authenticate ("SAL0", ""))
 }
 ```
 
- 
+ 
 
-You can add joins to the JoinRestriction property of the query. In the above example we have used the RightOuterJoin. Similarly all the other types of Joins can be added to the query.  
+You can add joins to the JoinRestriction property of the query. In the above example we have used the RightOuterJoin. Similarly all the other types of Joins can be added to the query.  

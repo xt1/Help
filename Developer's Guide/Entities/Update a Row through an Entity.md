@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 71
+<properties date="2016-05-10"
+SortOrder="71"
+/>
 
 A property which is of row type directly refers to a particular row of a table. For example in the Sale Entity the Associate property would refer to the Associate table and would contain the columns that are in the Associate Table as its properties. As in the case of creating or retrieving and assigning Entity properties to the Sale entity there are two methods of creating or retrieving and assigning Row properties to the Sale Entity.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Entities;
@@ -38,7 +39,7 @@ Here we have created an instance of a Row type, namely currency row and assigned
 
 However if the user wishes to change a limited number of properties of the Currency property in the Sale Entity he may use the following code.
 
- 
+ 
 
 ```
             newSale.Currency.Name = "DAS";
@@ -52,4 +53,4 @@ However if the user wishes to change a limited number of properties of the Curre
 
 Using this type of a code the properties of the Currency are accessed through the Sale Entity. When modifications are made and saved a new Currency row in the Currency table will be created.
 
- 
+ 

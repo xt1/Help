@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 17
+<properties date="2016-05-10"
+SortOrder="17"
+/>
 
- 
+ 
 
-In this section let’s concentrate on the SO Data Reader that we used in our select statement. The SO Data Reader class based upon the system and it implements the IDataReader interface. Since it implements this interface the SO Reader has all the capabilities of a normal ADO.Net reader and it has more functions built into it by the NetServer.  Let’s take the SO Date Reader code snippet of the select example.
+In this section let’s concentrate on the SO Data Reader that we used in our select statement. The SO Data Reader class based upon the system and it implements the IDataReader interface. Since it implements this interface the SO Reader has all the capabilities of a normal ADO.Net reader and it has more functions built into it by the NetServer.  Let’s take the SO Date Reader code snippet of the select example.
 
 ```
 //Loading the Data into the DataReader
@@ -23,7 +24,7 @@ myReader.GetString(4);
 }
 ```
 
- 
+ 
 
 In the above code snippet after we have executed the reader the data will be returned and they will be held in the reader. You can see that the fields returned from the database to the reader are retrieved using the specific data type methods just as you would do if you are using ADO.Net reader.
 
@@ -55,7 +56,7 @@ myReader[4].ToString();
 myReader.Close();
 ```
 
- 
+ 
 
 This is the same way as if you would use the method in an ADO.Net data reader. You may notice that we have converted all the return values to string type assuming that we don’t know the data type that will be returned. If you know the data type you can always cast the return value to the appropriate data type as in the following line.
 
@@ -63,7 +64,7 @@ This is the same way as if you would use the method in an ADO.Net data reader. Y
 intconID = (int)myReader[0];
 ```
 
- 
+ 
 
 Now let’s look at how we can retrieve data using the column name.
 
@@ -102,7 +103,7 @@ Here we have given the column name by using the appropriate table info object to
  string conID = myReader["Contact_Id"].ToString();
 ```
 
- 
+ 
 
 Now let’s look at the NetServer provided overloaded method.
 
@@ -132,6 +133,6 @@ while(myReader.Read())
 myReader.Close();
 ```
 
- 
+ 
 
 Here we have used the NetServer provide method of retrieving data through the index. Here we are passing a FieldInfo object as the parameter to the method. You can see that we have used the TableInfo object to specify column name.

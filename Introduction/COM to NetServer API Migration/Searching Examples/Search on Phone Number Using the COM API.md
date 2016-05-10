@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 54
+<properties date="2016-05-10"
+SortOrder="54"
+/>
 
-The following code demonstrates how to use the SOFind.ContactsByPhone() method to retrieve a collection of Contacts filtered by â€œPhone Number. Notice how the method returns a collection object and should be looped over to retrieve a specific contact.
+The following code demonstrates how to use the SOFind.ContactsByPhone() method to retrieve a collection of Contacts filtered by â€œPhone Number. Notice how the method returns a collection object and should be looped over to retrieve a specific contact.
 
 ```
 using SuperOffice.COM.SuperOfficeDB;

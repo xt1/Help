@@ -1,11 +1,12 @@
-Date: 2016-05-10
-SortOrder: 85
+<properties date="2016-05-10"
+SortOrder="85"
+/>
 
- 
+ 
 
 This section is where you configure the user settings of the NetServer user. If the anonymous settings have not been configured, NetServer will obtain the authentication details to login to the database from this location. In this section, you can also specify the type of users allowed login to the system.
 
- 
+ 
 
 ```
 <Explicit>

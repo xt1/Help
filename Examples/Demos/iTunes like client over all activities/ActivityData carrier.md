@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 8
+<properties date="2016-05-10"
+SortOrder="8"
+/>
 
 Have a look at the generic ActivityData class which is used to hold activity data as mentioned in the previous section. This class has the properties Date, Id, Description and the Activity Type which can be Document, Sale or Appointment and the Name of the Project associated with an activity.
 

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 12
+<properties date="2016-05-10"
+SortOrder="12"
+/>
 
 Our web site will start off with a simple web form: Username + Password.
 
@@ -42,7 +43,7 @@ Username.Value;
 }
 ```
 
- 
+ 
 
 The Util.GetFkDevice is a helper that creates a foreign-key app and device record for us if necessary.
 

@@ -1,13 +1,14 @@
-Date: 2016-05-10
-SortOrder: 8
+<properties date="2016-05-10"
+SortOrder="8"
+/>
 
 These patterns interact with the main application in order to provide a certain, very specific function on-demand. The NetServer application provides services that can be used by the plugin. The plugins are dependent on the services provided by the NetServer and does not usually work by themselves. Many of the big functionality areas in NetServer such as Lists, Archives, Tooltips, GUI Configuration, Search Operators and many more are implemented using plugins.
 
 The plugin concept of NetServer can be described as follows.
 
--   A public interface of the class is defined with an attribute that in effect says, “I am a plugin of this type“.
--   Write the required class with the necessary attributes.
--   Write a Factory that locates any class that implements the given interface and are marked with its attributes.
+* A public interface of the class is defined with an attribute that in effect says, “I am a plugin of this type“.
+* Write the required class with the necessary attributes.
+* Write a Factory that locates any class that implements the given interface and are marked with its attributes.
 
 The result of the above plugin concept is that you can add implementation without changing the NetServer code, which will be picked up automatically by the NetServer.
 
@@ -68,7 +69,7 @@ totalSales, totalSales / sales.Count, sales.Count );
 }
 ```
 
- 
+ 
 
 This example shows how a tooltip provider plugin is used to calculate total sales for a person. The tooltip hint for person is”person\_id”, but you do not really have to know that since the PersonTooltipProvider declares a string constant, PersonKey, for this purpose. We simply refer to it in our attribute, thereby saying,”Whatever the key for person tooltips is, I represent the same thing”.
 
@@ -76,7 +77,7 @@ The class inherits from TooltipPluginBase, which is mostly concerned with parsin
 
 Then we fetch all sales made by this person. However, if a custom query were used to fetch fewer fields it would be better in terms of performance, but this one-line method works and is extremely simple. Note the use of the GetFromIdx... method, which corresponds to an index in the database, this is will ensure avoidance of potentially expensive table scans for large tables.
 
-If the number of sales is greater than zero, we calculate the total amount (ignoring things like currency), and return a formatted string. If not, we simply return a string saying”no sales”.  These strings will be appended to the tooltip under construction by the tooltip system, and returned to the Browser for display.
+If the number of sales is greater than zero, we calculate the total amount (ignoring things like currency), and return a formatted string. If not, we simply return a string saying”no sales”.  These strings will be appended to the tooltip under construction by the tooltip system, and returned to the Browser for display.
 
 All that remains is to tell NetServer about our DLL using the config file:
 
@@ -89,6 +90,6 @@ SIX\bin\Debug\MyPlugin.dll" />
 </Factory>
 ```
 
- 
+ 
 
 NetServer will load the assembly; the TooltipProviderFactory will scan it for compatible plugins, and pick it up. Whenever a tooltip request comes in with the key that our plugin has declared, it will be called and is then running in process, authenticated, with all of NetServers available.

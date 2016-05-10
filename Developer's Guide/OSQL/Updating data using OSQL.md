@@ -1,11 +1,12 @@
-Date: 2016-05-10
-SortOrder: 15
+<properties date="2016-05-10"
+SortOrder="15"
+/>
 
- 
+ 
 
 Update class, which is located in SuperOffice.Data namespace, is used when updating using OSQL statements. This is much similar to that of the insert operation and others. The example below demonstrates how we may use the Update class in order to modify existing data.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Data;

@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 68
+<properties date="2016-05-10"
+SortOrder="68"
+/>
 
 Updating a basic property of an Entity means changing the values that are stored in properties of basic data types, such as integer, string and etc.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Entities;
@@ -31,8 +32,8 @@ using(SoSession mySession = SoSession.Authenticate("SAL0", ""))
 }
 ```
 
- 
+ 
 
 In the example values of basic properties of Sale Entity such as ActiveLinks, Amount, Earning, EarningPercentage, Heading and Status have being modified. These properties are of the following data types respectively, Unsigned Integer, Double, Double, Double, String, and SuperOffice.Data.SaleStatus. By using the Save() method the data will be saved in the database. The IsDirty property tells whether the entity has being modified and will be set to “true” if so.
 
- 
+ 

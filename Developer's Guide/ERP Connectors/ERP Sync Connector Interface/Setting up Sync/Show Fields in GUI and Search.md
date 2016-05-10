@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 7
+<properties date="2016-05-10"
+SortOrder="7"
+/>
 
 [Showing fields in GUI/Showing fields in search results]()
 -----------------------------------------------------------------------
@@ -12,15 +13,15 @@ Synchronisation means the value is passed between the systems and stored on each
 
 The main advantage of this option is that ERP values may be made visible in SO without having to synchronise the value to a SO field (either standard or user defined).
 
- 
+ 
 
 <img src="../Erp%20Sync%20Connector%20Interface_files/image007.png" id="Picture 4" width="627" height="476" />
 
 Setting up mapping/Show In ERP Tab options for the available ERP fields. Available actor types are added as tabs across the top. Mapping a field disables the ability to show the field in the GUI and vice versa.
 
- 
+ 
 
 <img src="../Erp%20Sync%20Connector%20Interface_files/image002.png" id="Picture 4" width="627" height="476" />
 
 The “Show In Search” checkbox tells us which ERP Actor properties to display in the Advanced Search dialog in SuperOffice.
- 
+ 

@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 91
+<properties date="2016-05-10"
+SortOrder="91"
+/>
 
 It is necessary to query data from a database when writing your own applications. Archive providers are designed to satisfy this need. Archive providers handle the complex business logic of filtering and flattening the complex relationships in the database into a simple flat table. The following example demonstrates how a PersonProvider is used to query data from the database.
 
- 
+ 
 
 ```
 using SuperOffice;
@@ -72,7 +73,7 @@ column in row.ColumnData)
 }
 ```
 
-Here we have initially created an Archive provider of type Person. PersonProvider is a specially designed archive provider. It is possible to retrieve the list of columns that can be handled by this archive provider through the GetAvailableColumns() method of the archive provider. Similarly the Entities that are supported by this Archive provider can also be retrieved via the GetAvailableEntities() method. The methods GetAvailableColumns() and GetAvailableEntities() return data lists of type  ArchiveColumnInfo and ArchiveEntityInfo respectively.  In the above example we have retrieved the ColumnInfo and EntityInfo from the PersonProvider and displayed them in two Listboxes.
+Here we have initially created an Archive provider of type Person. PersonProvider is a specially designed archive provider. It is possible to retrieve the list of columns that can be handled by this archive provider through the GetAvailableColumns() method of the archive provider. Similarly the Entities that are supported by this Archive provider can also be retrieved via the GetAvailableEntities() method. The methods GetAvailableColumns() and GetAvailableEntities() return data lists of type  ArchiveColumnInfo and ArchiveEntityInfo respectively.  In the above example we have retrieved the ColumnInfo and EntityInfo from the PersonProvider and displayed them in two Listboxes.
 
 <img src="../Archives_files/image001.jpg" width="277" height="217" />
 

@@ -1,11 +1,12 @@
-Date: 2016-05-10
-SortOrder: 13
+<properties date="2016-05-10"
+SortOrder="13"
+/>
 
- 
+ 
 
 Here we will show how we may use the SELECT statement of OSQL in order to retrieve a selected amount of rows and columns. The SELECT statement is similar to one that is used in SQL with the main difference is being that the differentiation of keywords.
 
- 
+ 
 
 ```
 
@@ -160,7 +161,7 @@ myReader.GetString(4);
 }
 ```
 
- 
+ 
 
 The example has been extended to retrieve data from more than one table to show how we can incorporate a Join to the select statement. The select object has all the methods to create all the join statements that exist in SQL. So it is matter of creating the right kind join you want and joining the tables in a logical manner just as in a normal SQL statement. If you have more than one table you can use those tables in the restriction statement as well. When it comes to adding the restrictions you can use any field from any table and you can include a AND statement or you can include an OR statement or you can include both again just as a normal SQL statement. So though you use the NetServer OSQL statements the power of normal SQL is not restricted.
 

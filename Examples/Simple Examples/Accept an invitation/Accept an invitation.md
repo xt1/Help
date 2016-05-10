@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 3
+<properties date="2016-05-10"
+SortOrder="3"
+/>
 
- 
+ 
 
 In the following section we will discuss how to accept an invitation. When you are trying to accept an invitation, two things comes to you mind. First what is the method to retrieve the invitations second what are the invitations that we are going to accept. We will build example that use the providers to retrieve an invitation and let’s accept the first invitation in the list which has an invitation date greater than today.
 
@@ -47,7 +48,7 @@ SuperOffice.Data.RecurrenceUpdateMode.OnlyThis);
 }
 ```
 
- 
+ 
 
 An important point to remember!
 
@@ -57,11 +58,11 @@ In the above example we have used the invitation provider to get the invitations
 
 The restrictions are special in provider, in the invitation provider a restriction for the associateId is a must since we are trying to pull out invitations of an associate. If you don’t specify this restriction the NetServer will throw an exception. After specifying the compulsory restriction you may give any other restriction that you want, in this case we have specified that we want invitation that are ahead of the current date.
 
-Now we have given all the information to the provider and all that is left is to execute it and get the results. The provider is executed by call the GetRows method of the provider which will return a set of ArchiveRows which we can loop through. The data in the rows are represented as Key Value pairs. The providers have lots of ways that can be used to retrieve the data; we have used one such way which is GetDisplayValue. Using the GetDisplayValue method we can get the value of the column we give as a parameter to the method. In the above case we have said we want the value of the appointmentId column. The values returned are formatted in a special way unique to NetServer, so in order to format the values as a normal string that is suited for the formatting of your region we can use the methods in the CultureDataFormatter class which exists in the SuperOffice.CRM.Globalization name space.   
+Now we have given all the information to the provider and all that is left is to execute it and get the results. The provider is executed by call the GetRows method of the provider which will return a set of ArchiveRows which we can loop through. The data in the rows are represented as Key Value pairs. The providers have lots of ways that can be used to retrieve the data; we have used one such way which is GetDisplayValue. Using the GetDisplayValue method we can get the value of the column we give as a parameter to the method. In the above case we have said we want the value of the appointmentId column. The values returned are formatted in a special way unique to NetServer, so in order to format the values as a normal string that is suited for the formatting of your region we can use the methods in the CultureDataFormatter class which exists in the SuperOffice.CRM.Globalization name space.   
 
 If you analyzes the above code you can see that we have jumped out of our loop that traverse the returned records that is because in the beginning we have set ourselves a assumption that we are going to accept the first invitation in the returned list. Finally we have used the appointment matrix to accept the invitation we retrieved. The appointment matrix is used in the NetServer to deal with various kinds of invitations that exists in SuperOffice application.
 
- 
+ 
 
 An important point to remember!
 
@@ -112,4 +113,4 @@ By default the invitation provider will filter out only the appointment that fol
 </tbody>
 </table>
 
- 
+ 

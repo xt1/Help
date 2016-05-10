@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 7
+<properties date="2016-05-10"
+SortOrder="7"
+/>
 
- 
+ 
 
 The other method of retrieving a Contact Entity is via Services layer. The following example shows how it is done.
 
@@ -21,6 +22,6 @@ using(SoSession mySession = SoSession.Authenticate("SAL0", ""))
 }
 ```
 
- 
+ 
 
 First you need to create a ContactAgent. Once the ContactAgent is created we can retrieve a Contact Entity carrier by passing the Contact\_id to the GetContact() method. At this moment all the properties of this particular Contact will be passed in to memory from the database. Now you can access all the properties of this Contact via this newly created Contact carrier.

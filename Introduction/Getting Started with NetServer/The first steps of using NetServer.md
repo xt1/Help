@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 7
+<properties date="2016-05-10"
+SortOrder="7"
+/>
 
 The very first step is to open Visual Studio and create a project. Since this example will focus on a windows project, we will begin by creating a new Windows Form Application project.
 The second step is to reference the NetServer data link libraries (DLL) that we are going to use in the project.
@@ -12,14 +13,14 @@ To reference the DLL's, right-click the project in the solution explorer window 
 
 In the Add Reference dialog there will be many tabs to choose from. Click the Browse tab and navigate to the NetServer SDK location, selected during installation. We accepted the default location, C:\\Program Files\\SuperOffice\\NetServer 3.0. In the installation directory, open the bin folder to see a list of all the DLL's that used when coding against NetServer. In this example we are going to write code that only uses the Rows layer of NetServer, therefore we only have to highlight the following DLL's, then click Ok.
 
--   SoCore.dll
--   SoDataBase.dll
+* SoCore.dll
+* SoDataBase.dll
 
 The two DLL's are now added to the project references, as seen in the screen shot below.
 
 ![](../Getting%20Started%20with%20NetServer%20-%20SuperOffice%20DevNet_files/Article_C.png)
 
- 
+ 
 
 Before starting to write code, there is one more thing left to do - add an application configuration file to the project. Every NetServer application requires an application configuration file that NetServer relies on for configuration settings. When we install the NetServer SDK, it included many sample configuration files that target specific database servers, i.e. Microsoft SQL Server, Oracle, and Sybase. From the examples, we can select the appropriate configuration file that will matches our database software vendor and add it to our project.
 
@@ -110,7 +111,7 @@ The TableInfo object contains all the table schema information, like table field
 
 For this example, the restriction is all contacts registered in the last 30 days. For the restriction we can use the Between operator. The Between object is accessed through the FieldInfo object, a property of TableInfo that correlates to a column in the table. We use the Registered field object to specify the criteria, and have therefore used the TableInfo.Registered.Between operator to specify the restriction parameters.
 
-All FieldInfo properties accessed through a TableInfo object have all the typical SQL restriction operators, such as: Like, Between, GreaterThan, LessThan, NotIn, etc.  
+All FieldInfo properties accessed through a TableInfo object have all the typical SQL restriction operators, such as: Like, Between, GreaterThan, LessThan, NotIn, etc.  
 
 The Between operator expects two parameters. In our example we have used the S.Parameter class which is used to encapsulate a parameter value. The Parameter class constructor has many overloads so as to accept all intrinsic data types. Once the two parameters are submitted and the restriction is constructed, we use the static ContactRows.GetFromCustomSearch method, which takes a CustomSearch as an parameter, to execute the query and get the results we asked for.
 

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 44
+<properties date="2016-05-10"
+SortOrder="44"
+/>
 
 I quite often find myself using a dictionary, where the value is a list
 

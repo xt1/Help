@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 7
+<properties date="2016-05-10"
+SortOrder="7"
+/>
 
- 
+ 
 
 In the following section we will discuss how we can update the name, address and position of an existing person using entities.
 
@@ -33,6 +34,6 @@ PersPosRow.GetFromIdxPersPosId(1);
 }
 ```
 
- 
+ 
 
-In the above example we have used a mix of entities and rows. We have taken rows here since some of the properties that are exposed by the person entity are rows for e.g. the position property of the person is exposed as a row. We first change the name of the person we want and then retrieve a position row and assign the retrieved row as the position of the person.  In the above example we have changed the address by accessing the properties of the address row through the person property itself. When we finally save the person property the address that was assigned to the person will get updated with the new values we specified.
+In the above example we have used a mix of entities and rows. We have taken rows here since some of the properties that are exposed by the person entity are rows for e.g. the position property of the person is exposed as a row. We first change the name of the person we want and then retrieve a position row and assign the retrieved row as the position of the person.  In the above example we have changed the address by accessing the properties of the address row through the person property itself. When we finally save the person property the address that was assigned to the person will get updated with the new values we specified.

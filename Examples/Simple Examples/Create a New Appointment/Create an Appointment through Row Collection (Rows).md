@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 14
+<properties date="2016-05-10"
+SortOrder="14"
+/>
 
 Rows type consists of a collection of Rows such as AppointmentRows type consists of a Collection of AppointmentRow types. Therefore, it is possible to create an AppointmentRow with the AppointmentRows class which has being explained in the example shown below.
 
@@ -34,7 +35,7 @@ using(SoSession mySession = SoSession.Authenticate("sam", "sam"))
 }
 ```
 
- 
+ 
 
 An AppointmentRow can be created according the example shown in Creating an Appointment Row. [Create an Appointment Row](Create%20an%20Appointment%20Row.htm) the Appointment Row has being created, the next phase of the code segment is to instantiate an AppointmentRows class. After which the instance can be added to the collection with the execution of the Add() method.
 
@@ -45,6 +46,6 @@ AppointmentRows.CreateNew();
             newAppRows.Save();
 ```
 
- 
+ 
 
 Once the AppointmentRow is added the Collection could be saved by executing the Save() method which ensures that the created entity is added to the Appointment table in the database.

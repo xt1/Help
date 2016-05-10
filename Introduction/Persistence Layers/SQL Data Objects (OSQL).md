@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 13
+<properties date="2016-05-10"
+SortOrder="13"
+/>
 
 SQL is the lowest-level API. This is a database-independent SQL that is compile-time checked (unlike SQL strings which are checked at run-time). Objectified SQL (OSQL) lets you build your own queries and SQL commands, without worrying about Oracle’s peculiarities.
 
@@ -13,7 +14,7 @@ Security means that the OSQL system will not return hidden or private data to us
 
 The security system works by rewriting your query behind the scenes – so a simple query across the document table will join in the appointment and visiblefor tables. The security system needs data from these tables to work out if you can see each record or not.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Data;
@@ -42,7 +43,7 @@ S.Parameter(1234) );
 }
 ```
 
- 
+ 
 
 The ContactTableInfo object represents an alias to a table in the database.
 

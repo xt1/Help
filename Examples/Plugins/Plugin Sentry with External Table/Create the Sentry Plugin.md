@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 16
+<properties date="2016-05-10"
+SortOrder="16"
+/>
 
 To begin creating a new Sentry plug-in, you must create a class that inherits from and implements the SuperOffice.CRM.Security.ISentryPlugin interface. In the plugin it is required to access the generated NetServer classes for the UDT. To accomplish this, compile the code generation solution and add a reference to the dll in the Plugin project.
 
- 
+ 
 
 ```
 using System;
@@ -129,10 +130,10 @@ sql.JoinRestriction.InnerJoin(newConTable.BusinessIdx.Equal(newCustomTable.Busin
 }
 ```
 
- 
+ 
 
 As we can see in the above code segment, we have created another class called “SentryPluginQueryTableUpdaterContact” which implement the SuperOffice.CRM.Security.ISentryPluginQueryTableUpdater interface. This interface has a single method called “ModifySelect” where we have implemented the sentry restriction to retrieve only the contact information where the Business-id of which is same as the currently logged in user’s Business-id.
 
- TableInfo objects are required for the tables of interest i.e., the Contact table and SuperOfficeTrainingTable. ContactTableInfo is retrieved by casting the TableInfo object passed to the ModifySelect method. Then the restriction is enforced to narrow the data selection to the current user’s business-id. Finally we have specified the join condition so that the custom table is joined in whenever the Contact table is queried upon.
+ TableInfo objects are required for the tables of interest i.e., the Contact table and SuperOfficeTrainingTable. ContactTableInfo is retrieved by casting the TableInfo object passed to the ModifySelect method. Then the restriction is enforced to narrow the data selection to the current user’s business-id. Finally we have specified the join condition so that the custom table is joined in whenever the Contact table is queried upon.
 
 We can see that we have marked this class as a SentryPluginQueryTableUpdater for the Contact table using attributes signaling NetServer that we have developed SentryPluginQueryTableUpdater for the Contact table. So whenever the Contact table is queried upon, this method will get fired.

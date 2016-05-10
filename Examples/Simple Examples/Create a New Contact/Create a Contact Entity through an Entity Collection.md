@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 12
+<properties date="2016-05-10"
+SortOrder="12"
+/>
 
 SuperOffice.CRM.Entities namespace exposes Entity Collections such as ContactCollection, PersonCollection and so on. It is therefore possible to create a Contact Entity and assign it to the Collection and there by saving the collection the Contact Entity will be saved. The following example demonstrates the method of doing the above.
 
@@ -51,7 +52,7 @@ using(SoSession mySession = SoSession.Authenticate("sam", "sam"))
 }
 ```
 
- 
+ 
 
 The difference of the above code to that of the previous code is that use of an Entity Collection such as the ContactCollection. In the above code, a Contact Entity has been created in a similar way that is to the once created in the previous examples and then it has being assigned to the instantiated ContactCollection. Then the instantiated ContactCollection has being saved with the use of the Save() method as show below.
 
@@ -60,4 +61,4 @@ The difference of the above code to that of the previous code is that use of an 
       newConCol.Save();
 ```
 
- 
+ 

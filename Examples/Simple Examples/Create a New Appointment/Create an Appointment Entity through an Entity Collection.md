@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 12
+<properties date="2016-05-10"
+SortOrder="12"
+/>
 
 SuperOffice.CRM.Entities namespace exposes Entity Collections such as AppointmentCollection, PersonCollection and so on. It is therefore possible to create an Appointment Entity and assign it to the Collection and there by saving the collection the Appointment Entity will be saved. The following example demonstrates the method of doing the above.
 
@@ -46,7 +47,7 @@ Collection
 }
 ```
 
- 
+ 
 
 After creating an instance of the Appointment Entity and assigning the desired values the next step is to assign the Created Appointment to the Collection.
 

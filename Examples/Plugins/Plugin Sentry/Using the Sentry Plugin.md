@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 9
+<properties date="2016-05-10"
+SortOrder="9"
+/>
 
- 
+ 
 
 For us to use the Plugin that we have developed first we have to tell NetServer that we have a Plugin that will add to the existing functionality. We have to do this through the config file of our application. Below is the section that we have to modify in the config file.
 
@@ -15,7 +16,7 @@ Plugin\\Sentry
 </Factory>
 ```
 
- 
+ 
 
 By this config section we have told NetServer that there is Plugin that exists and where the DLL is located. When NetServer loads its own DLLs our Plugin DLL will also be loaded.
 
@@ -79,7 +80,7 @@ contactEntity.Row.Sentries.TableRight(contactEntity.TableInfo);
 }
 ```
 
- 
+ 
 
 Here we can see that we have not done anything special to turn on the sentry plugin. In the above example we can see that we have created a contact entity and filled some basic properties. Notice that we have given a department name that end with “\_” so that our Plugin will be activated.
 

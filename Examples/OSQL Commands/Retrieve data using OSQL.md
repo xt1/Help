@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 9
+<properties date="2016-05-10"
+SortOrder="9"
+/>
 
 The following example shows how we may use the SELECT statement of OSQL in order to retrieve a selected amount of rows and columns. The example shows how we may retrieve Contacts information. [OSQL Data](../OSQL%20Data/OSQL%20Data.htm)
 
@@ -145,7 +146,7 @@ newSelect.JoinRestriction.LeftOuterJoin(newConTable.ContactId.Equal(newEMLTable.
 newSelect.JoinRestriction.LeftOuterJoin(newConTable.CountryId.Equal(newCouTable.CountryId));
 ```
 
- 
+ 
 
 The JoinRestriction property consist of methods that are capable of acting as inner join, left outer join etc in SQL term. For this, we need to have knowledge about the database structure since we would require the knowledge of how the tables are connected. Here we have used the ContactId of the Contact table to join I to the Person, email and Country tables as shown below.
 

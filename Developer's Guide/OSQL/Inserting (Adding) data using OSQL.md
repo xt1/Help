@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 14
+<properties date="2016-05-10"
+SortOrder="14"
+/>
 
- 
+ 
 
 In order to insert data using OSQL we would need to make use of the Insert class, which is located in the SuperOffice.Data namespace. The INSERT statement is used in a similar manner in which the above SELECT statement has being used. The example below demonstrates how we may insert data using the INSERT statement.
 

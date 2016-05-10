@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 55
+<properties date="2016-05-10"
+SortOrder="55"
+/>
 
 As explained earlier there can be more than one way to assign an Entity to a property of another Entity. In this section we will focus on creating a new Entity separately and assigning it to a property.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Entities;
@@ -62,7 +63,7 @@ the respective properties
 }
 ```
 
- 
+ 
 
 Since this example is bit long and complex it will be explained step by step below.
 
@@ -90,7 +91,7 @@ This is how you create a new URL and add it to the Entity. But if you want to re
 
 The next property that we are going to populate with data is the Address. The Address property is also exposed as an Address row but in the example we have directly accessed the properties of the Address row to populate them with data. The method we have used to access the properties of the Address property, and the method we have used to access the properties of the URL property, shows the difference between how we access the properties of a Row and a Row collection. Here also instead of assigning data directly to the Address row you can create an Address row and assign it to the address property.
 
- 
+ 
 
 ```
     //create a new AddressRow
@@ -112,7 +113,7 @@ Now let’s switch back to the main example, up to now we have created a Contact
 
 After filling some basic Entities lets try to add a couple of project members to the project we just created. In the example we have created two new project member instances and assigned two Persons from the person table. If you want to create a new Person and add that Person to the Project Member instances and then add the Project Member instance to the Project you can follow the following method.
 
- 
+ 
 
 ```
     Project myProject = Project.CreateNew();
@@ -127,7 +128,7 @@ After filling some basic Entities lets try to add a couple of project members to
 
 If you want to add a Project Member that is already assigned to another Project you can follow the below method.
 
- 
+ 
 
 ```
       myProject.Members.Add(

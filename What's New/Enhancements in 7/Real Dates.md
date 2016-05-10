@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 30
+<properties date="2016-05-10"
+SortOrder="30"
+/>
 
 We changed our datetime format from seconds-since-1970 to a real datetime
 

@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 10
+<properties date="2016-05-10"
+SortOrder="10"
+/>
 
- 
+ 
 
 SODataReader also facilitates us in obtaining Category Lists. Here you have to query the database to retrieve the Category List. The following example demonstrates how it is done.
 
@@ -44,6 +45,6 @@ reader[1].ToString() + "     " + reader[2].ToString());
 }
 ```
 
- 
+ 
 
 Here we make a query to retrieve the Category List from the category table in the database. If any Category has a heading then there will be a link provided in the categoryheadinglink table. We have grouped items in the Category List according to their headings. If any record in the category table doesn’t have a heading then “0” will be returned as the HeadingId. Similarly you can obtain the history items by querying the history table.

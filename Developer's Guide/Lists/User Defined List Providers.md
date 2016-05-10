@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 86
+<properties date="2016-05-10"
+SortOrder="86"
+/>
 
 It is possible for users to define their own fields and tables. If you need to create a list for a user defined field or table it is done via a User Defined List Provider. The following example demonstrates how this is done.
 
- 
+ 
 
 ```
 using SuperOffice;
@@ -59,4 +60,4 @@ When creating a list for a user defined table/field we have to give the Id of th
 
 Thus udlist requires an integer id to identify which of the multiple lists in that table should be created. The behavior of this list provider differs from the rest only by the fact that it searches the udlist instead of the conceptualtable to retrieve lists. In the above example we have created a user defined list for the user defined List with id 4. With the Udlist provider we are capable of retrieving the Historyitems, Headingitems and Rootitems if that list has any.
 
- 
+ 

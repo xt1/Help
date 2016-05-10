@@ -1,4 +1,5 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 The UdefHelper uses the ProgId field to identify a user-defined field. If the UdefField.ProgId field is blank, then the UdefField.Identity field is used, along with a prefix ("SuperOffice:").
 

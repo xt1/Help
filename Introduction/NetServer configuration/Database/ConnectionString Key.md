@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 81
+<properties date="2016-05-10"
+SortOrder="81"
+/>
 
 This key contains a string that instructs the NetServer on communicating with the database. It has a number of parameters and the NetServer replaces these parameters with the correct values. For example, the NetServer will replace the parameter \[@Server\] with the value you configured in the server key.
 
@@ -9,7 +10,7 @@ This key contains a string that instructs the NetServer on communicating with th
  ID=[@User];Password=[@Password]"/>
 ```
 
- 
+ 
 
 An Important Point to Remember!
 

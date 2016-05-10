@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 6
+<properties date="2016-05-10"
+SortOrder="6"
+/>
 
- 
+ 
 
-Sales are grouped into different statuses, like open, sold, lost or unknown. In the countervalue table this is represented under the field sale\_status. Sales are even grouped under different amount classes like small, medium, large and extra large. We might need to retrieve a list of companies with more than two successful sales. In this situation we do not want to restrict the amount-class, so we may specify the amountclassid =0. In the following example we will explain how this is done. 
+Sales are grouped into different statuses, like open, sold, lost or unknown. In the countervalue table this is represented under the field sale\_status. Sales are even grouped under different amount classes like small, medium, large and extra large. We might need to retrieve a list of companies with more than two successful sales. In this situation we do not want to restrict the amount-class, so we may specify the amountclassid =0. In the following example we will explain how this is done. 
 
 ```
 using SuperOffice.CRM.Rows;
@@ -45,7 +46,7 @@ cvTable.SaleStatus.Equal(S.Parameter(2)).And(cvTable.AmountClassId.Equal(S.Param
 }
 ```
 
- 
+ 
 
 In this example we have created an instance of the CustomSearch class. You can join the contact table with the countervalue table as done above. The exact SQL statement we run above is
 

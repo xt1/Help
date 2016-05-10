@@ -1,14 +1,15 @@
-Date: 2016-05-10
-SortOrder: 1
+<properties date="2016-05-10"
+SortOrder="1"
+/>
 
- 
+ 
 
 [Background & Vision]()
 =================================================
 
 The SuperOffice Quote Management system is based on an architecture that allows connection to several ERP systems. This is facilitated through a set of “Quote Connectors”. A quote connector provides specific data- and business logic for the ERP system in question. A Quote Connector communicates with SuperOffice through a set of API’s which are specifically made available for connector purposes. SuperOffice relies on partners to develop all Connectors. SuperOffice will certify all available Connectors, but will not distribute them or offer them as part of our standard pricelist.
 
- 
+ 
 
 [Architecture]()
 ------------------------------------------
@@ -17,7 +18,7 @@ The SuperOffice Quote Management system is based on an architecture that allows 
 
 Figure 1 : ERP system in this case is BaaN
 
- 
+ 
 
 The &lt; **SpesificERP&gt;QuoteConnector.DLL** is loaded into the SuperOffice client when the SuperOffice client starts.
 
@@ -32,7 +33,7 @@ The information needed to connect to the ERP system is set up and stored in the 
 
 **Erp.QuoteConnector.Baan.dll** – Contains the implementation of the IQuoteConnector interface defined in SuperOffice.Plugins.dll. This DLL should be compatible across minor releases of SuperOffice as long as it does not reference the SoDatabase.dll directly.
 
- 
+ 
 
 [The SuperOffice Quote Management API]()
 ==================================================================
@@ -44,30 +45,30 @@ Functions that we expect to vary between ERP systems we will make queryable via 
 [Some facts]()
 ========================================
 
-*          A SuperOffice installation can have, 0, 1 or many ERP connectors at the same time. Many large companies have more than one ERP system. (Typically divided over country borders.)
+* A SuperOffice installation can have, 0, 1 or many ERP connectors at the same time. Many large companies have more than one ERP system. (Typically divided over country borders.)
 
-*          The connector should be totally without user interface. It might be run at a server far, far away, far away from the user, by both Windows and Web clients.
+* The connector should be totally without user interface. It might be run at a server far, far away, far away from the user, by both Windows and Web clients.
 
-*          A connector must be installed and configured by the administrator.
+* A connector must be installed and configured by the administrator.
 
-*          The system will allow the administrator to set up which salesmen shall have access to which ERP clients. If a salesman has access to more than one system, he will be asked which one he wants to use when he creates a quote.
+* The system will allow the administrator to set up which salesmen shall have access to which ERP clients. If a salesman has access to more than one system, he will be asked which one he wants to use when he creates a quote.
 
-*          Since not all connectors will be able to support all functionality, and we don’t want to accept the least common denominator, the connector should be query-able; SuperOffice shall be able to query the connector about its capabilities.
+* Since not all connectors will be able to support all functionality, and we don’t want to accept the least common denominator, the connector should be query-able; SuperOffice shall be able to query the connector about its capabilities.
 
-*          SuperOffice shall report to the connectors the language the user is running in, and will strongly request that the responses is translated as far as possible (especially the user error responses).
+* SuperOffice shall report to the connectors the language the user is running in, and will strongly request that the responses is translated as far as possible (especially the user error responses).
 
- 
+ 
 
 [Company Policy Preferences]()
 --------------------------------------------------------
 
 SuperOffice Quote system can be configured to enable the various features available:
 
-*          Alternatives – available or not.
+* Alternatives – available or not.
 
-*          Versioning – used or not.
+* Versioning – used or not.
 
-*          Discounts on total order amount – or only on line items.
+* Discounts on total order amount – or only on line items.
 
 [Other company policy rules]()
 ========================================================
@@ -116,4 +117,4 @@ The system is implemented as one interface, but has some parts:
 </tbody>
 </table>
 
- 
+ 

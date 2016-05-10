@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 10
+<properties date="2016-05-10"
+SortOrder="10"
+/>
 
 An archive is a configurable multi-column list that flatten the complex relationships between tables into a simple grid.
 
@@ -45,9 +46,9 @@ column in row.ColumnData)
 }
 ```
 
- 
+ 
 
- 
+ 
 
 ------------------------------------------------------------------------
 

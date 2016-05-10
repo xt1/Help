@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 11
+<properties date="2016-05-10"
+SortOrder="11"
+/>
 
 To avoid sending the username + password around the web, we will instead use good old “security by obscurity”. A better name for this is a “nonce” or a “cookie”. If you know the secret word, you are allowed in. If you don’t know the right word, you don’t get anything.
 

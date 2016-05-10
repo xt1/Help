@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 34
+<properties date="2016-05-10"
+SortOrder="34"
+/>
 
 The intention of this document is to demonstrate the use of AppointmentMatrix to create recurring appointments. SuperOffice.CRM.Entities.AppointmentMatrix is a matrix holding information about repeating appointment and its participants.
 

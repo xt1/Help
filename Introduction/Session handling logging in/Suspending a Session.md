@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 8
+<properties date="2016-05-10"
+SortOrder="8"
+/>
 
 It is even possible to suspend a running session. In the following example we have demonstrated how this is done.
 
- 
+ 
 
 ```
  

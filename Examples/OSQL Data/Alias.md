@@ -1,4 +1,5 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 ```
  SELECT COUNT(T0.associate_id) as Test
@@ -12,27 +13,21 @@ Date: 2016-05-10
         SoConnection _con = ConnectionFactory.GetConnection();
         SoCommand _cmd = _con.CreateCommand();
         _con.Open();
-
         AssociateTableInfo a = TablesInfo.GetAssociateTableInfo();
         Select select = S.NewSelect();
         Count count = S.FieldExpression.Count( a.AssociateId );
         count.Alias.Name = "Test";
-
         select.ReturnFields.Add( count );
         select.Restriction = a.AssociateId.Between( S.Parameter( 10
 ), S.Parameter( 20 ) );
         select.GroupBy.Grouping.Add( a.AssociateId );
         select.OrderBy.Add( S.Parameter( "Test" ) );
-
         _cmd.SqlCommand = select;
         SoDataReader reader = _cmd.ExecuteReader();
-
         int i = 0;
         while( reader.Read() )
                 ++i;
-
         reader.Close();
-
         _con.Close();
         _con = null;
         _cmd = null;

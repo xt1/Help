@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 47
+<properties date="2016-05-10"
+SortOrder="47"
+/>
 
 Here we will expose the NetServer Entities layer which uses Entities in order to represent business objects to the user of NetServer.
 

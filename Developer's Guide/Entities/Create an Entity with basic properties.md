@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 53
+<properties date="2016-05-10"
+SortOrder="53"
+/>
 
 To create a basic Entity you have to use the CreateNew() method of the Entity class that you are going to create. After you have created the Entity you want to populate the various properties that are exposed by this newly created Entity.
 
- 
+ 
 
 ```
 using SuperOffice;

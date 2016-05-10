@@ -1,24 +1,25 @@
-Date: 2016-05-10
-SortOrder: 2
+<properties date="2016-05-10"
+SortOrder="2"
+/>
 
 [Quote Connector Setup – First time]()
 ----------------------------------------------------------------
 
-The SuperOffice Administration client will start by using the setup functions to set up the connection to the ERP system. 
+The SuperOffice Administration client will start by using the setup functions to set up the connection to the ERP system. 
 
 Admin calls **GetConfigurationFields**, and uses the result to add fields to the configuration dialog.
 
-  <img src="Quote%20Connector%20interface_files/image002.jpg" width="605" height="697" />
+  <img src="Quote%20Connector%20interface_files/image002.jpg" width="605" height="697" />
 
 For example: if the GetConfigFields call returns a list like this:
 
 \[{ “Web Service Key”, Integer },
-  { “User Name”, String },
-  { “Password”, Password },
-  { “Entity”, integer },
-  { “Web Service URL”, String } \]
+  { “User Name”, String },
+  { “Password”, Password },
+  { “Entity”, integer },
+  { “Web Service URL”, String } \]
 
- 
+ 
 
 This result results in the following dialog:
 
@@ -26,7 +27,7 @@ This result results in the following dialog:
 
 Figure 2 : Configure Quote Connection Dialog
 
- The user clicks the TEST button in the dialog, and the **TestConnection** method is called with the values from the dialog. When the user clicks OK the values are saved to the SuperOffice database as a connection.
+ The user clicks the TEST button in the dialog, and the **TestConnection** method is called with the values from the dialog. When the user clicks OK the values are saved to the SuperOffice database as a connection.
 
 <table>
 <colgroup>
@@ -50,7 +51,7 @@ Testing if the connection data is sufficient to get a connection with the ERP sy
 </tbody>
 </table>
 
- 
+ 
 
 **Pitfall:**
 

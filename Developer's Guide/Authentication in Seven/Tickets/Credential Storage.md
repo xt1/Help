@@ -1,11 +1,12 @@
-Date: 2016-05-10
-SortOrder: 53
+<properties date="2016-05-10"
+SortOrder="53"
+/>
 
-This table is already used for storing **outgoing** credentials – such as mail server logins for CRM.Web, in 6.x.  In 7 we introduce **incoming** credentials (password, SID) and tickets as types. Custom plugins can add their own information.
+This table is already used for storing **outgoing** credentials – such as mail server logins for CRM.Web, in 6.x.  In 7 we introduce **incoming** credentials (password, SID) and tickets as types. Custom plugins can add their own information.
 
 <img src="../../EW%202010%20Authentication_files/image001.gif" id="Picture 14" width="605" height="300" />
 
- 
+ 
 
 Examples:
 

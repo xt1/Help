@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 75
+<properties date="2016-05-10"
+SortOrder="75"
+/>
 
 This key informs the NetServer of the vendor database that your application is using. Given below are the values that must be defined for each distinctive vendor database:
 

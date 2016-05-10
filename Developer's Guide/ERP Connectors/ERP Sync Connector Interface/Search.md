@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 4
+<properties date="2016-05-10"
+SortOrder="4"
+/>
 
 [Search in ERP]()
 ------------------------------
@@ -14,17 +15,17 @@ The advanced search is performed in two steps. In step 1 the GetSearchableFields
 
 Each criterion selected by the user is sent as a SearchRestrictionInfo object, which contains a field key, an operator and a value. For the BETWEEN and IN operators, multiple values are included. The connector should perform the search and return the results, including those fields that have been specified as result fields in the call.
 
- 
+ 
 
 <img src="Erp%20Sync%20Connector%20Interface_files/image002.png" id="Picture 15" width="545" height="410" />
 
 2 : An example of a search screen in SuperOffice taking advantage of the extended search interface.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 
@@ -33,7 +34,7 @@ Each criterion selected by the user is sent as a SearchRestrictionInfo object, w
 
 The connector can also choose to offer an advanced search by exposing one or more field names through GetSearchableFields (fields are exposed per actor type). If advanced search is supported, the connector will have to support all required search operators, and a few “special” search keys; see below.
 
- 
+ 
 
 [The SearchRestrictionInfo class]()
 ------------------------------------------------
@@ -48,9 +49,9 @@ Describes a search restriction using three properties:
 <tbody>
 <tr class="odd">
 <td><p><strong>Property</strong></p>
-<p><strong> </strong></p></td>
+<p><strong> </strong></p></td>
 <td><p><strong>Information</strong></p>
-<p><strong> </strong></p></td>
+<p><strong> </strong></p></td>
 </tr>
 <tr class="even">
 <td><pre class="c40"><code>string
@@ -71,23 +72,23 @@ Describes a search restriction using three properties:
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
 [SearchOperators]()
 --------------------------------
 
 Each field type will require supporting a different set of search operators (e.g. equals, not equals, one of, contains, etc). These operators are conveniently available as string constants in the classes **StringOperators**, **IntOperators**, **DoubleOperators**, **BoolOperators**, **DateTimeOperators** and **ListOperators** in the SuperOffice.ErpSync.Contract assembly. For a complete list, see the appendix section of this document.
 
- 
+ 
 
 [SpecialSearchKeys]()
 ----------------------------------
 
 In addition to the required operators, there are a couple of special values that need to be supported for the **FieldKey** property of a **SearchRestrictionInfo** object. These special keys are available as constants in the SpecialSearchKeys class in the Contract assembly.
 
- 
+ 
 
 <table>
 <colgroup>
@@ -97,9 +98,9 @@ In addition to the required operators, there are a couple of special values that
 <tbody>
 <tr class="odd">
 <td><p><strong>FieldKey value</strong></p>
-<p><strong> </strong></p></td>
+<p><strong> </strong></p></td>
 <td><p><strong>Information</strong></p>
-<p><strong> </strong></p></td>
+<p><strong> </strong></p></td>
 </tr>
 <tr class="even">
 <td><pre class="c40"><code>“ParentErpKey”
@@ -118,7 +119,7 @@ string
 </tbody>
 </table>
 
- 
+ 
 
 [Search operators]()
 --------------------
@@ -232,7 +233,7 @@ desired order. Should not be case sensitive
             public const string BETWEEN = "between";
     }
 
- 
+ 
 
 ### [Double operators]()
 
@@ -280,7 +281,7 @@ desired order.
 }
 ```
 
- 
+ 
 
 ### [Bool operators]()
 
@@ -297,7 +298,7 @@ public static class BoolOperators
 }
 ```
 
- 
+ 
 
 ### [List operators]()
 
@@ -319,7 +320,7 @@ public static class ListOperators
 }
 ```
 
- 
+ 
 
 ### [DateTime operators]()
 
@@ -373,4 +374,4 @@ public static class DateTimeOperators
 }
 ```
 
- 
+ 

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 90
+<properties date="2016-05-10"
+SortOrder="90"
+/>
 
 The functionality of an archive list is basically searching on associate, contact or project and retrieving any combination of a large number of available columns, arbitrarily sorted.
 

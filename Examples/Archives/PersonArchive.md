@@ -1,4 +1,5 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 This example returns the person id, first+middle+last names, and two person udef fields across several contacts.
 

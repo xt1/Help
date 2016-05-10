@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 34
+<properties date="2016-05-10"
+SortOrder="34"
+/>
 
 Remember that in a grouped query, all return fields must either be aggregates or GROUP BY
 
@@ -7,9 +8,9 @@ Your query adheres to this, but once the Sentry system modifies it, it may break
 
 You can avoid this by adding the return fields and join yourself
 
-*          Sentry will pick up the fields; it only adds when it has to
+* Sentry will pick up the fields; it only adds when it has to
 
-*          But this may change the meaning of your query
+* But this may change the meaning of your query
 
 IgnoreSentry turns off Sentry, so your query is generated ”untouched”
 
@@ -21,7 +22,7 @@ FROM  CRM5."APPOINTMENT" T0
 WHERE DATEPART(year, T0."do_by") = 2010
 ```
 
- 
+ 
 
 Now that the SQL is predictable, GROUP BY can be used
 

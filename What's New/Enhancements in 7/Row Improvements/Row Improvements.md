@@ -1,4 +1,5 @@
-Date: 2016-05-10
-SortOrder: 38
+<properties date="2016-05-10"
+SortOrder="38"
+/>
 
 1. autolist

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 7
+<properties date="2016-05-10"
+SortOrder="7"
+/>
 
 The following section explains how to retrieve activity information using the Activity Archive Provider and convert the retrieved information into a format that can be displayed in a data grid.
 

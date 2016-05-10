@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 15
+<properties date="2016-05-10"
+SortOrder="15"
+/>
 
 Outlook can load the iCal feed using the “internet calendar” account setting.
 
@@ -11,7 +12,7 @@ Go to the INTERNET CALENDARS tab and add a NEW calendar.
 
 <img src="../SuperOffice%20iCal_files/image005.jpg" width="328" height="116" />
 
-Outlook will download the appointments once you have pasted in the link to  ical.aspx?associd=123&guid=1234-4567… 
+Outlook will download the appointments once you have pasted in the link to  ical.aspx?associd=123&guid=1234-4567… 
 
 The calendar shows up in the calendar view in Outlook – you just need to mark the checkbox for the calendar you added.
 

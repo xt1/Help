@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 6
+<properties date="2016-05-10"
+SortOrder="6"
+/>
 
 Once you have the NetServer SDK installation file copied to your local storage double click on it to get started with the installation. Follow the steps below.
 
@@ -13,7 +14,7 @@ On the Select Installation Folder page, accept the default installation location
 
 ![](../Getting%20Started%20with%20NetServer%20-%20SuperOffice%20DevNet_files/NetServerInstallation_C.png)
 
-The Confirm Installation page gives us the option to start or cancel the installation.  If we click Cancel, nothing will be installed on out machine. When we click Next, installation will begin and the wizard will display the progress page.
+The Confirm Installation page gives us the option to start or cancel the installation.  If we click Cancel, nothing will be installed on out machine. When we click Next, installation will begin and the wizard will display the progress page.
 
 ![](../Getting%20Started%20with%20NetServer%20-%20SuperOffice%20DevNet_files/NetServerInstallation_D.png)
 

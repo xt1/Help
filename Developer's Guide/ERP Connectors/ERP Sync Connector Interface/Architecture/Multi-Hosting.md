@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 6
+<properties date="2016-05-10"
+SortOrder="6"
+/>
 
 Multi-Hosting
 -------------
@@ -46,7 +47,7 @@ c:\Samples\Visma\SuperOffice.EIS.VismaConnector.dll
   </applicationSettings>
 ```
 
- 
+ 
 
 This configures the WCF Host to load three different DLLs, each with a different implementation of IErpConnector interface.
 

@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 55
+<properties date="2016-05-10"
+SortOrder="55"
+/>
 
-The example below demonstrates how to retrieve the same results as above, only this type we will use a CustomSearch to retrieve a ContactRows object, filtered by the phone number.
+The example below demonstrates how to retrieve the same results as above, only this type we will use a CustomSearch to retrieve a ContactRows object, filtered by the phone number.
 
 ```
 using SuperOffice;

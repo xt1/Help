@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 23
+<properties date="2016-05-10"
+SortOrder="23"
+/>
 
- 
+ 
 
 A property which is of row type directly refers to a particular row of a table. For example in the Sale Entity the Associate property would refer to the Associate table and would contain the columns that are in the Associate Table as its properties. The following example explains how to update properties of a Row through an Entity.
 
@@ -31,7 +32,7 @@ entity
 }
 ```
 
- 
+ 
 
 You may use the above code if you want to change a limited number of properties of a Currency property in the Sale Entity.
 

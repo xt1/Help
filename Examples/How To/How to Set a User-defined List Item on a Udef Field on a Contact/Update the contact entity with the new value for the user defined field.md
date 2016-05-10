@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 7
+<properties date="2016-05-10"
+SortOrder="7"
+/>
 
 This section explains how the selected value is set as the user-defined field value. We have used the SetValue method of the UdefHelper of the contact to set the selected value. This method accepts the progId which is used to refer a particular field and the value to set as the updated value for the field. Next, the Save method of the Contact entity is used to update the contact entity.
 
@@ -26,4 +27,4 @@ MessageBox.Show("Contact details saved sucessfully.");
 }
 ```
 
- 
+ 

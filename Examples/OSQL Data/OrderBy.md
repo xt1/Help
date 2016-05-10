@@ -1,4 +1,5 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 ```
 SELECT a.Associate_id, a.Name
@@ -11,7 +12,6 @@ ORDER BY a.Associate_id DESC
         SoConnection _con = ConnectionFactory.GetConnection();
         SoCommand _cmd = _con.CreateCommand();
         _con.Open();
-
         AssociateTableInfo a = TablesInfo.GetAssociateTableInfo();
         Select select = S.NewSelect();
         
@@ -19,7 +19,6 @@ ORDER BY a.Associate_id DESC
         select.Restriction = a.AssociateId.Between( S.Parameter( 10
 ), S.Parameter( 20 ) );
         select.OrderBy.Add( a.AssociateId, OrderBySortType.DESC );
-
         _cmd.SqlCommand = select;
         SoDataReader reader = _cmd.ExecuteReader();
         int i = 0;
@@ -30,7 +29,6 @@ ORDER BY a.Associate_id DESC
         }
         
         reader.Close();
-
         _con.Close();
         _con = null;
         _cmd = null;

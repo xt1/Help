@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 6
+<properties date="2016-05-10"
+SortOrder="6"
+/>
 
 The intention of the section is to develop a document plugin and use it to create documents. Finally we will check whether we can use this plugin to manipulate documents from the SuperOffice applications.
 
@@ -251,7 +252,7 @@ file
 }
 ```
 
- 
+ 
 
 As we can see the above example is lengthy but fairly straight-forward.
 

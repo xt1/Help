@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 35
+<properties date="2016-05-10"
+SortOrder="35"
+/>
 
 The code says
 
@@ -13,7 +14,7 @@ The generated SQL will start with
 /* comment */
 ```
 
- 
+ 
 
 This can be a powerful debugging/forensic tool
 

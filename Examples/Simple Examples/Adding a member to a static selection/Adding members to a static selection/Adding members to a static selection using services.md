@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 11
+<properties date="2016-05-10"
+SortOrder="11"
+/>
 
 The following example demonstrates how we can use the services layer of the NetServer to add members to a static selection
 
@@ -41,7 +42,7 @@ personId);
 }
 ```
 
- 
+ 
 
 In the above example we are using the agent factory of the NetServer to create all the agents we require. We have used the methods provided in the contact agent to retrieve the contact we want in order to add its persons to a selection. We have used the AddConactSelectionMembers method of the selection agent to add the members to a static selection. As you can see the second parameter of the method is an array of ContactPersonId objects. In the example we loop through the persons array of the contact entity and adding the person IDs to the ContactPersonId array. By looping through the persons we do not need to add the specific person\_id, but if we want it’s also possible to add a new selection member by person\_id. As one can see we have added only one contact person to the selection, but if we want we can add persons from different contacts to a static selection.
 
@@ -75,7 +76,7 @@ array to the
 }
 ```
 
- 
+ 
 
 Now let’s move on to explore how we can achieve the same result using the entities layer.
 

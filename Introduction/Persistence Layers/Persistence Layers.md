@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 8
+<properties date="2016-05-10"
+SortOrder="8"
+/>
 
 SuperOffice NetServer provides several persistence layers, each one allowing more fine-grain control than the next.
 
@@ -7,6 +8,6 @@ The more control over the queries you have, the more responsibility you take on 
 
 You can choose to work at the level that suits you best.
 
- 
+ 
 
 1. autolist

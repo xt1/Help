@@ -1,17 +1,18 @@
-Date: 2016-05-10
-SortOrder: 18
+<properties date="2016-05-10"
+SortOrder="18"
+/>
 
- 
+ 
 
 So far we have been expressing how data is retrieved from the database. In this section we will explain how data is updated. The example below demonstrates how to write the following SQL query in SuperOffice Objectified SQL.
 
-UPDATE    CRM5.associate
+UPDATE    CRM5.associate
 
-SET              name = 'Test Update'
+SET              name = 'Test Update'
 
-WHERE     (associate\_id = 103)
+WHERE     (associate\_id = 103)
 
- 
+ 
 
 ```
 using SuperOffice.Data;
@@ -50,6 +51,6 @@ then.
 }
 ```
 
- 
+ 
 
 After opening the connection we have to create an instance of SoTransaction. Instead of Select here we create an Update object. You have to specify the table and the primary key that will be updated by using the SetPrimaryKey() method. By providing the value of that primary key we can select the exact row. Once the field and the value that is being updated are entered you can set the SqlCommand property of the SoCommand instance to the newly created Update instance. Unless you commit the Transaction the database will not be updated.

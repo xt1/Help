@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 55
+<properties date="2016-05-10"
+SortOrder="55"
+/>
 
 The link to an AD identity is based on the SID, not the name
 

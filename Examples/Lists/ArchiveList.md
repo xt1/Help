@@ -1,4 +1,5 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 The archives are also available in List form.
 

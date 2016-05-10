@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 25
+<properties date="2016-05-10"
+SortOrder="25"
+/>
 
- 
+ 
 
 By using the Delete() method we are able to delete a Row as well. In this case it will delete an entire row from the database. Following example shows the use of the Delete() method to delete a Row property of an Entity.
 
@@ -28,16 +29,16 @@ deleted
 }
 ```
 
- 
+ 
 
 Here we use the Delete() method to delete a property of the Sale Entity which is of Row type. When the above Delete() method is executed it will delete the relevant currency row from the Currency table in the database.
 
- 
+ 
 
- 
+ 
 
-          
+          
 
- 
+ 
 
- 
+ 

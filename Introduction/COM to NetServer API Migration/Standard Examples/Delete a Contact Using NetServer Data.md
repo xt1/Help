@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 38
+<properties date="2016-05-10"
+SortOrder="38"
+/>
 
 To delete a Contact we use the Delete() method available in the Contact class as shown below.
 

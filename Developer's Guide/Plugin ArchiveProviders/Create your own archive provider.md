@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 5
+<properties date="2016-05-10"
+SortOrder="5"
+/>
 
 The individual properties of each Provider are described in the sections of one or more of the following interfaces. Each interface contains one aspect of the provider. These include IArchiveProviderDoesExtend, IArchiveProviderExtensible, IArchiveProviderHasColumns, IArchiveProviderHasEntities and IArchiveProviderHasRows, which are contained in the SuperOffice.CRM.ArchiveLists namespace.
 
@@ -9,7 +10,7 @@ IArchiveProvider is the external standard interface of Archive Providers exposed
 
 Most of the ArchiveProviders work in a similar manner and therefore any of the ArchiveProvider plugins can be used in a similar way.
 
- In the example below the written provider, which is called MyPlugin, is used instead of the SelectionAddMembersProvider given in NetServer.
+ In the example below the written provider, which is called MyPlugin, is used instead of the SelectionAddMembersProvider given in NetServer.
 
 ```
 using SuperOffice.Util;
@@ -107,13 +108,10 @@ ArchiveProviderFactory.Create(SelectionAddMembersProvider.ProviderName);
 
     Archive
     Provider Example
-
+     
+     
      
 
-     
+ 
 
-     
-
- 
-
- 
+ 

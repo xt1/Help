@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 77
+<properties date="2016-05-10"
+SortOrder="77"
+/>
 
 As we already know Entities have Entities itself as some of their properties. Since we are able to access properties of such an entity we are able to delete the Entity also by using the Delete() method which is shown in the example below.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Entities;

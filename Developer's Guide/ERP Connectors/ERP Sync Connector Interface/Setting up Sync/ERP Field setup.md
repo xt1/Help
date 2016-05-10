@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 8
+<properties date="2016-05-10"
+SortOrder="8"
+/>
 
 [ERP field setup]()
 --------------------------------
@@ -13,14 +14,14 @@ The actor types supported have to be a subset of a predefined list of types (Cus
 
 The connector will not be asked to store information about the field configuration done in SO Admin; it will only be required to supply a list of fields, and to recognise its own field keys when actors are requested or received for retrieval and saving.
 
- 
+ 
 
 <img src="../Erp%20Sync%20Connector%20Interface_files/image005.png" id="Bilde 9" width="510" height="546" />
 
 Sequence diagram detailing the process of retrieving available actor types, available fields for a given actor type and then configuring each ERP field
 
-[** **]()
+[** **]()
 
- 
+ 
 
- 
+ 

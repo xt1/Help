@@ -1,17 +1,18 @@
-Date: 2016-05-10
-SortOrder: 3
+<properties date="2016-05-10"
+SortOrder="3"
+/>
 
 What is sentry? As the name implies it acts as the watch dog that keeps an eye on all the access to data in the SuperOffice database.
 
 In SuperOffice the security is based on Roles so all the user of SuperOffice belongs to a Role. The different roles have different levels of rights to access the data in the database so Sentry is the mechanism that ensures that these levels get the proper data access. The levels of data access rights in SuperOffice are as follows.
 
--   None
--   Read
--   Create
--   Update
--   Delete
+* None
+* Read
+* Create
+* Update
+* Delete
 
- 
+ 
 
 Here None means that the user does not have any rights to the data, Read means that the user can read the data, Create means the user can create rows in a table, Update means the user can update the data and Delete means the user can delete the data. If a user has the right to Delete a data item that means that user has the right to Read, Create and Update the data and if the user has the right to Update the user will have the rights to Create and Read as well like wise the rights will be determined.
 
@@ -34,7 +35,7 @@ string saleHeading = mySale.Heading;
 }
 ```
 
- 
+ 
 
 In the above code snippet the authenticating user ‘PB’ belongs to a role that do not have rights to this sale record since it belongs to another user group and the PB user do not have any rights to other user groups sale data. In the role that he belongs to the data right on Sale is set to None on Sales of other associates  .  So now if you run this code since you are not trying to change any data NetSever will not throw an exception but it will not return you any data. It is always good parctise to avoid situations like this without disturbing the intended cause of your code. To avoid situations like this we have to check for wheather the logged user has proper access to data to do the intended operation in your code using the netserver provided methods to check data access rights. Below is the same code snippet with the proper checkings incoparted.
 
@@ -72,7 +73,7 @@ perform this operation");
 }
 ```
 
- 
+ 
 
 In the above code we properly avoid getting a blank value as the return for the heading of the sale. Here we use netserver provided mechanisams to check if the user has the rights if the user has the rights only we excute the code line which will retrive the sale heading.
 
@@ -95,9 +96,9 @@ mySale.Save();
 }
 ```
 
- 
+ 
 
-In the above example the authenticating user PB who belongs to a role that does not have access rights sales of other user groups. So here when the user tries to retrieve the in formation it will not give any errors but NetServer will not retrieve the data but when the user tries to change the heading the NetServer will throw a Sentry exception error. The exception will give you a message saying “Sentry denies access”. So to avoid a situation like this the developer is left with two options he can either catch the error in a try catch block and show the user the reason using a message box or the user can prevent the error from happening  by checking the users access right like in the previous example. In the previous example the developer did not have a  choice since NetServer did not threw a error so he is left with one option that is to check the users access rights. In the below two examples both these options are illustrated. 
+In the above example the authenticating user PB who belongs to a role that does not have access rights sales of other user groups. So here when the user tries to retrieve the in formation it will not give any errors but NetServer will not retrieve the data but when the user tries to change the heading the NetServer will throw a Sentry exception error. The exception will give you a message saying “Sentry denies access”. So to avoid a situation like this the developer is left with two options he can either catch the error in a try catch block and show the user the reason using a message box or the user can prevent the error from happening  by checking the users access right like in the previous example. In the previous example the developer did not have a  choice since NetServer did not threw a error so he is left with one option that is to check the users access rights. In the below two examples both these options are illustrated. 
 
 ```
 using SuperOffice;
@@ -125,7 +126,7 @@ to " + ex.Message);
             }
 ```
 
- 
+ 
 
 In the above example we catch the error and show the user why the operation was not successful.
 
@@ -164,19 +165,19 @@ this operation");
 }
 ```
 
- 
+ 
 
-The above example illustrates the use of checking for access right and avoiding the NetServer thrown error. In a scenario like this it is up to the developer to determine the best option but it is always a good practice to handle errors using a try catch block and it is also a very good practice always to check for the access rights. In the second example the try catch block is intentionally left out to make the point clear on access rights. 
+The above example illustrates the use of checking for access right and avoiding the NetServer thrown error. In a scenario like this it is up to the developer to determine the best option but it is always a good practice to handle errors using a try catch block and it is also a very good practice always to check for the access rights. In the second example the try catch block is intentionally left out to make the point clear on access rights. 
 
 Now that we have gone fairly deep into access rights lets focus on another dimension of sentry. In SuperOffice you can restrict access to a data item using the Visible for flag in addition to the user group’s rights to data. other than the role based security explained earlier. The visible for flag and role base security go hand in hand when the visible for flag is set it is a combination of role base access rights and access rights that was activated due to setting of the visible for flag. The visible for flag can be set at three levels.
 
- 
+ 
 
--   All
--   Group
--   Associate
+* All
+* Group
+* Associate
 
- 
+ 
 
 Here the groups means the group that a particular associate belongs to in a given company defined in the SOAdmin application. For example it can be the “Administration”, “Marketing”, “Sales”, and “Service” etc... You may have sufficient rights from the Role to see something, but if the data is flagged with a VisibleFor=Associate, then the data may only be seen by the associate that owns the data. So to explain the visible for flag and how it affects data access rights lets take an example.
 
@@ -209,7 +210,7 @@ EntityVisibleForHelper.VisibleForType.Associate;
 }
 ```
 
- 
+ 
 
 After executing the above code this particular sale belongs to user SAL0. Now what will happen if another user who belongs to the same user role (role 0) and also belongs to the same group witin the company ( Marketing Department). The user will not be able to gain access to this sale even though he has all the access to all tha data in the database. This is happening because from the role he gets Create, Read, Update and Delete (CRUD) rights for the data item but since the visible for flag is set he does not get any rights so ther is no common denominator between the two rights so he does not get any right at all on this sale.
 
@@ -222,7 +223,7 @@ saleVisibleFor.VisibleFor =
 EntityVisibleForHelper.VisibleForType.Group;
 ```
 
- 
+ 
 
 The above code lines make the sale visible for only the group members that belong to the same group as the authenticated user SAL0. In a case as above if another user who belongs to the same group in the company and belongs to a role that has access rights to data that belongs to user group members he will have access to this sale. This happens because from the Visible for flag we can explicitly say that this sale can be viewed by all the group members but that is only viewing the actual rights come from the role that a particular associate belongs to. If an associate belonging to the same group but belongs to role that does not have rights to a sale other than Read he will not be able to change any data on the sale.
 
@@ -235,8 +236,8 @@ saleVisibleFor.VisibleFor =
 EntityVisibleForHelper.VisibleForType.All;
 ```
 
- 
+ 
 
 In the above situation all the associates that are listed in the system will be able to view this sale but like in the above case the right to the data will be determined by the roles that each associate belongs to. For example if a associate belonging to a role that have right only to view the a sale that associate will not be ablee to modify any of the data in the sale.
 
- 
+ 

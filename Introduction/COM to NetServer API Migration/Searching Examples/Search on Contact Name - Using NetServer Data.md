@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 53
+<properties date="2016-05-10"
+SortOrder="53"
+/>
 
-The example below demonstates how to retrieve the same result as the COM code, only this time using NetServer data. In NetServer we again leverage a CustomSearch to retrieve a ContactRows object, filtered by name. The Distinct statement is used to filter out the duplicate rows.
+The example below demonstates how to retrieve the same result as the COM code, only this time using NetServer data. In NetServer we again leverage a CustomSearch to retrieve a ContactRows object, filtered by name. The Distinct statement is used to filter out the duplicate rows.
 
 ```
 using SuperOffice;

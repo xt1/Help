@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 5
+<properties date="2016-05-10"
+SortOrder="5"
+/>
 
- 
+ 
 
 The following example shows how to set a foreign key to a contact and how to retrieve a contact using its foreign key.
 
@@ -58,7 +59,7 @@ ContactRow.GetFromCustomSearch(searchContact);
 }
 ```
 
- 
+ 
 
 ForeignKeyHelper is designed to make it easier to manage foreign keys. The foreign key system can be broken down in to three levels: application, device and key.
 
@@ -68,10 +69,10 @@ ForeignApp can represent a sync application. ForeignApp is the starting point fo
 
 ForeignDevice represents an external device; it can be a PDA, an external database or some other device. One application may have more than one device. For ERP systems there would be only one device record. For PDAs there would be one record per PDA. These data are stored in the foreigndevice table.
 
-Foreign keys are stored in the foreignkey table. It holds a reference to the foreigndevice table.  
+Foreign keys are stored in the foreignkey table. It holds a reference to the foreigndevice table.  
 
-After setting the application device you know the ID of the foreign device which you wish to associate your keys with. A key always associates with a foreign device; hence it is important to know the foreign device ID. You can set a foreign key to a contact with the help of RowForeignKeyHelper.  All the changes are added to the database when the RowforeignKeyHelper is saved. You can retrieve its foreignkey value via the contact. For that you need to know the foreign device Id and the foreignKey. 
+After setting the application device you know the ID of the foreign device which you wish to associate your keys with. A key always associates with a foreign device; hence it is important to know the foreign device ID. You can set a foreign key to a contact with the help of RowForeignKeyHelper.  All the changes are added to the database when the RowforeignKeyHelper is saved. You can retrieve its foreignkey value via the contact. For that you need to know the foreign device Id and the foreignKey. 
 
 In the latter part of this example, we have retrieved a contact using custom search and the foreignkey is used as a restriction.
 
- 
+ 

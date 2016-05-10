@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 80
+<properties date="2016-05-10"
+SortOrder="80"
+/>
 
 This key informs to NetServer the table prefix of your SuperOffice database. Normally the SuperOffice database is owned by and exists under the CRM5 user, the table prefix will be CRM5.
 

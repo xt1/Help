@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 111
+<properties date="2016-05-10"
+SortOrder="111"
+/>
 
 In this key a Boolean value determines whether it should log detailed, information or not.
 

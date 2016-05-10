@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 55
+<properties date="2016-05-10"
+SortOrder="55"
+/>
 
 The ”dynamic” archive provider supports searches across the relationships defined in the dictionary without having to do any programming.
 
@@ -12,7 +13,7 @@ string[] archiveColumns = new string[] {
   "contact.name", "contact.department" };
 ```
 
- 
+ 
 
 Fetching the name of the contact’s business (MDO List item) is done by traversing the business\_idx field on contact:
 
@@ -22,7 +23,7 @@ string[] archiveColumns = new string[] {
 };
 ```
 
- 
+ 
 
 Fetching the contact’s associate’s person’s name:
 
@@ -33,7 +34,7 @@ string[] archiveColumns = new string[] {
   "contact.associate_id.person_id.firstname" };
 ```
 
- 
+ 
 
 The dot uses left-outer-joins by default. To force an inner-join, use a colon instead of a dot:
 
@@ -45,7 +46,7 @@ string[] archiveColumns = new string[] {
 
 This will inner-join contact and business – so contact’s without a business value will be skipped.
 
- 
+ 
 
 Right-outer joins can also be constructed:
 
@@ -54,7 +55,7 @@ string[] archiveColumns = new string[] {
   "contact.(url->contact_id).description" };
 ```
 
- 
+ 
 
 You can also use these dot-syntax fields in the restrictions:
 
@@ -69,7 +70,7 @@ ArchiveRestrictionInfo restriction =
 "begins", "A");
 ```
 
- 
+ 
 
 ------------------------------------------------------------------------
 

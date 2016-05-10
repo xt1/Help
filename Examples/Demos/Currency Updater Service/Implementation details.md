@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 8
+<properties date="2016-05-10"
+SortOrder="8"
+/>
 
 A Windows Service can call a web-service to automatically update the currency rates once a day.
 
@@ -7,7 +8,7 @@ For that the following free web service is used. “  [http://www.webservicex.ne
 
 Above web service has a base method called ConversionRate it uses 2 parameters.
 
- For example, we can use 2 currencies as parameters first one is the From currency(Base currency) next one is the To Currency
+ For example, we can use 2 currencies as parameters first one is the From currency(Base currency) next one is the To Currency
 
 ConversionRate(“USD”, “NOK”) gives value as 5.5352
 
@@ -38,7 +39,7 @@ ElapsedEventHandler(OnElapsedTime);
         }
 ```
 
- 
+ 
 
 ```
 private void OnElapsedTime(object source, ElapsedEventArgs e)
@@ -134,7 +135,7 @@ to units
  
 ```
 
- 
+ 
 
 ```
 protected override void OnStop()
@@ -143,7 +144,7 @@ protected override void OnStop()
         }
 ```
 
- 
+ 
 
 Cade segment from the App config file.
 
@@ -154,7 +155,7 @@ Cade segment from the App config file.
 </appSettings>
 ```
 
- 
+ 
 
 In the app config file of the service, under the “appSettings” tag have to give the “Username” and “Password” as shown above.
 

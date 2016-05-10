@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 104
+<properties date="2016-05-10"
+SortOrder="104"
+/>
 
 Allows you to set logging of informational messages.
 

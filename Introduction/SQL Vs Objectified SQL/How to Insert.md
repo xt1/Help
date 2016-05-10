@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 17
+<properties date="2016-05-10"
+SortOrder="17"
+/>
 
- 
+ 
 
-Inserting data is a very important transaction in database handling. SuperOffice Objectified SQL has its own classes and methods written to handle this function, so that you do not need to worry about the underlying database when inserting data in to the database. The following example shows how to insert data in to the database using SuperOffice Objectified SQL. The relevant SQL query is given below.   
+Inserting data is a very important transaction in database handling. SuperOffice Objectified SQL has its own classes and methods written to handle this function, so that you do not need to worry about the underlying database when inserting data in to the database. The following example shows how to insert data in to the database using SuperOffice Objectified SQL. The relevant SQL query is given below.   
 
 ```
 INSERT INTO CRM5.associate
@@ -17,7 +18,7 @@ CONVERT(int, GETDATE()), 2, 4,
                       CONVERT(int, GETDATE()))
 ```
 
- 
+ 
 
 ```
 using SuperOffice.Data;
@@ -69,6 +70,6 @@ S.Parameter(2));
 }
 ```
 
- 
+ 
 
-We have initially created a connection using SoConnection class.  An instance of the Insert class needs to be created and FieldValuePairs need to be added. Once the command is executed new data will be inserted in to the database.
+We have initially created a connection using SoConnection class.  An instance of the Insert class needs to be created and FieldValuePairs need to be added. Once the command is executed new data will be inserted in to the database.

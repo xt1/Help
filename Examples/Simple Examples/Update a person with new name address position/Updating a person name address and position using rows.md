@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 8
+<properties date="2016-05-10"
+SortOrder="8"
+/>
 
- 
+ 
 
 Now let’s focus how we can update the person name, position and address using rows.
 
@@ -38,8 +39,8 @@ AddressRow.GetFromIdxAtypeIdxOwnerId(SuperOffice.Data.AddressType.PersonPrivateA
 }
 ```
 
- 
+ 
 
 In the above example we have done the job using exclusively rows. We use the person row to change the name and the position of the person. Here we have assumed that we know the position id of the position row that we want so we simply give that id as the person’s position id. We changed the address of the person using an address row independent of the person row. Here we have retrieved the address row of the person using the address type and the person id so we know that this is the address that was assigned to this person. We have to save the person row and the address row separately since they are two different objects.
 
- 
+ 

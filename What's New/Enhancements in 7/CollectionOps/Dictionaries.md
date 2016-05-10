@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 45
+<properties date="2016-05-10"
+SortOrder="45"
+/>
 
 CreateDictionaryFromXXX( … ) – many overloads
 
@@ -15,6 +16,6 @@ Most are O(n) (i.e., linear speed)
 
 LINQ has a completely corresponding ToDictionary&lt;&gt; extension method; but ours was first.
 
- 
+ 
 
 See: CollectionOps

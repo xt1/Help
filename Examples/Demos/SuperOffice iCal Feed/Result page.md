@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 13
+<properties date="2016-05-10"
+SortOrder="13"
+/>
 
 The result page shows us the link that we can give to other systems for reading the calendar.
 
@@ -40,7 +41,7 @@ working. Only one link is valid at a time.";
 }
 ```
 
- 
+ 
 
 The system user bypasses the sentry security restrictions, and is therefore allowed to read and publish the user’s private appointments. This is not so important here, but is more important on the next page, the iCal Results.
 

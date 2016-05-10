@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 36
+<properties date="2016-05-10"
+SortOrder="36"
+/>
 
-To get a Contact using NetServer data, use of the static Contact.GetFromIdxContactId() method.
+To get a Contact using NetServer data, use of the static Contact.GetFromIdxContactId() method.
 
 ```
 using SuperOffice.CRM.Entities;
@@ -24,4 +25,4 @@ using (SoSession mySession = SoSession.Authenticate("sam", "sam"))
 }
 ```
 
-Any modification to the values of the retrieved Contact properties are saved again by calling the Contact Save() method. As a reminder, SetDefaults() method is not necessary in this context, only when a new contact is created.
+Any modification to the values of the retrieved Contact properties are saved again by calling the Contact Save() method. As a reminder, SetDefaults() method is not necessary in this context, only when a new contact is created.

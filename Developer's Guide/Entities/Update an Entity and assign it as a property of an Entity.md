@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 70
+<properties date="2016-05-10"
+SortOrder="70"
+/>
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Entities;
@@ -64,8 +65,8 @@ The next section of the code shows you how to update a property of the Person En
 
 Emails property of the Person Entity may consist of any amount of Emails Addresses which the person possesses. The Emails property consists of data which are of EmailRow type. Therefore an instance of EmailRow type has to be created, after which values are assigned to it which is then assigned to the Emails Property of the Person Entity.
 
- 
+ 
 
 In this scenario as well with the use of the Save() method when the Sale entity has being saved all other relevant Entities and Rows will also be saved in the respective database tables.
 
- 
+ 

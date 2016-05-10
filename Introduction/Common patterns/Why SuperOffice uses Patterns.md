@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 7
+<properties date="2016-05-10"
+SortOrder="7"
+/>
 
 Patterns can speed up the development process by providing tested, proven development paradigms. Reusing these patterns helps to prevent subtle issues that can cause major problems and improves code readability for coders and architects familiar with the patterns. In addition, patterns allow developers to communicate using well-known, well-understood names for software interactions.
 

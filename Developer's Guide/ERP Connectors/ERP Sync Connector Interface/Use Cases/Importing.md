@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 4
+<properties date="2016-05-10"
+SortOrder="4"
+/>
 
 Importing from ERP
 ------------------
@@ -73,8 +74,8 @@ Timestamps
 ----------
 
 The actors returned by the search are identified by two values:
--   **ErpKey** - is the id of the actor in the ERP system. This is a string, not an int or a GUID. The id should be stable over time. i.e. Editing the name of the company in the ERP system should not change the ErpKey.
--   **LastModified** - is the timestamp. This value is recorded when an ERP Actor is linked to a SuperOffice entity. The timestamp value is sent back to the connector when synchronizing, so that the connector can figure out what was changed last. The timestampt is not parsed or understood by SuperOffice -- it is for the ERP Sync connector to understand.
+* **ErpKey** - is the id of the actor in the ERP system. This is a string, not an int or a GUID. The id should be stable over time. i.e. Editing the name of the company in the ERP system should not change the ErpKey.
+* **LastModified** - is the timestamp. This value is recorded when an ERP Actor is linked to a SuperOffice entity. The timestamp value is sent back to the connector when synchronizing, so that the connector can figure out what was changed last. The timestampt is not parsed or understood by SuperOffice -- it is for the ERP Sync connector to understand.
 
 Importing
 ---------

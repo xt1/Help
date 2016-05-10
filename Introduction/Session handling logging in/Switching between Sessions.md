@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 9
+<properties date="2016-05-10"
+SortOrder="9"
+/>
 
 Sometimes it is necessary to suspend one session and switch in to another. Following example shows how this is done.
 
@@ -64,4 +65,4 @@ session is suspended and the former session is continued to show
 how you may switch between sessions.
 ```
 
- 
+ 

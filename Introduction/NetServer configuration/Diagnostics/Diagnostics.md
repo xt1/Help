@@ -1,11 +1,12 @@
-Date: 2016-05-10
-SortOrder: 101
+<properties date="2016-05-10"
+SortOrder="101"
+/>
 
- 
+ 
 
 The Diagnostics section contains eleven different sections that facilitate users to define settings related to logging.
 
- 
+ 
 
 ```
 <Diagnostics>

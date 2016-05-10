@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 51
+<properties date="2016-05-10"
+SortOrder="51"
+/>
 
 The following example shows how we can retrieve Contacts based on a SAINT search with NetServer.
 

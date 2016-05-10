@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 3
+<properties date="2016-05-10"
+SortOrder="3"
+/>
 
 The following document tells us how we can make use of the NetServer 3.0 and search for an interest and then set the interest to true of false.
 
@@ -38,7 +39,7 @@ newContact.InterestHelper.SetItemSelection(newIntrstItm.Id, true);
 }
 ```
 
- 
+ 
 
 Find() method available through the Contact class’s InterestHelper.RootItems can be used to make our search.
 
@@ -52,7 +53,7 @@ StringComparison.InvariantCultureIgnoreCase);
             }
 ```
 
- 
+ 
 
 The method returns an ISoListItem and requires a delegate that defines the element for which should searched for to be passed into the method. The method then returns any interest that matches our search interest by using the Equals() method.
 

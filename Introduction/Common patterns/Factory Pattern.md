@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 9
+<properties date="2016-05-10"
+SortOrder="9"
+/>
 
 Factory is the location in the code at which objects are constructed. The intent of employing this pattern is to isolate the creation of objects from their usage. This allows the new derived types to be introduced into the code with no change to the code that uses the base objects. Use of these patterns makes it possible to interchange the classes without changing the code that uses them even at runtime. However, employment of this pattern incurs the risk of unnecessary complexity and extra work in the initial writing of code.
 
@@ -20,7 +21,7 @@ SIX\bin\Debug\ MyFactory.dll" />
 </Factory>
 ```
 
- 
+ 
 
 Below is an example of the use of the get ConnectionFactory.
 
@@ -61,7 +62,7 @@ SuperOffice.SoSession.Authenticate("SAM", "sam"))
 }
 ```
 
- 
+ 
 
 In order for us to use the ConnectionFactory the SuperOffice.Data, namespace has being called. After a DataSet of the Contact Table have been created using OSQL statements. This will be explained in later stages of the document.
 
@@ -70,6 +71,6 @@ In order to use the connection we create an instance of the SoConnection using t
 
 The “newConn” variable may contain a SoConnection object, or it may contain a sub-class of SoConnection. The factory controls what sort of object is returned. The factory is configured using the app.config file.
 
- 
+ 
 
- 
+ 

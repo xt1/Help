@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 82
+<properties date="2016-05-10"
+SortOrder="82"
+/>
 
-If your application uses  a Sybase database or a  IBM DB2 database, this setting must be in your configuration file. This key sets the type of connection that should be loaded. The example displays the configurations for IBM DB2 & Sybase databases.
+If your application uses  a Sybase database or a  IBM DB2 database, this setting must be in your configuration file. This key sets the type of connection that should be loaded. The example displays the configurations for IBM DB2 & Sybase databases.
 
 ```
 IBM DB2

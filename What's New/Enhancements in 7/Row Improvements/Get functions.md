@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 39
+<properties date="2016-05-10"
+SortOrder="39"
+/>
 
 For each unique index, we generate a .GetFromIdx( … ) method on the Row
 

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 5
+<properties date="2016-05-10"
+SortOrder="5"
+/>
 
 Plugins are created using a Factory class. When creating a Document Plugin we make use of the DocumentPluginBase class, which is located in the SuperOffice.CRM.Documents namespace.
 
@@ -9,6 +10,6 @@ These plugins are simpler than the windows client’s document plugins, since th
 
 This document plugin is a low-level API aimed at getting documents in and out of a document store.
 
- 
+ 
 
 1. autolist

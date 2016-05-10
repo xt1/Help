@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 102
+<properties date="2016-05-10"
+SortOrder="102"
+/>
 
 In this key, a Boolean value determines whether to log all error messages or not.
 

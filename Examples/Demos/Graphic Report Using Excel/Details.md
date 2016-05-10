@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 3
+<properties date="2016-05-10"
+SortOrder="3"
+/>
 
 We have made use of Providers which are Available through the SuperOffice.CRM.ArchiveLists namespace in order to retrieve the data.
 
@@ -38,7 +39,7 @@ SuperOffice.Util.OrderBySortType.DESC);
 newSalePro.SetOrderBy(archiveSrtOrd);               
 ```
 
- 
+ 
 
 What we have done above is created a SaleProvider and assign values to the provider using certain methods available through it. Once this is done next step is to retrieve the data and get the data converted to a way acceptable by .Net which can be used to generated the excel report. This is necessary since the data returned by the provider consists of data that is not of the basic data types. The following code segment is used for this purpose.
 
@@ -63,7 +64,7 @@ frArrLst.Clear();
 }
 ```
 
- 
+ 
 
 What we have done is first to create an instance of our explicit conversion class called CoreWebList. Container class for Sales data which is called “SaleData” is passed in.
 
@@ -98,7 +99,7 @@ DataTableConverter<T>(_enforceKeys);
 }
 ```
 
- 
+ 
 
 The SaleData Container is as follows.
 
@@ -145,7 +146,7 @@ public string SalEarnPer
 }
 ```
 
- 
+ 
 
 The above code makes use of our custom attribute class which acquires the meta data about the properties of our container class that is built at runtime.
 
@@ -368,7 +369,7 @@ propType, bool DbNull, bool Key)
 }
 ```
 
- 
+ 
 
 The final steps of the code would be to get the result into an excel sheet that can be used to generate graphs and charts. For this we use the XmlTextWriterClass.
 

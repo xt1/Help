@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 15
+<properties date="2016-05-10"
+SortOrder="15"
+/>
 
 OSQL, which stands for Objectified SQL, is the SuperOffice Database Interface or the SODBIF. This is similar to SQL syntax with the difference being in the keywords.
 
@@ -53,7 +54,7 @@ Parameter(0));                                                               new
 }
 ```
 
- 
+ 
 
 After importing the required namespaces, you need to create a dataset of the required tables. In this, case the Contact Table.
 
@@ -61,7 +62,7 @@ After importing the required namespaces, you need to create a dataset of the req
       ContactTableInfo newConTab = TablesInfo.GetContactTableInfo();
 ```
 
- 
+ 
 
 Next step is to create an instance of the Insert class that is used to update the Contact table.
 
@@ -69,7 +70,7 @@ Next step is to create an instance of the Insert class that is used to update th
       Insert newInsert = S.NewInsert();
 ```
 
- 
+ 
 
 After the Insert instance has been created the required field should be added with the Add() method of the FieldValuePairs property exposed in the Insert class. The column name and the value should be passed into the Add() method as shown below.
 
@@ -77,7 +78,7 @@ After the Insert instance has been created the required field should be added wi
       newInsert.FieldValuePairs.Add(newConTab.ContactId,               S.Parameter(Sequence.GetNext(newConTab)));                       newInsert.FieldValuePairs.Add(newConTab.Name, S.Parameter("EuroCenter"));
 ```
 
- 
+ 
 
 Once all required fields have being added we create an SoConnection instance with the use of the ConnectionFactory, GetConnection() method.
 
@@ -85,7 +86,7 @@ Once all required fields have being added we create an SoConnection instance wit
       SoConnection myConn = ConnectionFactory.GetConnection();
 ```
 
- 
+ 
 
 Next we create SoCommand and SoTransaction instances as show below and assign the instantiated transaction to the Transaction property of the instantiated SoCommand.
 
@@ -97,7 +98,7 @@ Next we create SoCommand and SoTransaction instances as show below and assign th
       myComm.Transaction = newTrans;
 ```
 
- 
+ 
 
 In order to execute the created insert statement we need to assign it to the SqlCommand property of the created SoCommand instance and then Execute the ExecuteNonQuery() method of it.
 
@@ -106,7 +107,7 @@ In order to execute the created insert statement we need to assign it to the Sql
       myComm.ExecuteNonQuery();
 ```
 
- 
+ 
 
 Once the command has being execute with use of the following statements the transaction will be committed and the connection made to the database will be closed.
 

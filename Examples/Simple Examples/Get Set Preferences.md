@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 3
+<properties date="2016-05-10"
+SortOrder="3"
+/>
 
 Preferences keep track of an Associate’s likes and dislike such as calendar size, calendar starting date, default appointment text etc. In NetServer, these preferences are kept track of using the SoPreference class located in the SuperOffice.Data name space. Note that all preferences are stored in the UserPreference table. This section shows how to Get and Set Preferences using the Netserver.
 
@@ -15,7 +16,7 @@ using(SoSession mySession = SoSession.Authenticate("sam", "sam"))
 }
 ```
 
- 
+ 
 
 When the above code is executed wherever in the application a colander is displayed, its starting date will be Sunday as shown below.
 
@@ -28,7 +29,7 @@ When considering the code above the part that is related to the above change is 
 true);
 ```
 
- 
+ 
 
 Here we have made use of the SetPreference() method provided in the SoPreference class. The method provides four overloads depending on the input value, which could be either a string, int, DateTime, or bool value. The first two parameters preference section and the corresponding preference key is always set and they are both of string types. When setting preferences we may need to know what sections are already found in the database. To get the available sections we may use the GetSections() method exposed in the SoPreference class. The method will return an array of all sections defined for the current associate from the cache if possible or from the database. However, it is possible to add your own preference sections to the application.
 
@@ -36,7 +37,7 @@ Here we have made use of the SetPreference() method provided in the SoPreference
             string[] test2 = SoPreference.GetSections();
 ```
 
- 
+ 
 
 Once we have figured out which section to use the next is to get specific key, which relates to the part that we are planning to change. For this we use the GetKeys() method. The method gets all available keys within a section from the cache or from the database.
 
@@ -44,7 +45,7 @@ Once we have figured out which section to use the next is to get specific key, w
             string[] test = SoPreference.GetKeys("Visual");
 ```
 
- 
+ 
 
 Through the above code segment, we get the available keys, which are within the section called “Visual”.
 
@@ -61,7 +62,7 @@ false);
 }
 ```
 
- 
+ 
 
 The example above retrieves whether the calendar for the signed in user begins with Sunday or Monday. In this case since
 

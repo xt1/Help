@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 6
+<properties date="2016-05-10"
+SortOrder="6"
+/>
 
 [Price Calculations and Field Changes]()
 ------------------------------------------------------------------
@@ -12,7 +13,7 @@ Some installations will be able to compute a price by various means (customer fr
 
 The ERP Connector is responsible for performing the calculations when the user changes values in the quote, like quantity in a quoteline, or Earning on the quote alternative.
 
- 
+ 
 
 <table>
 <colgroup>
@@ -45,12 +46,12 @@ This method is called whenever the quote lines are changed, or when the user cli
 <p>Sale, Associate and Contact are still read-only.</p>
 <p><br />
 A draft quote version will have state = DraftNotCalculated when called. The connector should set the version state to DraftCalculated if the calculations were successful. Leave the state as DraftNotCalculated if the ERP system was not available or some other factor that made the calculation <a href="" id="OLE_LINK38"></a> <a href="" id="OLE_LINK30">unsuccessful</a>.</p>
-<p> </p>
+<p> </p>
 <p>The system will try to hint about why it is asking with the action parameter, it will tell you if the user has pressed send quote or place order.</p>
-<p> </p>
+<p> </p>
 <p>The connector can trigger the approval workflow by setting the state to DraftNeedsApproval. When a user with the approval permission has approved or rejected the quote, the quote version state will be DraftApproved or DraftApprovalRejected.</p>
-<p>Note that recalculate may also be called when the quote is Approved, or Archived.  In these cases, please leave the quote version state alone.</p>
-<p> </p>
+<p>Note that recalculate may also be called when the quote is Approved, or Archived.  In these cases, please leave the quote version state alone.</p>
+<p> </p>
 <p>The connector may signal problems with the quote by setting the Quote Version, Quote Alternative or a quote line’s Status to Error, Warning or OkWithInfo, and fill in the Reason field with an explanation.</p></td>
 </tr>
 <tr class="even">
@@ -60,20 +61,20 @@ A draft quote version will have state = DraftNotCalculated when called. The conn
 <p>This method is called whenever the user clicks the the UPDATE PRICES button in the Quote dialog.</p>
 <p>Quote Lines, Alternatives, Version and Quote fields can be changed in the return value.</p>
 <p>Sale, Associate and Contact are still read-only.</p>
-<p> </p>
+<p> </p>
 <p>The connector should look up the product in the pricelist and update each pricelist with new prices and other relevant details.</p>
-<p> </p>
+<p> </p>
 <p>The connector may signal problems with the quote by setting the Quote Version, Quote Alternative or a quote line’s Status to Error, Warning or OkWithInfo, and fill in the Reason field with an explanation.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
 <img src="Quote%20Connector%20interface_files/image017.jpg" id="Picture 7184" width="605" height="496" />
 
 A default implementation of price calculations are found in the plugin’s  QuoteCalculation class.
 
- 
+ 

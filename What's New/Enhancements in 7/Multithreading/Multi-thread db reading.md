@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 52
+<properties date="2016-05-10"
+SortOrder="52"
+/>
 
 <img src="EW%202010%20NetServer%20Enhancements_files/image017.jpg" id="Picture 16" width="413" height="249" />
 

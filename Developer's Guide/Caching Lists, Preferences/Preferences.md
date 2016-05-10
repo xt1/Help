@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 11
+<properties date="2016-05-10"
+SortOrder="11"
+/>
 
 The PreferenceCache stores information about what the user prefers. The aim of this is to make the application more user friendly. For example by adding default values for a document, appointment and so on. Another aspect of this is that it may define how your application looks. For example, whether the calendar starts on Sunday or Monday.
 
@@ -20,7 +21,7 @@ using(SoSession mySession = SoSession.Authenticate("sam", "sam"))
 }
 ```
 
- 
+ 
 
 Once the code is executed the results can be see through the Application.
 
@@ -32,15 +33,15 @@ The relevant section from the code that made the above change is,
       SoPreference.SetPreference("Visual", "SundayFirstDay", true);
 ```
 
- 
+ 
 
 The parameters that has being passed to it includes name of the preference section, the key and the new value used.
 
 See Also:
 
 [Get/Set Preferences](../../Examples/Simple%20Examples/Get%20Set%20Preferences.htm)
- 
+ 
 
- 
+ 
 
- 
+ 

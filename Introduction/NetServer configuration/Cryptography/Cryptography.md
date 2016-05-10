@@ -1,15 +1,16 @@
-Date: 2016-05-10
-SortOrder: 70
+<properties date="2016-05-10"
+SortOrder="70"
+/>
 
- 
+ 
 
 Cryptography is used for encrypting and decrypting the user sessions. This section consists of three Key Value pairs:
 
--   SymmetricKey         - Base64 encoded key-string
--   SymmetricIV          - Base64 encoded vector-string
--   SymmetricSecret     - String value representing the user-defined secret
+* SymmetricKey         - Base64 encoded key-string
+* SymmetricIV          - Base64 encoded vector-string
+* SymmetricSecret     - String value representing the user-defined secret
 
- 
+ 
 
 The SymmetricKey and the SymmetricIV is used in the Rijndeal (System.Security.Cryptography.Rijndael) based encrypting and decrypting methods. The SymmetricSecret is used to compute a hash code using the SHA256Managed classes (System.Security.Cryptography.SHA256Managed). The key value pairs in the section are used in the NetServer session suspend and session continue mechanisms.
 
@@ -19,15 +20,15 @@ In the session continue method, the SymmetricKey and the SymmetricIV will be use
 
 The SymmetricKey and the SymmetricIV are generated values while the SymmetricSecret is a user defined secret
 
- 
+ 
 
 An Important point to remember!
 
-It is important to know that if your system is using a server cluster these values should be identical in all cluster machines. 
+It is important to know that if your system is using a server cluster these values should be identical in all cluster machines. 
 
 1. autolist
 
- 
+ 
 
 ```
 <Cryptography>
@@ -39,4 +40,4 @@ value="mbiNaaa+3wWcbzGWCnvCvRBoLg8NADQiXaaChJ38W1w=" />
 </Cryptography>
 ```
 
- 
+ 

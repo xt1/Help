@@ -1,11 +1,12 @@
-Date: 2016-05-10
-SortOrder: 51
+<properties date="2016-05-10"
+SortOrder="51"
+/>
 
 When retrieving an Entity, either by using the GetFromIdx function or the CustomSearch, it retrieves the data from the database and temporality stores them in the instance. This instance can be used to manipulate the data which will not affect the data in the database unless it is intentionally saved using the Save() method.
 
 The following example explains the use of the “Idx……” function to retrieve an Entity.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Entities;
@@ -19,11 +20,11 @@ using(SoSession mySession = SoSession.Authenticate("SAL0", ""))
 }
 ```
 
- 
+ 
 
 As stated earlier this layer exposes us to Entity collections as well. In order to retrieve such a Collection as well we may use the “Idx….” function.
 
- 
+ 
 
 ```
 using SuperOffice;
@@ -52,7 +53,7 @@ Here we use the GetFromIdxFirstname function in order to retrieve a Collection o
 
 Another method of retrieving Entities or Entity Collections is with use of CustomSearch class. However in order to use the CustomSearch class we need to use the following namespaces i.e. SuperOffice.CRM.Rows, SuperOffice.CRM.Data and SuperOffice.Data in addition to the SuperOffice.CRM.Entities namespace.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Entities;

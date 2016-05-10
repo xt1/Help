@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 44
+<properties date="2016-05-10"
+SortOrder="44"
+/>
 
 Each plugin can have a post-validator
 
@@ -7,7 +8,7 @@ Post-validators are called after a plugin resolves an identity
 
 Post-validators can block login if specific conditions are not met
 
-*        This can be used to block based on any available knowledge.
+* This can be used to block based on any available knowledge.
 
 The full potential of this system is not yet leveraged
 

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 4
+<properties date="2016-05-10"
+SortOrder="4"
+/>
 
 RDB layer consists of collections types, which could be either EntityCollection types or Rows type that is a collection of Row types.
 
@@ -7,7 +8,7 @@ An important point to remember!
 
 With execution of statements such,
 
-         CountryRows newCouRow = CountryRows.GetFromIdxEnglishName();      PersonCollection newPerColl = PersonCollection.CreateNew();
+         CountryRows newCouRow = CountryRows.GetFromIdxEnglishName();      PersonCollection newPerColl = PersonCollection.CreateNew();
 
 Instantiates the collection class but nothing else. The purpose of methods such as these is to make it easy to use efficient queries that match the database indexes. Though the NetServer introduces Collection properties and Collection classes, the Collection classes only contains data groups based on a particular criteria. Data cannot be added through them as in the database there are no such data as Collection types.
 
@@ -90,7 +91,7 @@ newContact.Persons[0].Sales)
 }
 ```
 
- 
+ 
 
 In the Contact Entity the property, Person is of PersonCollection type. Therefore, when we access the above property as in the above code a new Select is created behind the scene.
 
@@ -104,7 +105,7 @@ if(newContact.Persons.Count != 0)
 }
 ```
 
- 
+ 
 
 In the case of the above the use of the property is not so bad however if the property was used within the loop it would greatly reduce the efficiency of the code. This is due to that when access a Collection we make use of a nested loop behind the scene. Though this can be easy to program this can be a slow way to use the database. The better practice would be to make use of the PersonCollection as shown below.
 
@@ -162,7 +163,7 @@ Collection
 }
 ```
 
- 
+ 
 
 What we have done above is created a Person Collection with all person whose Contact ID is 2. This would result in the execution of one “Select” statement as the Select is used only to retrieve information on the Person Collection. Once this is done, the properties of the Collection are retrieved without any further Selects because none of them is properties of Entity or Entity Collection types.
 
@@ -189,7 +190,7 @@ getPerson.Lastname;
 }
 ```
 
- 
+ 
 
 The above is a poor practice since we are using the Entity Collection to get data that can be retrieved with the use of a Row collection. In the case of the example, we could use a PersonRow instead of the used PersonCollection. Its should be said that when an Entity or Entity Collection is been used a big join is executed behind the scene, a since we are not using most of the data exposed by the Entity the database ends up wasting a lot of work.
 
@@ -216,7 +217,7 @@ getPerson.Lastname;
 }
 ```
 
- 
+ 
 
 Following is another bad practice when using Entities. Since Entities should be added by themselves. When this happens the relevant Entities will be updated which will change its last updated time and trigger the relevant replication of the Entity.
 
@@ -256,7 +257,7 @@ modified";
 }
 ```
 
- 
+ 
 
 In the above example the statements,
 
@@ -265,7 +266,7 @@ In the above example the statements,
       newContact.Persons.Add(newPerson2);
 ```
 
- 
+ 
 
 Is a bad practice since as earlier stated Entities should be added by themselves. This will cause the Contact to be updated, which will change its last updated time, and trigger replication of the Contact, which is not necessary when adding Persons to a Contact.
 
@@ -287,7 +288,7 @@ Contact.GetFromIdxContactId(25);
       }
 ```
 
- 
+ 
 
 If wish to delete a particular Row of the collection the following piece of code may be used.
 
@@ -295,7 +296,7 @@ If wish to delete a particular Row of the collection the following piece of code
       newContact.Emails[0].Delete();
 ```
 
- 
+ 
 
 An important point to remember!
 

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 103
+<properties date="2016-05-10"
+SortOrder="103"
+/>
 
 This key determines whether to log all warning messages or not.
 

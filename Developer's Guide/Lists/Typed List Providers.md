@@ -1,11 +1,12 @@
-Date: 2016-05-10
-SortOrder: 85
+<properties date="2016-05-10"
+SortOrder="85"
+/>
 
- 
+ 
 
 TypedListProviders are the specific List Providers that can be directly created using the SoLists class. You can create various types of ListProviders using the SoList class. The behavior of TypedListProviders does vary, this is the main reason why there are specific methods to create each TypedListProvider. Each TypedListProvider has three different types of items. They are HeadingItems, HistoryItems and RootItems. For Typed List Providers the way each item is defined can differ, and therefore the Typed List Providers are specialized for their functionality. The following example shows how to create a Typed List Provider.
 
- 
+ 
 
 ```
 using SuperOffice;
@@ -55,19 +56,19 @@ item.Heading.Name;
  
 ```
 
-Here we create an Associate List Provider by using the GetAssociateList() method of the SoList class.  Each item in a List has a set of properties, and we have retrieved only two of these properties which are Name and Id.
+Here we create an Associate List Provider by using the GetAssociateList() method of the SoList class.  Each item in a List has a set of properties, and we have retrieved only two of these properties which are Name and Id.
 
 The history items are defined in the History table with the table Id field referring to the table Id of the Associate table. When a particular list has its MDO mode turned on then if any item is selected from that list, a record will be added to the History table. Hence every list doesn’t have history items. If its MDO mode is turned off by the Admin client then the history items of that list will be empty.
 
 The Root items are defined by the records in the corresponding table only if the MDO mode is set to false. If the MDO mode is set to true then Root Items contain just items that have not been assigned to a heading. This is why the root items may be empty.
 
-Generally all the Heading Items are taken directly from the heading table. If a particular list doesn't have a record in the Heading table, then it will not have any Heading Item. A heading with no items in it will be hidden. A heading must have items in order to be included. But the behavior of the TypeList Providers does differ from one another, and therefore the history, heading and root items may be different. For example, heading items of the associates are defined in the UserGroup table. Hence in the above example the heading items are taken from the UserGroup table. 
+Generally all the Heading Items are taken directly from the heading table. If a particular list doesn't have a record in the Heading table, then it will not have any Heading Item. A heading with no items in it will be hidden. A heading must have items in order to be included. But the behavior of the TypeList Providers does differ from one another, and therefore the history, heading and root items may be different. For example, heading items of the associates are defined in the UserGroup table. Hence in the above example the heading items are taken from the UserGroup table. 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 An Important point to remember!
 

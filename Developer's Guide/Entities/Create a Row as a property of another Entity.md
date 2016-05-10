@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 56
+<properties date="2016-05-10"
+SortOrder="56"
+/>
 
 An Entity can have properties that are of the type Row. A Row object contains properties of basic data types. This section will focus on how to create a Row object and assign it to a property of an Entity.
 
- 
+ 
 
 ```
 using SuperOffice;
@@ -43,4 +44,4 @@ Here we have created an instance of a CurrencyRow type using the CreateNew() met
 
 In the second half of the code a new Reason is created and assigned to the Reason property of the Sale Entity instance. The properties of the Reason property has being modified through the Sale Entity.
 
-With the execution of the Save() method the Sale Entity instance will be saved along with  a new row being added to the Currency table with its name, rank, units fields having the values Riyal, 5 and 52.25 respectively and rest of the columns will be of default values.  Similarly a new row will be added to the Reason Table
+With the execution of the Save() method the Sale Entity instance will be saved along with  a new row being added to the Currency table with its name, rank, units fields having the values Riyal, 5 and 52.25 respectively and rest of the columns will be of default values.  Similarly a new row will be added to the Reason Table

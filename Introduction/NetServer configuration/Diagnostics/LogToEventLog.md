@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 107
+<properties date="2016-05-10"
+SortOrder="107"
+/>
 
 Setting the value of this Key to true will enable logging of messages to the Event Log.
 

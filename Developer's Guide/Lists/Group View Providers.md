@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 87
+<properties date="2016-05-10"
+SortOrder="87"
+/>
 
 GroupView Providers are another type of List providers. In the diary of the CRM client we have four tabs which are Day, Week, Month and View. The Group View list defines the user groups and the user own custom definitions of users as a list so that we can display it as a dropdown. The following example demonstrates how a Group View List provider is created.
 
- 
+ 
 
 ```
 using SuperOffice;
@@ -51,6 +52,6 @@ view
 }
 ```
 
- 
+ 
 
-Here we have first created a Group View list. This list contains three sets of data: usergroups, resource headings, custom diaryview definitions for the user. Through this list provider all we can get is the id of the usergroup, the id of the resource heading or the id of a custom view. By passing these ids to different list providers we can obtain different lists. The user group table, diaryview table and diaryviewrow table are used to obtain data for the Group View List. 
+Here we have first created a Group View list. This list contains three sets of data: usergroups, resource headings, custom diaryview definitions for the user. Through this list provider all we can get is the id of the usergroup, the id of the resource heading or the id of a custom view. By passing these ids to different list providers we can obtain different lists. The user group table, diaryview table and diaryviewrow table are used to obtain data for the Group View List. 

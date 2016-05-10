@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 12
+<properties date="2016-05-10"
+SortOrder="12"
+/>
 
 Rows are simple, straightforward persistence objects. Each table in the database has a corresponding Row object and Rows collection.
 
@@ -30,6 +31,6 @@ AddressRow.GetFromIdxAtypeIdxOwnerId(
 }
 ```
 
- 
+ 
 
 Note that the address row will have the owner\_id field set to 1234, and the atypeidx field set to 1 (postal address for contact).

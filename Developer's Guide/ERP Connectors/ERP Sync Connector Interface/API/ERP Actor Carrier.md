@@ -1,12 +1,13 @@
-Date: 2016-05-10
-SortOrder: 7
+<properties date="2016-05-10"
+SortOrder="7"
+/>
 
 [ErpActor]()
 -------------------------
 
 The ErpActor class describes the primary carrier that is passed to and from a Sync Connection. It is a representation of an ERP actor (see “Glossary and abbreviations”) containing a key set of properties for identification and mandatory fields, along with a key/value list of fields and their values.
 
- 
+ 
 
 Members:
 
@@ -22,14 +23,14 @@ Members:
 <pre class="c40"><code> </code></pre></td>
 <td><p>The actor’s type (subset of a known list; see “Glossary and abbreviations”).</p>
 <p>Although passed as a string, it is a textual representation of the internal enumerator ErpActorType.</p>
-<p> </p></td>
+<p> </p></td>
 </tr>
 <tr class="even">
 <td><pre class="c40"><code>string
  ErpKey</code></pre>
 <pre class="c40"><code> </code></pre></td>
 <td><p>The local identifier (primary key) for the actor in the given connection. This is proprietary and will only need to be readable by the connector itself. Erp Sync will store the value locally for mapping purposes, but will not need to parse it or understand it.</p>
-<p> </p></td>
+<p> </p></td>
 </tr>
 <tr class="odd">
 <td><pre class="c40"><code>string
@@ -37,11 +38,11 @@ Members:
 <pre class="c40"><code> </code></pre></td>
 <td><p>Describes when the actor was last changed/modified. 100% mandatory; used for timestamp comparison and sync loop retrieval.</p>
 <p>This can be “any” timestamp, but there are two basic requirements:</p>
-<p>1.        It needs to be incremental, i.e. when comparing two LastModified values on the same actor from the same connection, it must be possible to determine which one is older without knowing the specific format and build-up of the value itself.</p>
-<p>2.        It needs to be “global”, which means that if Erp Sync compares the timestamps of two different actors, it must be able to determine which one is newer. For this reason, a “version number” specific to each actor will not be sufficient.</p>
-<p> </p>
+<p>1.        It needs to be incremental, i.e. when comparing two LastModified values on the same actor from the same connection, it must be possible to determine which one is older without knowing the specific format and build-up of the value itself.</p>
+<p>2.        It needs to be “global”, which means that if Erp Sync compares the timestamps of two different actors, it must be able to determine which one is newer. For this reason, a “version number” specific to each actor will not be sufficient.</p>
+<p> </p>
 <p>Good type options are numeric or Datetime values.</p>
-<p> </p></td>
+<p> </p></td>
 </tr>
 <tr class="even">
 <td><pre class="c40"><code>string
@@ -49,14 +50,14 @@ Members:
 <pre class="c40"><code> </code></pre></td>
 <td><p>If the actor has a parent, the parent’s actor type is specified here</p>
 <p>E.g. if the actor is a contact person it will probably have a parent actor that might be a customer or vendor</p>
-<p> </p></td>
+<p> </p></td>
 </tr>
 <tr class="odd">
 <td><pre class="c40"><code>string
  ParentErpKey</code></pre>
 <pre class="c40"><code> </code></pre></td>
-<td><p>The local identifier (primary key) for the parent  actor in the given connection</p>
-<p> </p></td>
+<td><p>The local identifier (primary key) for the parent  actor in the given connection</p>
+<p> </p></td>
 </tr>
 <tr class="even">
 <td><pre class="c40"><code>Dictionary
@@ -67,14 +68,14 @@ string
 &gt; FieldValues</code></pre>
 <pre class="c40"><code> </code></pre></td>
 <td><p>Key/value pairs of field keys and field values. Field keys are supplied as specified by the given connection in the method GetAvailableActorFields. See also Field value formats and conventions.</p>
-<p> </p></td>
+<p> </p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
 ### [ErpActorType]()
 
@@ -82,7 +83,7 @@ For the connection, the ErpActorType value in combination with the ErpKey value 
 
 ErpActorType is an enumerator in SuperOffice.Plugins, but for communication purposes to and from the connector it is sent as a string (“Customer”, “Supplier”, etc.) to minimise future compatibility problems if the enumerator changes over time.
 
- 
+ 
 
 Members:
 
@@ -130,7 +131,7 @@ Members:
 
 \* Not currently supported in Erp Sync, but the connector may choose to offer these types for future compatibility.
 
- 
+ 
 
 ### [Field value formats and conventions]()
 
@@ -140,7 +141,7 @@ The CultureDataFormatter will encode any supported field type inside brackets an
 
 Note: Strings do not need to be encoded; they can be sent “as is”.
 
- 
+ 
 
 <table>
 <colgroup>
@@ -150,9 +151,9 @@ Note: Strings do not need to be encoded; they can be sent “as is”.
 <tbody>
 <tr class="odd">
 <td><p><strong>Type</strong></p>
-<p><strong> </strong></p></td>
+<p><strong> </strong></p></td>
 <td><p><strong>Parsing/format information</strong></p>
-<p><strong> </strong></p></td>
+<p><strong> </strong></p></td>
 </tr>
 <tr class="even">
 <td><pre lang="cs"><code>Date/Datetime
@@ -179,7 +180,7 @@ Note: Strings do not need to be encoded; they can be sent “as is”.
 </tbody>
 </table>
 
- 
+ 
 
 
 

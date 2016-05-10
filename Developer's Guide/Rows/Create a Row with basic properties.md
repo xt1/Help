@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 16
+<properties date="2016-05-10"
+SortOrder="16"
+/>
 
 To create a basic Row you have to use the CreateNew method of the Row class that you are going to create. After you have created the Row you will want to populate its properties with data. The following example shows how to create a Row and to populate some very basic properties.
 
@@ -32,7 +33,7 @@ using(SoSession newSession = SoSession.Authenticate("SAL0", ""))
 
 The example shows how to create a ContactRow and populate its properties with data. When assigning a value to the CountryId property of the ContactRow we have first retrieved a CountryRow by using the IdxName method. Retrieving data will be explained in more detail later. The countryId is retrieved through the countryRow and assigned to the CountryId property of the ContatctRow. You can even assign an integer value to the countryId property directly.
 
- 
+ 
 
 An Important Point to Remember!
 

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 12
+<properties date="2016-05-10"
+SortOrder="12"
+/>
 
 In order to delete data using OSQL we would need to use the Delete Class. The example below shows how we may make use of the Delete command in OSQL.  [OSQL Data](../OSQL%20Data/OSQL%20Data.htm) 
 

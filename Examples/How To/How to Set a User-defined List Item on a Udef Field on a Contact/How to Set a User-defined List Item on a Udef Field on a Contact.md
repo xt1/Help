@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 5
+<properties date="2016-05-10"
+SortOrder="5"
+/>
 
- 
+ 
 
 The intention of this section is to demonstrate how to set a user-defined list item value on a user-defined field on a given contact.
 

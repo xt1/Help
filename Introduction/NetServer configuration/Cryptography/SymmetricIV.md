@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 72
+<properties date="2016-05-10"
+SortOrder="72"
+/>
 
- 
+ 
 
 This value represents the initialization vector part of the Rijndeal symmetric encryption (System.Security.Cryptography.Rijndael) algorithm. This is also a Base64 encoded string and for this also the above example can be used to generate the value.
 
@@ -9,7 +10,7 @@ This value represents the initialization vector part of the Rijndeal symmetric e
 <add key="SymmetricIV" value="aBL3Kh0mXHzn+NvXkSS/Lg==" />
 ```
 
- 
+ 
 
 An Important point to remember!
 

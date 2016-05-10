@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 14
+<properties date="2016-05-10"
+SortOrder="14"
+/>
 
 The iCal page does the same login check as the Result page, but it actually reads the user’s appointments and outputs the iCal.
 
@@ -22,7 +23,7 @@ AppointmentCollection appoints =
 AppointmentCollection.GetFromCustomSearch(q);
 ```
 
- 
+ 
 
 In order to output the appointments, we need to set a few things in the header:
 
@@ -35,7 +36,7 @@ Response.Cache.SetNoStore();
 Response.ContentEncoding = Encoding.UTF8;
 ```
 
- 
+ 
 
 The response itself has a header and then a list of appointment details.
 
@@ -54,7 +55,7 @@ calendar\r\n");
 Response.Write("X-WR-TIMEZONE;VALUE=TEXT:Europe/Oslo\r\n");
 ```
 
- 
+ 
 
 The per-appointment output looks like this:
 
@@ -118,7 +119,7 @@ AppointmentType.BookingForDiary )
 }
 ```
 
- 
+ 
 
 Google is picky about the time-zone id on the DTSTART/DTEND – it must be present.
 
@@ -166,7 +167,7 @@ END:VEVENT
 END:VCALENDAR
 ```
 
- 
+ 
 
 This non-XML format is what Outlook, Google and Apple’s calendar can use to integrate external calendar events.
 

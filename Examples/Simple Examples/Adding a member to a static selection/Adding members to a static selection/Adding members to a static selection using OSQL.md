@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 13
+<properties date="2016-05-10"
+SortOrder="13"
+/>
 
 Now let’s look at the last method which OSQL.
 
@@ -58,7 +59,7 @@ newInsert.FieldValuePairs.Add(selectionMemTableInfo.ContactId,
 }
 ```
 
- 
+ 
 
 We are adding two members to a static selection that we choose. At this level of the NetServer you need to have a very good understanding of the SuperOffice database so you create the correct table info objects to insert or update the database table. In this example we are only adding members to a static selection so we have created a SelectionMemberTableInfo object since we know that the data gets inserted to the SelectionMember table. If you analyze the above code carefully you can observe that we have used a class called Sequence to get the next sequence of the SelectionMember table. This class will help you to get the next sequence number of any table if you provide the correct table info.
 
@@ -144,7 +145,7 @@ secondInsert.FieldValuePairs.Add(selectionMemTableInfo.PersonId,
 }
 ```
 
- 
+ 
 
 If you analyze this example you can observe that we have made two additional changes. We have created a new insert object and added the second member through that and we have created a new object call the batch save. This new batch save object holds the secret to adding more than one member to a static selection. A batch save object can hold many SQL statements for us; it acts as an array of SQL statements. In this case it holds two insert statements for us. So when we add our SQL statements to the batch save object and then we assign the batch save object as our SQL command in the SO command object. Now when we execute our query the NetServer will do the rest for us. It will add the two records to the SelectionMember table with the correct selection member id.
 
@@ -152,4 +153,4 @@ An important point to remember!
 
 If you are adding members to a static selection by hard coding the contact id and the person id, or if you are getting these values from a user interface input, you must make sure that the person id belongs to a person that belongs to the contact id you are specifying for a given SelectionMemberRow.
 
- 
+ 

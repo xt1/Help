@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 50
+<properties date="2016-05-10"
+SortOrder="50"
+/>
 
-We **cannot** reproduce the original authentication, because it’s quite possible we never saw those credentials!   And all the code is effectively public, given Reflection tools
+We **cannot** reproduce the original authentication, because it’s quite possible we never saw those credentials!   And all the code is effectively public, given Reflection tools
 
-Enter the **ticket**, a string that proves that you are currently authenticated, without revealing who you are or how you got there.   Like a paper ticket, it is only valid if it has a ”stub”
+Enter the **ticket**, a string that proves that you are currently authenticated, without revealing who you are or how you got there.   Like a paper ticket, it is only valid if it has a ”stub”
 
 The stub is in the database, and is put there when the ticket is issued
 

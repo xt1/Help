@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 29
+<properties date="2016-05-10"
+SortOrder="29"
+/>
 
 This article discusses SuperOffice development issues with regard to a transition from COM-based development to .NET NetServer development.
 

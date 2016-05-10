@@ -1,4 +1,5 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 You can use methods on the providers to find out more about what is available on any given archive provider.
 

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 11
+<properties date="2016-05-10"
+SortOrder="11"
+/>
 
 Creating an Appointment through an entity can be done in two different ways, i.e. if you create an Entity called “A” and assign it to an Entity called “B”, when saving Entity “B” entity will be saved through NestedPersistent, or you could create an Entity which is a property of another Entity. Then when saving the main Entity the Entity created as the property of it will be saved as well. Both these would give the same results.
 
@@ -56,7 +57,7 @@ In the example above, we have created an Appointment as explained in example cre
             newContact.Save();
 ```
 
- 
+ 
 
 Below is the example of how we may make use of the AddNew() method available in the Appointments property of the Contact class in order to create a new Appointment.
 
@@ -115,7 +116,7 @@ The difference between Example 1 and Example 2 is that in Example 2 we have crea
 Contact.GetFromIdxContactId(20);
 ```
 
- 
+ 
 
 The Appointment created will be saved when saving the Contact Entity with the use of it’s Save() method.
 

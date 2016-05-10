@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 3
+<properties date="2016-05-10"
+SortOrder="3"
+/>
 
 [Configuring Sync Connection]()
 --------------------------------------------
@@ -16,12 +17,12 @@ Once the connector reports back that the connection details have been saved, SO 
 
 SO Admin will also store a copy of the connection details, in case the connector requests it to be resent at some point in the future.
 
- 
+ 
 
 <img src="../Erp%20Sync%20Connector%20Interface_files/image004.png" id="Bilde 1" width="602" height="584" />
 
 Sequence diagram detailing the process of defining and saving a new Sync Connection.
 
- 
+ 
 
- 
+ 

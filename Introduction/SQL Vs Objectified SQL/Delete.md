@@ -1,13 +1,14 @@
-Date: 2016-05-10
-SortOrder: 19
+<properties date="2016-05-10"
+SortOrder="19"
+/>
 
 Deleting a particular row from a table is also an important action in database handling. The following example shows how particular row in the Associate table is deleted. You can compare the following SQL query with the SuperOffice Objectified SQL.
 
 DELETE FROM CRM5.associate
 
-WHERE     (associate\_id = 103)
+WHERE     (associate\_id = 103)
 
- 
+ 
 
 ```
 using SuperOffice.Data;
@@ -42,4 +43,4 @@ using(SoSession newSession = SoSession.Authenticate ("SAL0", ""))
 }
 ```
 
- 
+ 

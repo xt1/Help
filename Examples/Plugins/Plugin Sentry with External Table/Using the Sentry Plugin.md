@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 17
+<properties date="2016-05-10"
+SortOrder="17"
+/>
 
 In order for us to use the plugin, modifications are required in the ‘config’ file signaling NetServer that we have our own plugin and mentioning where the dll is located. Below is the section that we have to modify in the ‘app.config’ file.
 
@@ -13,7 +14,7 @@ value="C:\\AllBackups\\SuperOffice_Working_Files\\SentryForCustomTableDll\\Sentr
 </Factory>
 ```
 
- 
+ 
 
 Following code snippet is an example that uses the plugin. Here we attempt to retrieve the Contact information logging on with different users and outputting the list of contacts that each user can see.
 
@@ -102,7 +103,7 @@ conDept);
 }
 ```
 
- 
+ 
 
 We have first retrieved the TableInfo object for the Contact table. Next a Select object is created in order to retrieve data. The columns to be included in the selection and the order in which the results to be sorted are specified next. The select command is executed against the Contact table to retrieve the Contact information. This is the point where our plugin come in to the picture i.e., when we attempt to run a query against the Contact table, the NetServer sentry mechanism calls our sentry plugin and the plugin logic gets executed. With the restriction specified in the ModifySelect method of the plugin, any user can retrieve only the contact information where the BusinessId of which is same as the currently logged in user’s BusinessId.
 

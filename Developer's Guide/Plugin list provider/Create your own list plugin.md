@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 5
+<properties date="2016-05-10"
+SortOrder="5"
+/>
 
 In NetServer you can develop a list Plugin that will give your own functionality to any of the lists that exists in SuperOffice. In SuperOffice the lists can be of mainly two types’ lists that are constructed from a table in the database and the lists that have been hard coded.
 
@@ -50,7 +51,7 @@ Country","Default
 }
 ```
 
- 
+ 
 
 Notice that the class is preceded by an attribute. This is done to tell the NetServer that this is a Plugin and we give a specific attribute since we want to tell NetServer that this is a Plugin of type MDO list provider and the name MDOProviderPlugin is the name that is given by NetServer for it to identify this is a MDO list plugin. The MDOProviderPlugin attribute must be provided with what is the list that you’re trying to enhance or manipulate as a parameter in the above example it is the country list.
 
@@ -84,13 +85,13 @@ protected override string GetItemTooltip(ListTableRow row)
 }
 ```
 
- 
+ 
 
 Now let’s look at how you can manipulate the actual data that is coming to the list. Let’s write some OSQL (Objectified SQL). In the below example we are going to override the GetSimpleListQuery method of the MDOProviderBase class since it is where we have define our query if we want to get some data that we want.
 
- 
+ 
 
- 
+ 
 
 ```
 private TableInfo tableInfo = null;
@@ -130,11 +131,11 @@ protected override ListTableRows.CustomSearch GetSimpleListQuery()
 }
 ```
 
- 
+ 
 
 Here we filter out only the countries that start with A. Please refer to the OSQL section of the SDK help for more information  [In depth OSQL](../OSQL/OSQL.htm) .
 
-Now that we have developed our Plugin lets discuss how we can use our developed Plugin. How do we inform NetServer that we have developed a Plugin? We have to specify in our app.config file that NetServer should use our new Plugin instead. Below is an example of how we have to configure our Plugin in the app.config file. 
+Now that we have developed our Plugin lets discuss how we can use our developed Plugin. How do we inform NetServer that we have developed a Plugin? We have to specify in our app.config file that NetServer should use our new Plugin instead. Below is an example of how we have to configure our Plugin in the app.config file. 
 
 ```
 <Factory>
@@ -146,7 +147,7 @@ value="C:\\TestApps\\Pulgin\\Pulgin\\bin\\Debug\\Pulgin.dll" />
 </Factory>
 ```
 
- 
+ 
 
 When you declare your Plugin DLL in the DynamicLoad section of the Factory section group of your app.config file NetServer will load your DLL along with its other DLLs. For more information on app.config settings please refer to (TO DO Put the Ref Here to NetServer config section). Now let’s see how we can use the developed Plugin in a normal windows forms based application.
 
@@ -184,6 +185,6 @@ netserver
 }
 ```
 
- 
+ 
 
 In the above example when we get the country list using the GetCountryList method of the SoLists class it will create the list using the methods we overrode and it will revert to the original implementation of the methods that we did not override. So here we will only get the countries that start with the letter A.

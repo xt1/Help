@@ -1,12 +1,13 @@
-Date: 2016-05-10
-SortOrder: 5
+<properties date="2016-05-10"
+SortOrder="5"
+/>
 
 []() [Helper methods and classes]()
 ================================================
 
 By referencing SuperOffice.ErpSync.Contract in your Sync Connector, you can take advantage of various helper classes and methods to make creating a connector a bit easier.
 
- 
+ 
 
 [ConfigDataHelper]()
 ---------------------------------
@@ -15,14 +16,14 @@ The ConfigDataHelper class contains a GetMetaData() method which parses a given 
 
 In addition, it also has methods to save and retrieve configuration data to and from persistent storage (using IsolatedStorage); SaveData() and GetData().
 
- 
+ 
 
 [ResponseHelper]()
 -------------------------------
 
 All return types from a Sync Connector are PluginResponseInfo objects (or objects from one of its derived classes), and the ResponseHelper class is designed to make it as easy as possible to generate these objects.
 
- 
+ 
 
 [CultureDataFormatter]()
 -------------------------------------
@@ -31,7 +32,7 @@ ConnectorWS also contains a copy of CultureDataFormatter (original version found
 
 [For more information on the usefulness of this class, see the section “Field value formats and conventions"]()
 
- 
+ 
 
 [SearchHelper]()
 -----------------------------
@@ -46,9 +47,9 @@ The SearchHelper class contains various methods for checking if a given field va
 <tbody>
 <tr class="odd">
 <td><p><strong>Method</strong></p>
-<p><strong> </strong></p></td>
+<p><strong> </strong></p></td>
 <td><p><strong>Information</strong></p>
-<p><strong> </strong></p></td>
+<p><strong> </strong></p></td>
 </tr>
 <tr class="even">
 <td><p>bool IsMatch</p>
@@ -70,11 +71,11 @@ The SearchHelper class contains various methods for checking if a given field va
 </tbody>
 </table>
 
- 
+ 
 
 Note: There isn’t a separate method for list values, because each connector will handle lists in its own way. However, since the list item keys are communicated as simple strings from the ERP sync, IsMatchString will probably be useful for checking searches containing list restrictions.
 
- 
+ 
 
 [Extension methods]()
 ----------------------------------
@@ -83,4 +84,4 @@ There are also extension methods available for all classes that are duplicated b
 
 
 
- 
+ 

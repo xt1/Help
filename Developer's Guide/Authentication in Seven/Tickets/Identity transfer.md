@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 49
+<properties date="2016-05-10"
+SortOrder="49"
+/>
 
 SuperOffice is much more than one application!
 

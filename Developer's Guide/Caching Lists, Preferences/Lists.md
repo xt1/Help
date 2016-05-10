@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 10
+<properties date="2016-05-10"
+SortOrder="10"
+/>
 
 Under the Lists categorization, the following classes can be added. AssociateCache, CategoryCache, MDOListTableCache, PriorityCache, ProbCache and RedLetterDayCache.
 
@@ -31,7 +32,7 @@ using(SoSession mySession = SoSession.Authenticate("SAM", "sam"))
 }
 ```
 
- 
+ 
 
 The aim of the above example is to retrieve the current instance of the Category Cache. For this we use the GetCurrent() method. Once the instance is retrieved, we may access the information in cache and update it as shown above. Once the cache has being update, the database will be updated accordingly. It should be noted that when updating values of the cache the relevant row should be retrieved first. Once the row is retrieved, we may update it in similar manner as when we update row types exposed in NetServer.
 

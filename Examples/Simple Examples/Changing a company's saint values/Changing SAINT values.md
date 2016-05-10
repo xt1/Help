@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 5
+<properties date="2016-05-10"
+SortOrder="5"
+/>
 
 SAINT values are stored in the statusvalue table. They are simple binary values in either on or off state. These values determine the look and feel of the company and project cards.
 
@@ -109,7 +110,7 @@ reader[7].ToString());
 }
 ```
 
- 
+ 
 
 In this example initially we have created a connection and retrieved SAINT values of the Contact with contact\_id = 30 and isSignalled = 1. The isSignalled field determines whether to display an image in the back ground of the contact card or not. The image displayed in the contact card is defined in the statusdef table. According to the StatusDef\_id in the statusvalue table, the statusdef table is referred and the background image in the contact card varies accordingly. The actual image is found via the blob link table. After retrieving the SAINT values we have changed the isSignalled field from 1 to 0. When it is set to 0, no image is displayed on the contact card. The following image shows how it appears in the windows client.
 
@@ -117,7 +118,7 @@ The output of this example is displayed below.
 
  <img src="../Changing%20a%20company&#39;s%20SAINT%20values_files/image001.jpg" width="408" height="185" /> 
 
-When isSignalled = 0 
+When isSignalled = 0 
 
  <img src="../Changing%20a%20company&#39;s%20SAINT%20values_files/image002.jpg" width="604" height="396" /> 
 

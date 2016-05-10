@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 16
+<properties date="2016-05-10"
+SortOrder="16"
+/>
 
- 
+ 
 
 In order to delete data using OSQL we would need to use the Delete Class which is located in the SuperOffice.SQL.Data namespace. The example below shows how we may make use of the Delete command in OSQL.
 

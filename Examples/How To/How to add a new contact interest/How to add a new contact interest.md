@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 4
+<properties date="2016-05-10"
+SortOrder="4"
+/>
 
 The following document tells us how we can make use of the NetServer 3.0 and adding a new Contact interest.
 
@@ -67,7 +68,7 @@ newContact.InterestHelper.HeadingItems[0].Heading.Id;
 }
 ```
 
- 
+ 
 
 What we have done first is to create ContIntRow using the CreateNew() method and assign values to its properties and then saved it using the Save() method available in the ContIntRow class.
 
@@ -89,7 +90,7 @@ newContGrpLinkRows.AddNew();
 }
 ```
 
- 
+ 
 
 Finally we need to create a ContIntHeadingLinkRow. This is necessary because the ContInt is defined as a sub-item, we would need to create a heading for under which it should fall. This is done using the CreateNew() method available in the ContIntHeadingLinkRow class and assigning values to its properties.
 

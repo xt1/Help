@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 50
+<properties date="2016-05-10"
+SortOrder="50"
+/>
 
 SoContext, SoDatabase and other variables that are in the environment are managed for you.
 

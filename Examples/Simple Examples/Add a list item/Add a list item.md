@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 3
+<properties date="2016-05-10"
+SortOrder="3"
+/>
 
- 
+ 
 
 There are several lists Used in SuperOffice CRM, most of them are stored in tables in the database. An explanation of all the lists that exists in the SuperOffice CRM is beyond the scope of this section so we will take the category list as an example. All the lists manipulation can be done the same way so the knowledge that you gain in this section can be applied to manipulating all the lists.
 
@@ -35,6 +36,6 @@ CategoryGroupLinkRow.CreateNew();
 }
 ```
 
- 
+ 
 
 In the above example we have used purely rows to get the job done. We have created a category row and filled some basic properties of the row and saved it. This means that we have a new category and we can now use this category. We have not stopped at creating a category but we have a created a category group link row as well. If we create a category we must create a group link row as well to specify that this category belongs to this group. Creating a category group link row makes the category appear for the given group in the GUI.

@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 45
+<properties date="2016-05-10"
+SortOrder="45"
+/>
 
-The example below demonstrates how to retrieve the Category list using the Database.GetList() method in the SuperOffice.COM.SuperOfficeDB namespace.
+The example below demonstrates how to retrieve the Category list using the Database.GetList() method in the SuperOffice.COM.SuperOfficeDB namespace.
 
 ```
 using SuperOffice.COM.SuperOfficeDB;
@@ -31,4 +32,4 @@ else
     Console.WriteLine("Incorrect Username or Password");
 ```
 
-As with all list types, the Category list is a collection of IListTextItem types, aptly named IListTextItems. The GetList() method retrieves an IListTextItems type by specifying the list type enumeration parameter. GetList() only returns items the current user is allowed to see, and does not return hidden or deleted items.
+As with all list types, the Category list is a collection of IListTextItem types, aptly named IListTextItems. The GetList() method retrieves an IListTextItems type by specifying the list type enumeration parameter. GetList() only returns items the current user is allowed to see, and does not return hidden or deleted items.

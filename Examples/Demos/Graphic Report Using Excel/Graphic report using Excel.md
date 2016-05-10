@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 3
+<properties date="2016-05-10"
+SortOrder="3"
+/>
 
 The intention of this document is to show us how we can make use of NetServer and retrieve data and generate an excel report based on such data.
 
@@ -11,7 +12,7 @@ Third: save the data table as an XML file
 
 Fourth: open the XML file using Excel.
 
- 
+ 
 
 1. autolist
 

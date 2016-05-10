@@ -1,4 +1,5 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 Sentry is automatically applied to rows as well as entities now. Attempting to modify a read-only object will throw an exception. Attempting to read a hidden property will return a blank value - reading will **not** throw exceptions.
 

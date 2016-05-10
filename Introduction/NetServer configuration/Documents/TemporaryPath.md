@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 115
+<properties date="2016-05-10"
+SortOrder="115"
+/>
 
 This is used to specify the location of the temporary folder for streaming files. The value must contain the physical location of the temporary folder.
 

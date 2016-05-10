@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 4
+<properties date="2016-05-10"
+SortOrder="4"
+/>
 
 [SuperOffice Client Startup]()
 --------------------------------------------------------
@@ -12,13 +13,13 @@ If the InitializeConnection returned NOT OK then the connection is marked as una
 
 <img src="Quote%20Connector%20interface_files/image006.jpg" width="575" height="478" />
 
- 
+ 
 
 Connections are initialized on demand.
 
 If a connection fails to initialize then the result is cached, so that the client can get the initialize result later (for tooltips and the like).
 
- 
+ 
 
 <table>
 <colgroup>
@@ -31,20 +32,20 @@ If a connection fails to initialize then the result is cached, so that the clien
 <td><p>The id of this connection in the CRM system.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>PluginResponseInfo <strong>InitializeConnection</strong>( QuoteConnectionInfo connectionData, Dictionary&lt;string, string&gt; configurationFields, IProductRegisterCache productRegister)</p></td>
 <td><p>Set up the connection to the ERP system.</p>
 <p>Will be called as part of SuperOffice client startup for each installed connection.</p>
-<p> </p>
+<p> </p>
 <p>Configuration data comes from the config dialog shown in the Admin client (see <strong>IQuoteConnectorSetup.GetConfigurationFields</strong>)<br />
 <br />
 </p>
 <p>The key in the Dictionary is the FieldKey, and must match the key in the FieldMetadataInfo. The value is the user entry, as described in <strong>Config Values</strong>.</p>
 <p><br />
-Return value: <strong>IsOk</strong> set to false if connector can’t provide service (no network); text will explain to user.  IsOk = False means the connection is not available, and quotes based on this connection cannot be edited.</p></td>
+Return value: <strong>IsOk</strong> set to false if connector can’t provide service (no network); text will explain to user.  IsOk = False means the connection is not available, and quotes based on this connection cannot be edited.</p></td>
 </tr>
 <tr class="even">
 <td><p>Dictionary&lt;string, PluginResponseInfo&gt; <strong>GetCapabilities</strong>()</p></td>
@@ -52,8 +53,8 @@ Return value: <strong>IsOk</strong> set to false if connector can’t provide se
 <p>Using the PluginResponseInfo gives the connector the possibility to disable a capability, with a reason string that might be shown to the user.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>QuoteVersionResponseInfo</p>
@@ -62,7 +63,7 @@ Return value: <strong>IsOk</strong> set to false if connector can’t provide se
 The Quote does not exist in database at this time; any changes in the returned QuoteContextInfo will be saved and the GUI updated.<br />
 <br />
 The following parts of the QuoteContextInfo can be updated by this method: Quote; QuoteVersion; QuoteAlternative. Changes to other parts of the QuoteContextInfo will be ignored.</p>
-<p> </p>
+<p> </p>
 <p>Returns an updated context.</p></td>
 </tr>
 <tr class="odd">
@@ -77,4 +78,4 @@ Changes to the QuoteContextInfo are ignored.</p></td>
 </tbody>
 </table>
 
- 
+ 

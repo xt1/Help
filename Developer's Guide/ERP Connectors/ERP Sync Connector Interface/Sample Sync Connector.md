@@ -1,12 +1,13 @@
-Date: 2016-05-10
-SortOrder: 9
+<properties date="2016-05-10"
+SortOrder="9"
+/>
 
 [Example connector]()
 ----------------------------------
 
 This is purely an example to show how simple a basic connector can be. It obviously contains no code that actually talks to an ERP system; it purely implements the required methods and generates default return objects.
 
- 
+ 
 
 ```
 using SuperOffice.CRM;

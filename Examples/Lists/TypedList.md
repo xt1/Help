@@ -1,17 +1,16 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 ```
     using SuperOffice;
     using SuperOffice.CRM.Lists;
                 
         SoSession _session = SoSession.Authenticate( "SAL1", "" );
-
         ISoListProvider mdoProvider = SoLists.GetCurrencyList();
         PrintMdoProvider( "Currency", mdoProvider );
         
         mdoProvider = SoLists.GetCategoryList();
         PrintMdoProvider( "Category", mdoProvider );
-
         _session.Close();
         
         private void PrintMdoProvider( string listname,

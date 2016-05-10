@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 19
+<properties date="2016-05-10"
+SortOrder="19"
+/>
 
 Retrieving data from a particular row of a table in the database can easily be done via Rows.
 
@@ -22,6 +23,6 @@ using(SoSession newSession = SoSession.Authenticate("SAL0", ""))
 }
 ```
 
- 
+ 
 
 Here some of the properties of a ContactRow are retrieved. ContactRow accesses the Contact table in the database and we are retrieving data in a row with row Id equal to 4.

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 97
+<properties date="2016-05-10"
+SortOrder="97"
+/>
 
 If the anonymous user setting has been enabled, this key will specify the user name of the Anonymous user.
 
@@ -9,4 +10,4 @@ If the anonymous user setting has been enabled, this key will specify the user n
  
 ```
 
- 
+ 

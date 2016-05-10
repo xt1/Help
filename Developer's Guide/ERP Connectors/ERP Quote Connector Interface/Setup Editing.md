@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 3
+<properties date="2016-05-10"
+SortOrder="3"
+/>
 
 [Quote Connector Setup – Editing a Connection]()
 --------------------------------------------------------------------------
@@ -16,6 +17,6 @@ Note that the connection is not initialized again until the connection is saved,
 
 The connection values are stored in the SuperOffice database – not in the connector.
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 83
+<properties date="2016-05-10"
+SortOrder="83"
+/>
 
-If your application uses a Sybase database or a  IBM DB2 database this setting must be in your configuration file. This key defines the type of database driver that should be loaded. The example displays the configurations for IBM DB2 & Sybase databases.
+If your application uses a Sybase database or a  IBM DB2 database this setting must be in your configuration file. This key defines the type of database driver that should be loaded. The example displays the configurations for IBM DB2 & Sybase databases.
 
 ```
 IBM DB2
@@ -14,7 +15,7 @@ Files\Sybase\SQL Anywhere 9\win32\iAnywhere.Data.AsaClient.dll"
 />
 ```
 
- 
+ 
 
 An I mportant Point to Remember!
 

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 54
+<properties date="2016-05-10"
+SortOrder="54"
+/>
 
 There is an implicit «AND» between archive restrictions
 

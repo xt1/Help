@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 50
+<properties date="2016-05-10"
+SortOrder="50"
+/>
 
 NetServer 3.0
 =============
@@ -34,18 +35,18 @@ Assembly changes
 ----------------
 
 The number of assemblies used got reduced drastically:
--   SuperOffice.Factory.dll
--   SuperOffice.Exceptions.dll
--   SuperOffice.Customization.dll
--   SuperOffice.Configuration.dll
+* SuperOffice.Factory.dll
+* SuperOffice.Exceptions.dll
+* SuperOffice.Customization.dll
+* SuperOffice.Configuration.dll
 
 are combined into **SoCore.dll**.
 SOCORE does not require database connection, and can be deployed on clients using web-services.
 
--   SuperOffice.HDB.dll
--   SuperOffice.RDB.dll
--   SuperOffice.Data.dll
--   SuperOffice.Security.dll
+* SuperOffice.HDB.dll
+* SuperOffice.RDB.dll
+* SuperOffice.Data.dll
+* SuperOffice.Security.dll
 
 are combined into **SoDatabase.dll**. This DLL requires a connection to the database set up in the app config file.
 If you are not using the database directly, you need to look at the web services documentation.

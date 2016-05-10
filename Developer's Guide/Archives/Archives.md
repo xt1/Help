@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 89
+<properties date="2016-05-10"
+SortOrder="89"
+/>
 
 The main purpose of this section is exposing the NetServer ArchiveList layer. This document is designed to give you an idea of how archives are used and the importance of archives in your applications.
 

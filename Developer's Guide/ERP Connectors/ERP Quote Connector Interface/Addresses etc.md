@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 10
+<properties date="2016-05-10"
+SortOrder="10"
+/>
 
 [Address Provider]()
 ----------------------------------------------
@@ -24,11 +25,11 @@ The ERP systems often has addresses, and when creating a quote, the CRM system c
 </tbody>
 </table>
 
- 
+ 
 
 If the connector returns NULL or does not support addresses, then SuperOffice will use the contact’s street and postal addresses as defaults.
 
- 
+ 
 
 [IArchiveProvider]()
 ----------------------------------------------
@@ -69,7 +70,7 @@ The archive provider and its associated interfaces are used to implement multi-c
 </tr>
 <tr class="odd">
 <td><p>SetDesiredEntities( string[] )</p></td>
-<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>SetOrderBy( ArchiveOrderByInfo[] )</p></td>
@@ -90,7 +91,7 @@ The archive provider and its associated interfaces are used to implement multi-c
 </tbody>
 </table>
 
- 
+ 
 
 [IProductRegisterCache]()
 ---------------------------------------------------
@@ -118,24 +119,24 @@ This interface will be implemented by SuperOffice. The implementation is passed 
 <p>Returns the products updated with their new ids.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p><strong>UpdateProduct</strong> ( ProductInfo newProd )</p></td>
 <td><p>Update a product in the cache with new information</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>IProductProvider <strong>GetSuperOfficeProductProvider</strong>( int quoteConnectionId )</p></td>
 <td><p>Here you can get the data you have inserted into the SuperOffice tables.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>void <strong>RemovePriceList</strong>( int pricelistId, bool alsoRemoveRelatedProducts )</p></td>
@@ -147,20 +148,20 @@ This interface will be implemented by SuperOffice. The implementation is passed 
 </tr>
 <tr class="even">
 <td><p>int <strong>InsertImage</strong>(int productId, Image img, int rank );</p></td>
-<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>void <strong>RemoveImage</strong>( int imageId );</p></td>
-<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 ===========================
 
 
 
-  
+  

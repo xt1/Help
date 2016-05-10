@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 4
+<properties date="2016-05-10"
+SortOrder="4"
+/>
 
 In this section, we will walk you through an example of adding a Custom Archive. The example is based on the Tooltip Provider.
 

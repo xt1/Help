@@ -1,16 +1,15 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 ```
     using SuperOffice;
     using SuperOffice.CRM.Rows;
-
         using(SuperOffice.SoSession session =
 SuperOffice.SoSession.Authenticate( "Sal1", "" ))
         {
                 OwnerContactLinkRow owns = new
 OwnerContactLinkRow.IdxOwnerContactLinkId( 1 );
                 int contactId = owns.ContactId;
-
                 Assert.IsTrue( contactId > 0, "Found owner
 contact id" );
 

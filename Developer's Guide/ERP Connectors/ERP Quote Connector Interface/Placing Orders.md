@@ -1,10 +1,11 @@
-Date: 2016-05-10
-SortOrder: 9
+<properties date="2016-05-10"
+SortOrder="9"
+/>
 
 [Placing Orders into ERP]()
 -----------------------------------------------------
 
-<img src="Quote%20Connector%20interface_files/image021.jpg" id="Picture 114" width="347" height="169" />      <img src="Quote%20Connector%20interface_files/image022.jpg" id="Picture 26" width="236" height="166" />
+<img src="Quote%20Connector%20interface_files/image021.jpg" id="Picture 114" width="347" height="169" />      <img src="Quote%20Connector%20interface_files/image022.jpg" id="Picture 26" width="236" height="166" />
 
 The user clicks the PLACE ORDER button. The quote version is validated first.
 
@@ -30,7 +31,7 @@ After the Quote has been accepted/sold, then the user can check the delivery sta
 <td><p>PlaceOrderResponseInfo <strong>PlaceOrder</strong> ( QuoteContextInfo context )</p></td>
 <td><p>Place the order in the ERP system.</p>
 <p>If the operation returns successfully, the Quote will be locked (completed) in the CRM system, and all updates will come from the ERP system thru the GetOrderState function.</p>
-<p> </p>
+<p> </p>
 <p>A summary of all the problems (if any) should be placed in the response object.<br />
 Requires that the iorderconsumer_place_order capability is true.</p></td>
 </tr>
@@ -45,4 +46,4 @@ Requires that the Order-Status capability is true.</p></td>
 </tbody>
 </table>
 
- 
+ 

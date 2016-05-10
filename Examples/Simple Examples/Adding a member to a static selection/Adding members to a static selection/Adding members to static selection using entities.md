@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 12
+<properties date="2016-05-10"
+SortOrder="12"
+/>
 
 In this section we will explore how we can add members to a static selection using the entities layer of the NetServer. The example demonstrates the use of entities to achieve the task.
 
@@ -47,11 +48,11 @@ collection one by
 }
 ```
 
- 
+ 
 
-Here we have retrieved the contact entity which the persons that we want to add as members to the static selection belong to. Now we can loop through the person collection of the contact entity and add the person’s one by one as members of the static selection. This example only adds persons from one contact, but if you want you may add persons from many contacts as members of a static selection. Also you can notice the contact id and the person id has not been hard coded but if you want to this is also a possibility.  
+Here we have retrieved the contact entity which the persons that we want to add as members to the static selection belong to. Now we can loop through the person collection of the contact entity and add the person’s one by one as members of the static selection. This example only adds persons from one contact, but if you want you may add persons from many contacts as members of a static selection. Also you can notice the contact id and the person id has not been hard coded but if you want to this is also a possibility.  
 
- 
+ 
 
 An important point to remember!
 

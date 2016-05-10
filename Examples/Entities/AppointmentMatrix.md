@@ -1,4 +1,5 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 The AppointmentMatrix is used to manage complex appointments: invitations and recurrences.
 

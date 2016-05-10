@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 27
+<properties date="2016-05-10"
+SortOrder="27"
+/>
 
 Troubleshooting NetServer
 -------------------------------------------------
@@ -11,7 +12,7 @@ Which .Net version
 
 ### Visual Studio 2003
 
-Therefore, if you were trying to reference a NetServer 3.0 dll in VS 2003 it would generate an error message. For example if you try loading SOCore.dll in VS 2003 it would generate “A reference to ‘SOCOre.dll’ could not be added…….” error message. This because VS 2003 supports only .Net framework 1.1.   Another thing that the user should watch out for is when deploying SIX.Web on an ASP.Net/IIS on XP machine since .Net 1.1 is the default framework on XP. In order to overcome this, the user needs to manually set the ASP.Net framework to 2.0.
+Therefore, if you were trying to reference a NetServer 3.0 dll in VS 2003 it would generate an error message. For example if you try loading SOCore.dll in VS 2003 it would generate “A reference to ‘SOCOre.dll’ could not be added…….” error message. This because VS 2003 supports only .Net framework 1.1.   Another thing that the user should watch out for is when deploying SIX.Web on an ASP.Net/IIS on XP machine since .Net 1.1 is the default framework on XP. In order to overcome this, the user needs to manually set the ASP.Net framework to 2.0.
 
 ### Visual Studio 2005
 
@@ -26,13 +27,13 @@ Which Database
 
 NetServer 3.0 supports the following databases.
 
-Ø   Microsoft SQL Server 7, 2000 and 2005
+Ø   Microsoft SQL Server 7, 2000 and 2005
 
-Ø   Oracle 8, 9i and 10g
+Ø   Oracle 8, 9i and 10g
 
-Ø   IBM DB2 8 and iSeries
+Ø   IBM DB2 8 and iSeries
 
-Ø   Sysbase iAnywhere 7,8 and 9
+Ø   Sysbase iAnywhere 7,8 and 9
 
 NetServer and IIS7
 ------------------

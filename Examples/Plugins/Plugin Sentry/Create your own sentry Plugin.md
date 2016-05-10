@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 7
+<properties date="2016-05-10"
+SortOrder="7"
+/>
 
 In NetServer there are many built-in sentry mechanisms like contact sentry, person sentry, project sentry, etc. Our intention in this section is to develop our own sentry mechanisms on top of what already is in NetServer.
 
@@ -40,9 +41,9 @@ To make this easy to follow we are going to make a silly example: we will make r
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
 ```
 using System;
@@ -183,7 +184,7 @@ sql.ReturnFields.Add(((ContactTableInfo)tableInfo).Department);
 
 The above example is bit long and complex but if we analyze it carefully we can understand what it is trying to do. First we make our whole class a sentry plugin for the contact sentry. This class will act as a Plugin and enhance the standard NetServer contact sentry mechanism. This example aims to modify the contact sentry right if the department name of a contact ends with “\_”. For example if the department name of a given contact looks like this “XYZ Department\_” then we change the sentry rights.
 
-The most important method is the ModifyTableRight method. NetServer will pass in a TableRights object as the parameter. This object is the rights object that we intend modify according to the rules that we have defined. In this method first we retrieve department name using the GetFieldValue helper method that we have developed.  The GetFieldValue method will use the QueryInfo method that we have developed to cast the sentry type that we have set in the Init method of the class to a ContactSentryQueryInfo type. Using the ContactSentryQueryInfo we can obtain any field info of the MainTable that exists within the ContactSentryQueryInfo. Here we have retrieved the department field info object and pass it to the GetFieldValue method. So this method will return us the field value. Now we have the value of the department field.
+The most important method is the ModifyTableRight method. NetServer will pass in a TableRights object as the parameter. This object is the rights object that we intend modify according to the rules that we have defined. In this method first we retrieve department name using the GetFieldValue helper method that we have developed.  The GetFieldValue method will use the QueryInfo method that we have developed to cast the sentry type that we have set in the Init method of the class to a ContactSentryQueryInfo type. Using the ContactSentryQueryInfo we can obtain any field info of the MainTable that exists within the ContactSentryQueryInfo. Here we have retrieved the department field info object and pass it to the GetFieldValue method. So this method will return us the field value. Now we have the value of the department field.
 
 Then we will check whether the field is empty, the value ends with a “\_” and the logged in user is not the owner of the record. The owner of the record will anyway have full rights to the record, changing that will not be logical. If these conditions are satisfied we go ahead and modify the rights of the rights object that we received as a parameter. Here we make them all to read only. Now we have developed a sentry mechanism that will be triggered only if the department value ends with “\_”.
 

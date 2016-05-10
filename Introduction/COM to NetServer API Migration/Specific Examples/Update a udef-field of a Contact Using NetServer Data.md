@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 48
+<properties date="2016-05-10"
+SortOrder="48"
+/>
 
-UdefHelper, a Contact entity property, is a type which helps handle user-defined fields with ease.
+UdefHelper, a Contact entity property, is a type which helps handle user-defined fields with ease.
 
 ```
 using SuperOffice;
@@ -27,4 +28,4 @@ using (SoSession mySession = SoSession.Authenticate("sam", "sam"))
 }
 ```
 
-The example above demonstrates how to address a particular user-defined field by using a program identifier. A program identifier is the value located in the progId column of the udeffield table. The progId field remains as a constant throughout the user-defined field lifetime. The main purpose of progId is to facilitate 3rd party developers to access their user-defined fields consistantly through the lifetime of their applications, regardless if the label text is changed.
+The example above demonstrates how to address a particular user-defined field by using a program identifier. A program identifier is the value located in the progId column of the udeffield table. The progId field remains as a constant throughout the user-defined field lifetime. The main purpose of progId is to facilitate 3rd party developers to access their user-defined fields consistantly through the lifetime of their applications, regardless if the label text is changed.

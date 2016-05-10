@@ -1,16 +1,17 @@
-Date: 2016-05-10
-SortOrder: 74
+<properties date="2016-05-10"
+SortOrder="74"
+/>
 
- 
+ 
 
 The Database section defines the location and database-vendor specific settings. The database servers currently supported are:
 
--   Microsoft SQL Server 7 and 2000
--   Oracle 8.1.7, 9i and 10g
--   Sybase 7, 8 and 9
--   DB2 version 8
+* Microsoft SQL Server 7 and 2000
+* Oracle 8.1.7, 9i and 10g
+* Sybase 7, 8 and 9
+* DB2 version 8
 
- 
+ 
 
 This section will depend heavily on the vendor of the database that your application uses. Given below is an example of how these settings should be defined in the config file. The example contains all key value combinations that should be configured for all the databases supported by NetServer.
 
@@ -33,7 +34,7 @@ Files\IBM\SQLLIB\BIN\netf11\policy.8.1.IBM.Data.DB2.dll" />
 </Database>
 ```
 
- 
+ 
 
 The keys in the above example will change based on the database used as they are database specific. For example, the value of the ConnectionString key for MS SQL 2000 will be as defined below:
 
@@ -43,7 +44,7 @@ value="Server=[@Server];Database=[@Database];User
 ID=[@User];Password=[@Password]"/>
 ```
 
- 
+ 
 
 In IBM DB2 V8, the value of the ConnectionString key will be as defined below:
 
@@ -52,7 +53,7 @@ In IBM DB2 V8, the value of the ConnectionString key will be as defined below:
 ID=[@User];Password=[@Password]" />
 ```
 
- 
+ 
 
 It is imperative that these configurations be defined according to the settings of each database. Furthermore, it’s important that some of the keys in this section are specific to the database. For example, the key value combinations given below are only specific to IBM DB2 and Sybase databases.
 

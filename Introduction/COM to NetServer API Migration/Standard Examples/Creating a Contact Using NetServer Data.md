@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 34
+<properties date="2016-05-10"
+SortOrder="34"
+/>
 
-The example below shows how to create a Contact similar to the one created above, but now using NetServer.
+The example below shows how to create a Contact similar to the one created above, but now using NetServer.
 
 ```
 using SuperOffice.CRM.Entities;
@@ -53,19 +54,19 @@ to the Contact Entity
 }
 ```
 
-Entity types are defined in the SuperOffice.CRM.Entitites namespace. With an authenticated SoSession instance, the user can create a Contact using the static (Shared in VB.NET) Contact.CreateNew() method.
+Entity types are defined in the SuperOffice.CRM.Entitites namespace. With an authenticated SoSession instance, the user can create a Contact using the static (Shared in VB.NET) Contact.CreateNew() method.
 
 ```
 Contact newContact = Contact.CreateNew();
 ```
 
-Using the new contact instance, we call the SetDefaults() method to set the default vales for all contact propperties.
+Using the new contact instance, we call the SetDefaults() method to set the default vales for all contact propperties.
 
 ```
 newContact.SetDefaults();
 ```
 
-The rest of the example code above demonstates how to assign vales to both simple and complex Contact Entity property types. When done with setting properties, we use of the newContact.Save() method to save the new Contact.
+The rest of the example code above demonstates how to assign vales to both simple and complex Contact Entity property types. When done with setting properties, we use of the newContact.Save() method to save the new Contact.
 
 ```
 newContact.Save();

@@ -1,4 +1,5 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 You can update fields directly instead of using the Row objects. This is the simplest form of an update-statement.
 

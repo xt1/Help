@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 5
+<properties date="2016-05-10"
+SortOrder="5"
+/>
 
 ```
 using SuperOffice;
@@ -23,27 +24,23 @@ passWord))
       newSale.SaleText = TextRow.GetFromIdxTextId(169);            
       
       newSale.Save();
- 
       Console.WriteLine("A new Sale has been Created");
- 
       //Creates a Appoitnment and link it a Sale
       Appointment newApp = Appointment.CreateNew();
       newApp.SetDefaults();
       newApp.Contact = Contact.GetFromIdxContactId(124);
       newApp.AppointmentText = TextRow.GetFromIdxTextId(169);
- 
       //Adds the Link to the Sale
       SaleRow newSaleRw = SaleRow.GetFromIdxSaleId(newSale.SaleId);
   
       newApp.LinksHelper.AddSaleLink(newSaleRw);
       newApp.Save();                    
- 
       Console.WriteLine("A new Appointment has been created");
       Console.ReadLine();
 }
 ```
 
- 
+ 
 
 In the example above what we have done first is to create a new Sale and certain values to its properties. The SetDefault() method is used to assign default values to the properties in that respective class. The Save() method is used in the end to save the created Sale.
 

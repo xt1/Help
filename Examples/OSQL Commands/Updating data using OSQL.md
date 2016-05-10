@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 11
+<properties date="2016-05-10"
+SortOrder="11"
+/>
 
 Update class is used to update data stored at the database. This is much similar to that of the insert operation and others, which have being discussed throughout the section. The example below demonstrates how we may use the Update class in order to modify existing data. [OSQL Data](../OSQL%20Data/OSQL%20Data.htm)
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Data;

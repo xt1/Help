@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 7
+<properties date="2016-05-10"
+SortOrder="7"
+/>
 
- 
+ 
 
 ```
 public interface IPrivateFactory
@@ -28,9 +29,9 @@ object[] constructorArguments);
     }
 ```
 
- 
+ 
 
- 
+ 
 
 NetServer(backend) uses the class called TypeFactories. TypeFactories.cs is referenced to the interfaces IPrivateFactory and ICustomFactory. IPrivateFactory is used to create an object and ICustomFactor is used to create a “CustomImplementationDescription” type object. IPrivateFactory is the simpler interface. ICustomFactory is used for creating objects based on reflection results. It is used internally in NetServer.
 
@@ -46,7 +47,7 @@ Factory\\bin\\Debug\\Custom Factory.dll" />
 </Factory>
 ```
 
- 
+ 
 
 The “Custom Factory.dll” assembly that we created has two classes called MyCustomAddressRow and MyCustomFactory. We called the SOCore.dll and SoDataBase.dll from the NetServer by adding the references to the classlibrary.
 
@@ -113,11 +114,11 @@ primary key
 }
 ```
 
- 
+ 
 
-Code segment in the above shows that the class is inherited form the SuperOffice.CRM.Rows.AddressRow. In this class it inherits the ToString() method from  SuperOffice.CRM.Rows.AddressRow which returns the string value. We have overridden the ToString() method by adding  extra string part called “This is the customized AddressRow”. In this method it will return a string value by adding “This is the customized AddressRow” in to the front.
+Code segment in the above shows that the class is inherited form the SuperOffice.CRM.Rows.AddressRow. In this class it inherits the ToString() method from  SuperOffice.CRM.Rows.AddressRow which returns the string value. We have overridden the ToString() method by adding  extra string part called “This is the customized AddressRow”. In this method it will return a string value by adding “This is the customized AddressRow” in to the front.
 
-MyCustomFactory is the other class which is created by us.  MyCustomFactory.cs is shown below.
+MyCustomFactory is the other class which is created by us.  MyCustomFactory.cs is shown below.
 
 ```
 using System;
@@ -175,7 +176,7 @@ back to the requestor.
 }
 ```
 
- 
+ 
 
 MyCustomFactory.cs first sets the attribute
 
@@ -184,7 +185,7 @@ MyCustomFactory.cs first sets the attribute
 FactoryPriority=FactoryPriority.High)]
 ```
 
- 
+ 
 
 Type of the attribute is set to the AddressRow and priority is set to high and MyCustomFactory class inherited from the IPrivateFactory created an object by calling the create method inheriting from the IPrivateFactory. The ClassFactory attribute signals to the class factory mechanism what sorts of objects we will manufacture. The high priority overrides the default implementation (which has medium/normal priority).
 
@@ -253,7 +254,7 @@ AddressRow
 }
 ```
 
- 
+ 
 
 In the above code we create an instance of AddressRow called aRow. AddressRow.CreateNew() uses the ClassFactory to create the new instenace. Secondly we create an object directly from SuperOffice.Factory.ClassFactory and then it is assigned to AddressRow. Both these methods will create a object of type MyCustomAddressRow instead of the NetServer address row.
 
@@ -269,7 +270,7 @@ Factory\\bin\\Debug\\Custom Factory.dll" />
 </Factory>
 ```
 
- 
+ 
 
 Output of the program is shown below.
 

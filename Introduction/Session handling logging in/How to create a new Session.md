@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 7
+<properties date="2016-05-10"
+SortOrder="7"
+/>
 
 When someone logs in a new session is created. Sessions are created through the SoSession class. The following example demonstrates how to authenticate a user through the SoSession class.
 
@@ -21,8 +22,8 @@ UserName is " + SoContext.CurrentIdentity.Name);
 }
 ```
 
- 
+ 
 
-Here we have created a new Session via SoSession class. If the authentication data are correct, an instance of the SoSession is created.  We have retrieved some data about the currently logged in user through SoContext class which holds information about the currently logged in user.
+Here we have created a new Session via SoSession class. If the authentication data are correct, an instance of the SoSession is created.  We have retrieved some data about the currently logged in user through SoContext class which holds information about the currently logged in user.
 
 The Authenticate method has 3 overloads. If you do not pass any parameters to the Authenticate method then it authenticates the user based upon the currently logged in windows user.

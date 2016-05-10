@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 10
+<properties date="2016-05-10"
+SortOrder="10"
+/>
 
 Create an Entity means that the main purpose of the code segment is to create a Contact. This can be stated as one of the simplest ways to create a Contact. The following code segment shows us how to create a Contact in the form while assigning values to the different property types which are exposed in the Contact Entity.
 
@@ -47,7 +48,7 @@ using(SoSession mySession = SoSession.Authenticate("sam", "sam"))
 }
 ```
 
- 
+ 
 
 In order to use Entity types we would have to import SuperOffice.CRM.Entitites name space with the use of the “using” statement. After a SoSession instance has been created and the user authenticated we can proceed to create a Contact.
 
@@ -57,7 +58,7 @@ In order to create a contact we create an Instance of the Contact Entity and use
       Contact newContact = Contact.CreateNew();
 ```
 
- 
+ 
 
 Next we use the SetDefaults() method exposed in the Contact class to set the default vales for the created Contact.
 
@@ -65,7 +66,7 @@ Next we use the SetDefaults() method exposed in the Contact class to set the def
       newContact.SetDefaults();
 ```
 
- 
+ 
 
 Since an Entity exposes properties of different types such as String, int, DateTime, Row and Rows types, Entity and Entity Collection types. Next part of the code above shows how we may assign vales to such properties exposed through the Contact Entity. Once such assignments have being made we make use of the Save() method exposed in the Contact class as shown below in order to save the created Contact.
 
@@ -73,4 +74,4 @@ Since an Entity exposes properties of different types such as String, int, DateT
       newContact.Save();
 ```
 
- 
+ 

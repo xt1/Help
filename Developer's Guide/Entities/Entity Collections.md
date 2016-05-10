@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 58
+<properties date="2016-05-10"
+SortOrder="58"
+/>
 
 An Entity can have properties of type Entity Collection. Entity Collection type consists of a Collection of Entity types, just as its name implies.
 
- 
+ 
 
 ```
 using SuperOffice;

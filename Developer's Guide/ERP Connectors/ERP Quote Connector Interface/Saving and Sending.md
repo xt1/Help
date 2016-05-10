@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 7
+<properties date="2016-05-10"
+SortOrder="7"
+/>
 
 [Saving the Quote]()
 ----------------------------------------------
@@ -8,9 +9,9 @@ SortOrder: 7
 
 The sale is updated with the preferred alternative’s total amount when the quote dialog is closed.
 
-After the sale and quote have been written to the database, the OnAfterSaveQuote is called for each alternative in turn.  The OnAfterSaveQuote cannot edit the quote – it is intended for the connector to update the ERP with any interesting changes – i.e. for keeping the ERP system up to date with respect to the SuperOffice quote.
+After the sale and quote have been written to the database, the OnAfterSaveQuote is called for each alternative in turn.  The OnAfterSaveQuote cannot edit the quote – it is intended for the connector to update the ERP with any interesting changes – i.e. for keeping the ERP system up to date with respect to the SuperOffice quote.
 
- 
+ 
 
 [Sending Quotes]()
 --------------------------------------------
@@ -33,13 +34,13 @@ The QuoteConnector is called after all this is done, so that the connector can s
 <tbody>
 <tr class="odd">
 <td><p>QuoteSentResponseInfo <strong>OnAfterSentQuoteVersion</strong>( QuoteContextInfo context )</p></td>
-<td><p>Called after a quote version is sent to the customer. Can return a URL or SO Protocol, or a status message to indicate success/failure.  Cannot prevent the version becoming archived.</p></td>
+<td><p>Called after a quote version is sent to the customer. Can return a URL or SO Protocol, or a status message to indicate success/failure.  Cannot prevent the version becoming archived.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 <img src="Quote%20Connector%20interface_files/image020.jpg" id="Picture 7187" width="605" height="501" />
 
- 
+ 

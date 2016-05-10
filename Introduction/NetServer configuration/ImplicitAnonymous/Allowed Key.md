@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 93
+<properties date="2016-05-10"
+SortOrder="93"
+/>
 
 This configuration informs NetServer of Anonymous user access and whether an Anonymous user should be allowed into NetServer or not based on the Boolean values defined.
 
- 
+ 
 
 ```
 <add key="Allowed" value="True"/>

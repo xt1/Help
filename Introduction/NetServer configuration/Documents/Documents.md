@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 113
+<properties date="2016-05-10"
+SortOrder="113"
+/>
 
- 
+ 
 
 The Documents section contains seven settings related to SuperOffice documents. It is used as a method for NetServer to identify the location of the document archive and the temporary directory to be used. As access to the document archive can be restricted to certain users, to access the required directories NetServer must impersonate a user with read and write access.
 

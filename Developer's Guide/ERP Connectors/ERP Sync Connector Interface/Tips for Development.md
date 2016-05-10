@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 23
+<properties date="2016-05-10"
+SortOrder="23"
+/>
 
 [Tips for Development]()
 =====================================
@@ -22,9 +23,9 @@ If you choose to use the SuperOffice-provided connector host, then your connecto
 
 To utilize direct-loading, you need to
 
-a)       Include your connector assembly in the &lt;dynamicLoad&gt; section in web.config
+a)       Include your connector assembly in the &lt;dynamicLoad&gt; section in web.config
 
-b)       Instead of a site URL for the connector, use plugin://&lt;connectorname&gt;, where &lt;connectorname&gt; represents the name given in the ErpConnector attribute on the implementing class.
+b)       Instead of a site URL for the connector, use plugin://&lt;connectorname&gt;, where &lt;connectorname&gt; represents the name given in the ErpConnector attribute on the implementing class.
 
 ![](sync-connector-plugin.PNG)
 
@@ -34,7 +35,7 @@ Having the connector loaded directly can make debugging simpler, since there are
 
 If you attempt to use this connection from the windows client you will get an error. The windows client and the Travel Gateway both require that you use a URL to connect to the sync service.
 
- 
+ 
 
 
 

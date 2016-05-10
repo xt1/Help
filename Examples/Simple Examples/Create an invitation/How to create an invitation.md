@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 5
+<properties date="2016-05-10"
+SortOrder="5"
+/>
 
 After creating an appointment you may need to invite members. The following example demonstrates how this is done.
 
@@ -48,10 +49,10 @@ AppointmentMatrix(appointmentOne, recurrenceMode);
 }
 ```
 
- 
+ 
 
-In this example, we have initially created an appointment. We have set certain properties of the appointment. A Person Entity is used for the purpose of adding as a participant to this appointment. In the latter part of the above example we have set some properties of the participant such as AssociateId, PersonId and SendEmail. You can create an array of ParticipantInfo as we have done above. An   instance of the AppointmentMatrix is created by passing the newly created appointment.
+In this example, we have initially created an appointment. We have set certain properties of the appointment. A Person Entity is used for the purpose of adding as a participant to this appointment. In the latter part of the above example we have set some properties of the participant such as AssociateId, PersonId and SendEmail. You can create an array of ParticipantInfo as we have done above. An   instance of the AppointmentMatrix is created by passing the newly created appointment.
 
 You can add the participants to the AppointmentMatrix by using the AddParticipant() method.
 
-When the AppointmentMatrix is saved two records will be added to the appointment table.  One is corresponding to the creator of the appointment and the other one is referring to the participant. If we have added more participants more records will be entered in to the appointment table.
+When the AppointmentMatrix is saved two records will be added to the appointment table.  One is corresponding to the creator of the appointment and the other one is referring to the participant. If we have added more participants more records will be entered in to the appointment table.

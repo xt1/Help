@@ -1,4 +1,5 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 A Sentry is automatically added when you query on entity tables like Contact or Project. You can ask this sentry about your permission to access the various fields you get back.
 

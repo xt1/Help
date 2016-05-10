@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 12
+<properties date="2016-05-10"
+SortOrder="12"
+/>
 
- 
+ 
 
-Before you write queries, first you must create a new connection. Following example demonstrates how this is done.  This is the basic of SuperOffice Objectified SQL. This is used in the rest of the examples.
+Before you write queries, first you must create a new connection. Following example demonstrates how this is done.  This is the basic of SuperOffice Objectified SQL. This is used in the rest of the examples.
 
 ```
 using SuperOffice.Data;
@@ -33,6 +34,6 @@ using(SoSession newSession = SoSession.Authenticate ("SAL0", ""))
 }
 ```
 
- 
+ 
 
-Initially we create a connection through the GetConnection() method of the ConnectionFactory. If the connection is successfully created the new SoConnection instance will be returned. Once a new connection is created you must first open the connection before writing any queries. When you finish with querying you must close the connection just as you do when writing SQL queries. 
+Initially we create a connection through the GetConnection() method of the ConnectionFactory. If the connection is successfully created the new SoConnection instance will be returned. Once a new connection is created you must first open the connection before writing any queries. When you finish with querying you must close the connection just as you do when writing SQL queries. 

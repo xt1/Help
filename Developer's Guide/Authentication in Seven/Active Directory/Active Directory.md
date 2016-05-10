@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 54
+<properties date="2016-05-10"
+SortOrder="54"
+/>
 
 <img src="../../EW%202010%20Authentication_files/image002.jpg" id="Picture 1" width="435" height="33" />
 

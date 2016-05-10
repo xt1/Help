@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 16
+<properties date="2016-05-10"
+SortOrder="16"
+/>
 
 For the application to run, some modifications are required in the web configuration file. The following section illustrates the modifications required in the authentication section and the database section of the configuration file.
 
- 
+ 
 
 ```
 <authentication mode="Forms">

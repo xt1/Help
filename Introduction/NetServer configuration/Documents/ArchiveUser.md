@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 117
+<properties date="2016-05-10"
+SortOrder="117"
+/>
 
 This key relates to the n ame of the archive user to be impersonated. The value must contain the name of the archive user.
 

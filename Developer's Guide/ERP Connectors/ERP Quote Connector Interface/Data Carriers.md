@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 11
+<properties date="2016-05-10"
+SortOrder="11"
+/>
 
 [Data carriers]()
 ===========================================
@@ -12,7 +13,7 @@ All these carriers are defined in the **SuperOffice.Plugins.DLL** – they will 
 
 To keep these classes apart from the internal SuperOffice classes we have suffixed the class names with “Info”, like “QuoteAlternativeInfo”.
 
- 
+ 
 
 [QuoteConnectionInfo]()
 -------------------------------------------------
@@ -59,9 +60,9 @@ Quote connections will be stored in the table “QuoteConnection” in the CRM d
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
 [ISaleInfo]()
 ---------------------------------------
@@ -79,7 +80,7 @@ Read-only sale information.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><p>int SaleId  </p></td>
+<td><p>int SaleId  </p></td>
 <td><p>Primary key of the sale record in CRM database</p></td>
 </tr>
 <tr class="even">
@@ -147,8 +148,8 @@ Read-only sale information.
 <td><p>Open/Sold/Lost/Stalled</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>Decimal Cost</p></td>
@@ -161,7 +162,7 @@ Read-only sale information.
 </tbody>
 </table>
 
- 
+ 
 
 [QuoteInfo]()
 ---------------------------------------
@@ -190,8 +191,8 @@ Read-write Quote information.
 <p>Identifies the ERP connection used for this quote. Each quote is bound to one and only one connection.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>string ERPQuoteKey</p></td>
@@ -204,8 +205,8 @@ Read-write Quote information.
 <p>Only filled out if there exists a corresponding order representation of the quote in the ERP system.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>int ActiveQuoteVersionId</p></td>
@@ -234,25 +235,25 @@ A quote is divided into one or more versions (or revisions, if you like), so a q
 
 I.e. a QuoteVersion always have a quote.
 
-Even if versioning is disabled, a single version will exist.  When versioning is disabled, new versions are not created, but the only one is reused.
+Even if versioning is disabled, a single version will exist.  When versioning is disabled, new versions are not created, but the only one is reused.
 
 int QuoteVersionId
 
 Primary key in CRM database.
 
- 
+ 
 
 string ERPQuoteVersionKey
 
 Key in the ERP system that uniquely identifies this Version within the ERP system (if available, the field may be empty).
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 int QuoteId
 
@@ -260,13 +261,13 @@ Foreign key to CRM quote (the conceptual parent).
 
 Owning Quote of this Quote Version
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 string Description
 
@@ -276,13 +277,13 @@ Potentially longer text description, typically used in a tooltip.
 
 Max 2K.
 
- 
+ 
 
 string Number
 
 A quote number that the user (or ERP connector) can fill out.
 
- 
+ 
 
 QuoteVersionStateInfo State
 
@@ -290,7 +291,7 @@ Current state of this quote version.
 
 The states will be like: CalculatedDraft, NotCalculatedDraft, Published, etc.
 
- 
+ 
 
 int LikelyQuoteAlternativeId
 
@@ -298,67 +299,67 @@ The alternative that is considered most likely to be accepted.
 
 Used to calculate probable income.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 DateTime SentDate
 
 The date the version was sent to the customer.
 
- 
+ 
 
 int FollowupId
 
 Link to a follow-up activity, created when this quote version was sent to the customer.
 
- 
+ 
 
 DateTime ExpirationDate
 
 Last date the quote Version is valid, expiration is at midnight end of this day.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 string DeliveryCountry
 
-The quote has an address for delivery.  Should be stored as ISO code or something…
+The quote has an address for delivery.  Should be stored as ISO code or something…
 
- 
+ 
 
 bool HasOwnDeliveryAddress
 
 The delivery address is not the same as the contact's Street address
 
- 
+ 
 
 string InvoiceCountry
 
 The quote has an address for Invoicing. Should be stored as ISO code or something…
 
- 
+ 
 
 bool HasOwnInvoiceAddress
 
 The quote has an address for Invoicing. This will typically be copied from the company's addresses.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 string ERPPaymentTermsKey
 
@@ -366,7 +367,7 @@ Either a List id to an id from a connector provided list, or, if the connection 
 
 For instance: ‘Standard 30 days’.
 
- 
+ 
 
 string ERPPaymentTypeKey
 
@@ -374,7 +375,7 @@ Either a List id to an id from a connector provided list, or, if the connection 
 
 For instance: ‘Invoice’.
 
- 
+ 
 
 string ERPDeliveryTermsKey
 
@@ -382,7 +383,7 @@ Either a List id to an id from a connector provided list, or, if the connection 
 
 For instance: ‘FOB’ (‘Free on board’).
 
- 
+ 
 
 string ERPDeliveryTypeKey
 
@@ -390,41 +391,41 @@ Either a List id to an id from a connector provided list, or, if the connection 
 
 For instance: ‘Air’.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 int Rank
 
 Rank/Version number, starts at 1.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 QuoteStatus Status
 
 If there was a problem with for instance calculation, this field is set to warning or error.
 
- 
+ 
 
 string Reason
 
 If there was a problem, this field contains a localized explanation of the problem and possible steps to fix it that the user can be shown.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 string ExtraField1
 
@@ -446,11 +447,11 @@ string ExtraField5
 
 Optional information added by Quote Connector; usable in the quote document merge process.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 int ApprovedBy
 
@@ -458,7 +459,7 @@ Not yet implemented:
 
 Id of associate who approved (or rejected approval) for this version.
 
- 
+ 
 
 string ApprovedText
 
@@ -466,7 +467,7 @@ Not yet implemented:
 
 Text with comments on why approval was granted (or rejected)
 
- 
+ 
 
 int ApprovedRegisteredBy
 
@@ -474,21 +475,21 @@ Not yet implemented:
 
 Id of associate who actually entered the approval; might be different from ApprovedBy (i.e. due to telephone consultation/approval)
 
- 
+ 
 
 DateTime ApprovedRegisteredDate
 
 When was approval granted or rejected
 
- 
+ 
 
 DateTime LastRecalculated
 
 <a href="" id="OLE_LINK40"></a> <a href="" id="OLE_LINK39">When this version was last subjected to a total recalculation</a> . This field must be set by the <a href="" id="OLE_LINK48"></a> <a href="" id="OLE_LINK41">connector</a>, since the connector may choose to ignore a RecalculateVersion call based on policies and possibly the current value of this field. SuperOffice will set this field to 1.1.1760 whenever any change occurs to the quote, to indicate that a recalculation is needed.
 
- 
+ 
 
- 
+ 
 
 ### [QuoteVersionStateInfo]()
 
@@ -547,9 +548,8 @@ The various states a QuoteVersion can be in.
 </tbody>
 </table>
 
-                              
-
-               
+                              
+               
 
  <img src="Quote%20Connector%20interface_files/image026.png" width="127" height="29" />  [QuoteAlternativeInfo]()
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -577,16 +577,16 @@ An Alternative may have discounts on the total amount. The Alternative tracks wh
 <td><p>Key that identifies this alternative in the ERP system, if it exists there.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>int QuoteVersionId</p></td>
 <td><p>The version that owns this alternative (the chain is Sale 1-&gt;1 Quote 1-&gt;+ QuoteVersion 1-&gt;+ QuoteAlternative.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>string Name</p></td>
@@ -597,8 +597,8 @@ An Alternative may have discounts on the total amount. The Alternative tracks wh
 <td><p>The tool-tip to use in the user interface (on the tab, for instance).</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>QuoteStatus Status</p></td>
@@ -609,14 +609,14 @@ An Alternative may have discounts on the total amount. The Alternative tracks wh
 <td><p>If there was a problem, this field contains a localized explanation of the problem and possible steps to fix it that the user can be shown.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p><a href="">double</a> <a href="" id="OLE_LINK6"></a> <a href="" id="OLE_LINK5">ERPDiscountPercent</a></p></td>
 <td><p>The discount the system calculates based on customer /amount / whatever. Can be overridden by the salesman in the field ‘DiscountPercent’ or ‘DiscountAmount’.</p>
 <p>Both the two ‘ERPDiscountPercent’ and ‘ERPDiscountAmount’ shall be filled out.</p>
-<p> </p>
+<p> </p>
 <p>If UserValueOverride is 'None', then the ERPDiscountAmount shall be copied into DiscountAmount and ERPDiscountPercent into DiscountPercent.</p>
 <p><a href="" id="OLE_LINK34"></a> <a href="" id="OLE_LINK33"></a> <a href="" id="OLE_LINK32"></a> <a href="" id="OLE_LINK31">The Percentage is given in percent form, i.e. ‘12%’ is represented as ‘12’.</a></p></td>
 </tr>
@@ -624,12 +624,12 @@ An Alternative may have discounts on the total amount. The Alternative tracks wh
 <td><p>double <a href="" id="OLE_LINK15"></a> <a href="" id="OLE_LINK14">ERPDiscountAmount</a></p></td>
 <td><p>The discount the system calculates based on customer /amount / whatever. Can be overridden by the user in the field ‘DiscountPercent’ or ‘DiscountAmount’.</p>
 <p>Both the two ‘ERPDiscountPercent’ and ‘ERPDiscountAmount’ shall be filled out.</p>
-<p> </p>
+<p> </p>
 <p>If UserValueOverride is 'None', then the ERPDiscountAmount shall be copied into DiscountAmount and ERPDiscountPercent into DiscountPercent.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>double DiscountPercent</p></td>
@@ -649,13 +649,13 @@ An Alternative may have discounts on the total amount. The Alternative tracks wh
 <tr class="odd">
 <td><p>ValueOverrideInfo UserValueOverride</p></td>
 <td><p>Has the pre-calculated (from ERP) price information been overridden, and how.</p>
-<p> </p>
+<p> </p>
 <p>If the user has filled out the discountpercentage field, then the UserValueOverride field is set to OverridePercent.</p>
 <p>(The DiscountAmount, EarningPercent, EarningAmount and TotalPrice fields are calculated based on the discountPercent.)</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>string VATInfo</p></td>
@@ -671,8 +671,8 @@ An Alternative may have discounts on the total amount. The Alternative tracks wh
 <p>May or may not be filled out.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>double EarningAmount</p></td>
@@ -686,12 +686,12 @@ An Alternative may have discounts on the total amount. The Alternative tracks wh
 <tr class="even">
 <td><p>double SubTotal</p></td>
 <td><p>The sum of the quotelines totalPrice (and not the sum of their subtotal!!).</p>
-<p> </p>
+<p> </p>
 <p>Think of it as sum before discount.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>double TotalPrice</p></td>
@@ -723,7 +723,7 @@ An Alternative may have discounts on the total amount. The Alternative tracks wh
 </tbody>
 </table>
 
- 
+ 
 
 ### [Quote Alternative Discounts/Earning]()
 
@@ -731,7 +731,7 @@ Each quote line can have a discount applied. A quote alternative (a set of quote
 
 <img src="Quote%20Connector%20interface_files/image028.jpg" width="605" height="149" />
 
- 
+ 
 
 The discount on the whole quote alternative works much like the discounts on the quote.
 The ERP system can suggest a discount (either Percent or a fixed amount) and the user can override the suggestion.
@@ -742,21 +742,21 @@ Another way to set the discount is to set the earning! Since Cost + Earning = To
 
 This means that if you set any of the fields:
 
-*          DiscountAmount
+* DiscountAmount
 
-*          DiscountPercent
+* DiscountPercent
 
-*          EarningAmount
+* EarningAmount
 
-*          EarningPercent
+* EarningPercent
 
-*          TotalPrice
+* TotalPrice
 
 Then the other 4 values will be adjusted accordingly.
 
 The QuoteCalculation helper class in the plug-in DLL can help you handle the different methods of calculating totals and discounts.
 
- 
+ 
 
 [QuoteLineInfo]()
 -------------------------------------------
@@ -786,16 +786,16 @@ QuoteLines are mainly information copied from the Products provider. Products in
 <td><p>The foreign key to the quoteline in ERP system (if it has such a representation).</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>int QuoteAlternativeId</p></td>
 <td><p>The alternative this line is part of, the conceptual Parent in CRM database.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>s tring ERPProductKey</p></td>
@@ -804,13 +804,13 @@ QuoteLines are mainly information copied from the Products provider. Products in
 </tr>
 <tr class="odd">
 <td><p>string ERPPriceListKey</p>
-<p> </p></td>
+<p> </p></td>
 <td><p>Foreign key to the price list that this quoteline is a part of.</p>
 <p>Can be blank since the QuoteLine doesn’t have to be connected to a product.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>QuoteStatus Status</p></td>
@@ -822,8 +822,8 @@ QuoteLines are mainly information copied from the Products provider. Products in
 <td><p>If QuoteStatus is not OK, then this field contains a localized explanation that the user can be shown.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>double Quantity</p></td>
@@ -838,8 +838,8 @@ QuoteLines are mainly information copied from the Products provider. Products in
 <td><p>QuoteLines can be re-ordered, so we must track the ordering.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>string Name</p></td>
@@ -875,8 +875,8 @@ QuoteLines are mainly information copied from the Products provider. Products in
 <p>Is stored here if the user changes the value from the product in the pricelist, or just enters a QuoteLine without a product link.</p></td>
 </tr>
 <tr class="odd">
-<td><p>   </p></td>
-<td><p> </p></td>
+<td><p>   </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>string  ProductCategoryKey </p></td>
@@ -897,8 +897,8 @@ QuoteLines are mainly information copied from the Products provider. Products in
 <p>Is stored here if the user changes the value from the product in the pricelist, or just enters a QuoteLine without a product link.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>string SupplierCode</p></td>
@@ -911,8 +911,8 @@ QuoteLines are mainly information copied from the Products provider. Products in
 <p>Is stored here if the user changes the value from the product in the pricelist, or just enters a QuoteLine without a product link.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>string Thumbnail</p></td>
@@ -920,8 +920,8 @@ QuoteLines are mainly information copied from the Products provider. Products in
 <p>Base64 encoded string, or a valid URI that resolves to an image.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>string VatInfo</p></td>
@@ -935,8 +935,8 @@ QuoteLines are mainly information copied from the Products provider. Products in
 <p>This is just to help out the layout of the quote in a document, but SuperOffice will not try to calculate this value.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>double UnitCost</p></td>
@@ -954,25 +954,25 @@ QuoteLines are mainly information copied from the Products provider. Products in
 <td><p>ProductExtraDataFieldInfo[] ExtraInfo</p></td>
 <td><p>Extra data (fields with labels). Shall be shown in the quoteline dialog.</p>
 <p>Additional info that the ERP system would like to store and show in the user interface.</p>
-<p> </p>
+<p> </p>
 <p>Information placed here is shown in the GUI if the “provide-extra-data” capability is true.</p>
 <p>Different products can have different fields.</p>
 <p>It will not be possible to directly put info here into the quote document.</p>
-<p> </p>
+<p> </p>
 <p>BTW, this will be stored in the SuperOffice database as an xml field, like this:</p>
 <p>&lt;Fields&gt;</p>
-<p>  &lt;Field Name=&quot;Weight&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[[F:16.6] tons]]&gt;&lt;/Field&gt;</p>
-<p>  &lt;Field Name=&quot;Height&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[ [F:44.0]cm]]&gt;&lt;/Field&gt;</p>
-<p>  &lt;Field Name=&quot;Arms&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[ [I:2]]]&gt;&lt;/Field&gt;</p>
-<p>  &lt;Field Name=&quot;Certification&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[AB-ICE]]&gt;&lt;/Field&gt;</p>
-<p>  &lt;Field Name=&quot;Weight&quot; Type=&quot;String&quot;&gt;&lt;![CDATA40°C]]&gt;&lt;/Field&gt;</p>
-<p>  &lt;Field Name=&quot;Security info&quot; Type=&quot;Url&quot; &gt;&lt;![CDATA[http://www.armystudyguide.com/content/army_board_study_guide_topics/hand_grenades/throwing-of-hand-grenades.shtml]]&gt;&lt;/Field&gt;</p>
-<p>   &lt;Field Name=&quot;Security image &gt;&lt;![CDATA[http://upload.wikimedia.org/wikipedia/commons/thumb/8/80/MK2_grenade_DoD.jpg/220px-MK2_grenade_DoD.jpg&lt;/Field]]&gt;</p>
+<p>  &lt;Field Name=&quot;Weight&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[[F:16.6] tons]]&gt;&lt;/Field&gt;</p>
+<p>  &lt;Field Name=&quot;Height&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[ [F:44.0]cm]]&gt;&lt;/Field&gt;</p>
+<p>  &lt;Field Name=&quot;Arms&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[ [I:2]]]&gt;&lt;/Field&gt;</p>
+<p>  &lt;Field Name=&quot;Certification&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[AB-ICE]]&gt;&lt;/Field&gt;</p>
+<p>  &lt;Field Name=&quot;Weight&quot; Type=&quot;String&quot;&gt;&lt;![CDATA40°C]]&gt;&lt;/Field&gt;</p>
+<p>  &lt;Field Name=&quot;Security info&quot; Type=&quot;Url&quot; &gt;&lt;![CDATA[http://www.armystudyguide.com/content/army_board_study_guide_topics/hand_grenades/throwing-of-hand-grenades.shtml]]&gt;&lt;/Field&gt;</p>
+<p>   &lt;Field Name=&quot;Security image &gt;&lt;![CDATA[http://upload.wikimedia.org/wikipedia/commons/thumb/8/80/MK2_grenade_DoD.jpg/220px-MK2_grenade_DoD.jpg&lt;/Field]]&gt;</p>
 <p>&lt;/Fields&gt;</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>string Rights</p></td>
@@ -988,8 +988,8 @@ QuoteLines are mainly information copied from the Products provider. Products in
 <p>Will NOT be used by SuperOffice.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>string ExtraField1</p></td>
@@ -1012,8 +1012,8 @@ QuoteLines are mainly information copied from the Products provider. Products in
 <td><p>This a simple field for adding information that the Connector can provide, and that the qoute document need to display.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>double ERPDiscountAmount</p></td>
@@ -1048,13 +1048,13 @@ QuoteLines are mainly information copied from the Products provider. Products in
 <tr class="even">
 <td><p>ValueOverrideInfo UserValueOverride</p></td>
 <td><p>Has the pre-calculated (from ERP) price information been overridden, and how.</p>
-<p> </p>
+<p> </p>
 <p>If the user has filled out the discountpercentage field, then the UserValueOverride field is set to OverridePercent.</p>
 <p>(The DiscountAmount, EarningPercent, EarningAmount and TotalPrice fields are calculated based on the DiscountPercent.)</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>double EarningAmount</p></td>
@@ -1073,12 +1073,12 @@ QuoteLines are mainly information copied from the Products provider. Products in
 <p>Calculated by the ERPconnector</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>double TotalPrice</p></td>
-<td><p>TotalPrice  = SubTotal - DiscountAmount</p>
+<td><p>TotalPrice  = SubTotal - DiscountAmount</p>
 <p>or</p>
 <p>TotalPrice = (UnitCost * Quantity) + EarningAmount</p>
 <p>, according to what the user changed last.</p></td>
@@ -1086,10 +1086,10 @@ QuoteLines are mainly information copied from the Products provider. Products in
 <tr class="odd">
 <td><p>b ool IsIncluded</p></td>
 <td><p>Not yet implemented:</p>
-<p> “IsNotAnOption”</p>
+<p> “IsNotAnOption”</p>
 <p>If true, will be added to the total price.<br />
 Shown as a checkbox on the quote line.</p>
-<p> </p>
+<p> </p>
 <p>Not in V1</p></td>
 </tr>
 <tr class="even">
@@ -1099,20 +1099,20 @@ Shown as a checkbox on the quote line.</p>
 <p>The name will be used as Label.</p>
 <p>Totalprice will reflect the sum of all totalprices in the quotelines connected to the group.</p>
 <p>The rank shall be ascending thru the whole QuoteAlternative, disregarding any groups</p>
-<p> </p>
+<p> </p>
 <p>Not in V1</p></td>
 </tr>
 <tr class="odd">
 <td><p>int ParentQuoteLine</p></td>
 <td><p>Not yet implemented:</p>
 <p>If this quoteLine is a part of a group heading or a Package, this field will have that quoteline’s id.</p>
-<p> </p>
+<p> </p>
 <p>Not in V1</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ### [Enum ValueOverrideInfo]()
 
@@ -1130,7 +1130,7 @@ OverrideEarningPercent = 4,
 
 OverrideEarningAmount = 5
 
- 
+ 
 
 ### []() []() [Rights field]()
 
@@ -1138,10 +1138,10 @@ Specification: “Field1=Right,Reason&Field2=Right,Reason”
 
 ***Right:***
 
--   N = None or Hidden
--   R = Read-only (Implies Visual)
--   W = Writable (& Visual)
--   M = Mandatory (& Writable & Visual)
+* N = None or Hidden
+* R = Read-only (Implies Visual)
+* W = Writable (& Visual)
+* M = Mandatory (& Writable & Visual)
 
 The rights are mutually exclusive; a field can only have one of these rights.
 
@@ -1161,7 +1161,7 @@ The reason will only work when the right is R (Read-only).
 
 “QuoteLine.Image=N&QuoteLine.UnitCost=R,This product has a fixed cost.&QuoteLine.Description=W&QuoteLine.VAT=M”
 
- 
+ 
 
 ### [QuoteListItemInfo]()
 
@@ -1178,8 +1178,8 @@ One line in a list, consisting of a key, a name, a tooltip and an icon. Lists ar
 <td><p>Primary key for the item</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>String DisplayValue</p></td>
@@ -1196,9 +1196,9 @@ One line in a list, consisting of a key, a name, a tooltip and an icon. Lists ar
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
 ### [QuoteVersionResponseInfo]()
 
@@ -1246,7 +1246,7 @@ Return value on Quote Sent.
 </tbody>
 </table>
 
- 
+ 
 
 ### [OrderResponseInfo]()
 
@@ -1275,7 +1275,7 @@ Inherits PluginResponseInfo.
 </tbody>
 </table>
 
- 
+ 
 
 ### [PlaceOrderResponseInfo]()
 
@@ -1296,7 +1296,7 @@ Inherits OrderResponseInfo.
 </tbody>
 </table>
 
- 
+ 
 
 ### [FieldMetadataInfo]()
 
@@ -1308,7 +1308,7 @@ The GUI will use this info to build the user interface controls. The call to the
 
 Figure 3 : Admin Quote Connection Dialog.
 
- 
+ 
 
 <table>
 <colgroup>
@@ -1361,39 +1361,39 @@ Figure 3 : Admin Quote Connection Dialog.
 </tbody>
 </table>
 
- 
+ 
 
 ### [Enum ConfigFieldType]()
 
 <a href="" id="OLE_LINK52">Describes the different types of controls that can appear in the Configure connection dialog</a> :
 
-*          Checkbox           – checkbox control.  Returns 0 or 1
+* Checkbox           – checkbox control.  Returns 0 or 1
 
-*          Text                      – edit field
+* Text                      – edit field
 
-*          Password           - edit field with \*\*\* masking
+* Password           - edit field with \*\*\* masking
 
-*          Integer                – edit field – digits only, accepts integers
+* Integer                – edit field – digits only, accepts integers
 
-*          Double                - edit field – digits only, accepts decimal numbers formatted with CultureInfo.InvariantCulture (for instance: “-1000.01”)
+* Double                - edit field – digits only, accepts decimal numbers formatted with CultureInfo.InvariantCulture (for instance: “-1000.01”)
 
-*          List                        – dropdown list
+* List                        – dropdown list
 
-*          Label                    – static text (no value entered or saved)
+* Label                    – static text (no value entered or saved)
 
- 
+ 
 
 ### [Enum FieldAccessInfo]()
 
 Access restrictions and mandatory status, if any.
 
-*          Normal                - Normal field, no particular restrictions
+* Normal                - Normal field, no particular restrictions
 
-*          Mandatory        - This field is mandatory
+* Mandatory        - This field is mandatory
 
-*          ReadOnly           - This field is read-only
+* ReadOnly           - This field is read-only
 
- 
+ 
 
 ### [Config va]()  l  ues
 
@@ -1429,19 +1429,19 @@ PluginResponseInfo exists to be able to respond with more than just a true/false
 </tbody>
 </table>
 
- 
+ 
 
 ### []() [Enum QuoteStatus]()
 
 QuoteStatus shall be used to give indications in the user interface that there is more info or problems available.
 
-*          Ok,                // OK, all is good
+* Ok,                // OK, all is good
 
-*          OkWithInfo,// All is good, but there is some additional information that the user should be made aware of.
+* OkWithInfo,// All is good, but there is some additional information that the user should be made aware of.
 
-*          Warning,     // There is a problem that the user must be made aware of.
+* Warning,     // There is a problem that the user must be made aware of.
 
-*          Error,            // There is a problem that the system will not be able to get around. The user needs to do something. **SuperOffice will deny the user to send the quote or place the order.** If the error is not so bad thet it have to stop the user? Then it is not an error, it is a warning.
+* Error,            // There is a problem that the system will not be able to get around. The user needs to do something. **SuperOffice will deny the user to send the quote or place the order.** If the error is not so bad thet it have to stop the user? Then it is not an error, it is a warning.
 
 Example: The user has registered a quoteline that is discontinued and the amount the user has registered is not in stock.
 
@@ -1461,7 +1461,7 @@ And so on.
 
 ##### Reason fields.
 
- 
+ 
 
 The reason fields will be shown to the user, and should thus be translated to the language of the user.
 
@@ -1487,7 +1487,7 @@ Please note that the format is quite strict; if the text does not follow these c
 
 Some of the functions also returns a PluginResponseInfo. See PluginResponseInfo for more info.
 
- 
+ 
 
 ### [ERP Discounts and User Discounts]()
 
@@ -1501,7 +1501,7 @@ If the user does not enter anything, we default to the ERP system suggestions.
 
 If the user enters a discount, the ERP connector gets a chance to change them.
 
- 
+ 
 
 ### [Value Fields and Amounts and Percent’s]()
 
@@ -1511,21 +1511,21 @@ Figure 9 : Please notice that this dialog has been revised severely. It will loo
 
 The Quote Line dialog has five ways of setting the discount; using any of the following fields: DISCOUNT PERCENT and DISCOUNT AMOUNT, EARNING PERCENT and EARNING AMOUNT, and TOTAL PRICE.
 
-These are linked. Change the discount percent, and the discount amount, the total price, the earning percent and earning amount will be recalculated. 
+These are linked. Change the discount percent, and the discount amount, the total price, the earning percent and earning amount will be recalculated. 
 
 We track which field was most recently modified by the user, and we use that as the master field. When UnitCostPrice, Quantity or UnitListPrice changes, the discounts can be adjusted accordingly to maintain the master field’s value.
 
 e.g. Assume a quoteline where:
 
-*          UnitCost is 10.00
+* UnitCost is 10.00
 
-*          UnitListPrice = 13.00
+* UnitListPrice = 13.00
 
 The user has entered
 
-*          Quantity = 10
+* Quantity = 10
 
-*          Discount 10%
+* Discount 10%
 
 The UserValueOverride is DiscountPercent since that is what the user modified last.
 
@@ -1544,27 +1544,27 @@ The UserValueOverride is DiscountPercent since that is what the user modified la
 <td><p>130.00 * 10% = 13.00</p></td>
 </tr>
 <tr class="odd">
-<td><p>The connector calculates the <strong>Total Price</strong> from the SubTotal and Discount Amount: </p></td>
+<td><p>The connector calculates the <strong>Total Price</strong> from the SubTotal and Discount Amount: </p></td>
 <td><p>130.00 – 13.00 = 117.00</p></td>
 </tr>
 <tr class="even">
-<td><p>The connector calculates the <strong>Total Cost</strong> from the Quantity and UnitCost: </p></td>
+<td><p>The connector calculates the <strong>Total Cost</strong> from the Quantity and UnitCost: </p></td>
 <td><p>10*10.00 = 100.00</p></td>
 </tr>
 <tr class="odd">
-<td><p>The connector calculates the <strong>Earning Amount</strong> from the TotalPrice and cost: </p></td>
+<td><p>The connector calculates the <strong>Earning Amount</strong> from the TotalPrice and cost: </p></td>
 <td><p>117.00– 100.00 = 17.00</p></td>
 </tr>
 <tr class="even">
-<td><p>The connector calculates the <strong>Earning Percent</strong> from the Earning Amount and TotalPrice: </p></td>
+<td><p>The connector calculates the <strong>Earning Percent</strong> from the Earning Amount and TotalPrice: </p></td>
 <td><p>17.00 / 117.00 = 14.53%</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
-The user changes **Quantity**:                       Quantity = **100**
+The user changes **Quantity**:                       Quantity = **100**
 
 <table>
 <colgroup>
@@ -1581,25 +1581,25 @@ The user changes **Quantity**:                       Quant
 <td><p>1300.00 * 10% = 130.00</p></td>
 </tr>
 <tr class="odd">
-<td><p>The connector calculates the <strong>Total Price</strong> from the SubTotal and Discount Amount: </p></td>
+<td><p>The connector calculates the <strong>Total Price</strong> from the SubTotal and Discount Amount: </p></td>
 <td><p>1300.00 – 130.00 = 1170.00</p></td>
 </tr>
 <tr class="even">
-<td><p>The connector calculates the <strong>Total Cost</strong> from the Quantity and UnitCost: </p></td>
+<td><p>The connector calculates the <strong>Total Cost</strong> from the Quantity and UnitCost: </p></td>
 <td><p>100*10.00 = 1000.00</p></td>
 </tr>
 <tr class="odd">
-<td><p>The connector calculates the <strong>Earning Amount</strong> from the TotalPrice and cost: </p></td>
+<td><p>The connector calculates the <strong>Earning Amount</strong> from the TotalPrice and cost: </p></td>
 <td><p>1170.00– 1000.00 = 170.00</p></td>
 </tr>
 <tr class="even">
-<td><p>The connector calculates the <strong>Earning Percent</strong> from the Earning Amount and TotalPrice: </p></td>
+<td><p>The connector calculates the <strong>Earning Percent</strong> from the Earning Amount and TotalPrice: </p></td>
 <td><p>170.00 / 1170.00 = 14.53%</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 The user changes **Discount Amount** to 100 – this changes the UserValueOverride to DiscountAmount.
 
@@ -1618,25 +1618,25 @@ The user changes **Discount Amount** to 100 – this changes the UserValueOverri
 <td><p>100 / 1300.00 = 7.70%</p></td>
 </tr>
 <tr class="odd">
-<td><p>The connector calculates the Total Price from the SubTotal and Discount Amount: </p></td>
+<td><p>The connector calculates the Total Price from the SubTotal and Discount Amount: </p></td>
 <td><p>1300.00 – 100.00 = 1200.00</p></td>
 </tr>
 <tr class="even">
-<td><p>The connector calculates the Total Cost from the Quantity and UnitCost: </p></td>
+<td><p>The connector calculates the Total Cost from the Quantity and UnitCost: </p></td>
 <td><p>100*10.00 = 1000.00</p></td>
 </tr>
 <tr class="odd">
-<td><p>The connector calculates the Earning Amount from the TotalPrice and cost: </p></td>
+<td><p>The connector calculates the Earning Amount from the TotalPrice and cost: </p></td>
 <td><p>1200.00– 1000.00 = 200.00</p></td>
 </tr>
 <tr class="even">
-<td><p>The connector calculates the Earning Percent from the Earning Amount and TotalPrice: </p></td>
+<td><p>The connector calculates the Earning Percent from the Earning Amount and TotalPrice: </p></td>
 <td><p>200.00 / 1200.00 = 16.67%</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 The user changes **Total Price** to 1100 – this changes the UserValueOverride to TotalPrice.
 
@@ -1659,24 +1659,24 @@ The user changes **Total Price** to 1100 – this changes the UserValueOverride 
 <td><p>200 / 1300.00 = 15.40%</p></td>
 </tr>
 <tr class="even">
-<td><p>The connector calculates the Total Cost from the Quantity and UnitCost: </p></td>
+<td><p>The connector calculates the Total Cost from the Quantity and UnitCost: </p></td>
 <td><p>100*10.00 = 1000.00</p></td>
 </tr>
 <tr class="odd">
-<td><p>The connector calculates the Earning Amount from the TotalPrice and cost: </p></td>
+<td><p>The connector calculates the Earning Amount from the TotalPrice and cost: </p></td>
 <td><p>1200.00– 1100.00 = 100.00</p></td>
 </tr>
 <tr class="even">
-<td><p>The connector calculates the Earning Percent from the Earning Amount and TotalPrice: </p></td>
+<td><p>The connector calculates the Earning Percent from the Earning Amount and TotalPrice: </p></td>
 <td><p>100.00 / 1100.00 = 9.10%</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 ---------------------------
 
- 
+ 
 ---------------------------
 
 [QuoteAlternativeWithLinesInfo]()
@@ -1701,20 +1701,20 @@ Combines an alternative with the corresponding quote lines.
 </tbody>
 </table>
 
- 
+ 
 
 [QuoteAlternativeContextInfo]()
 ---------------------------------------------------------
 
- 
+ 
 
  <img src="Quote%20Connector%20interface_files/image037.png" width="605" height="126" /> 
 
- 
+ 
 
 Exists to be able to give the connector the relevant information for QuoteAlternative specific operations, for instance to be able to compute the correct price/discount on all levels.
 
- 
+ 
 
 <table>
 <colgroup>
@@ -1727,8 +1727,8 @@ Exists to be able to give the connector the relevant information for QuoteAltern
 <td><p>Foreign key – always present.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>UserInfo CRMAssociate</p></td>
@@ -1764,7 +1764,7 @@ The CRM client will update the amount + cost fields on the sale based on the quo
 <tr class="even">
 <td><p>QuoteVersionInfo CRMQuoteVersion</p></td>
 <td><p>Read + Write version information.</p>
-<p> </p>
+<p> </p>
 <p>This is the active version</p></td>
 </tr>
 <tr class="odd">
@@ -1796,12 +1796,12 @@ The CRM client will update the amount + cost fields on the sale based on the quo
 <p>May be empty.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>String UserLanguageCode</p></td>
@@ -1809,19 +1809,19 @@ The CRM client will update the amount + cost fields on the sale based on the quo
 .net culture code: “nb-NO”, “en-US” etc.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>QuoteAlternativeWithLinesInfo CRMAlternativeWithLines</p></td>
 <td><p>Read + Write alternative information.</p>
-<p> </p>
+<p> </p>
 <p>This is the active alternative</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 ---------------------------
 
 [QuoteAction]()
@@ -1858,16 +1858,16 @@ An enumeration hinting about what the user has asked for.
 </tbody>
 </table>
 
- 
+ 
 
 QuoteVersionContextInfo
 -------------------------------------------------
 
- 
+ 
 
  <img src="Quote%20Connector%20interface_files/image038.png" width="605" height="202" /> 
 
- 
+ 
 
 Exists to be able to give the connector relevant information for QuoteVersion specific operations, like SendQuoteVersion.
 
@@ -1882,8 +1882,8 @@ Exists to be able to give the connector relevant information for QuoteVersion sp
 <td><p>Foreign key – always present.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>UserInfo CRMAssociate</p></td>
@@ -1938,8 +1938,8 @@ EISConnectionId</code></pre></td>
 <p>May be empty.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>QuoteInfo CRMQuote</p></td>
@@ -1948,12 +1948,12 @@ EISConnectionId</code></pre></td>
 <tr class="even">
 <td><p>QuoteVersionInfo CRMQuoteVersion</p></td>
 <td><p>Read + Write version information.</p>
-<p> </p>
+<p> </p>
 <p>This is the active version</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>String UserLanguageCode</p></td>
@@ -1961,28 +1961,28 @@ EISConnectionId</code></pre></td>
 .net culture code: “nb-NO”, “en-US” etc.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>QuoteAlternativeWithLinesInfo CRMQuoteAlternativeWithLines</p></td>
 <td><p>Read + Write alternative information.</p>
-<p> </p>
+<p> </p>
 <p>This is the active alternative</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 ---------------------------
 
- 
+ 
 ---------------------------
 
 [PriceListInfo]()
 -------------------------------------------
 
- 
+ 
 
 <img src="Quote%20Connector%20interface_files/image039.png" id="Picture 4" width="403" height="134" />
 
@@ -2001,16 +2001,16 @@ We have decided not to separate prices and products, which means that we get a s
 <td><p>Reference to the pricelist in the product supplier system.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>int QuoteConnectionId</p></td>
 <td><p>The connection in SuperOffice this pricelist comes from.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>string Name</p></td>
@@ -2029,8 +2029,8 @@ We have decided not to separate prices and products, which means that we get a s
 <td><p>The name to use in the user interface, like perhaps 'US dollar' or '$'</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>DateTime ValidFrom</p></td>
@@ -2041,8 +2041,8 @@ We have decided not to separate prices and products, which means that we get a s
 <td><p>The date (inclusive) the pricelist ends to be valid. This can be DateTime.MaxValue to signal that it doesn't have a specific end date.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>Bool IsActive</p></td>
@@ -2051,9 +2051,9 @@ We have decided not to separate prices and products, which means that we get a s
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
 [ProductInfo (Article)]()
 ---------------------------------------------------
@@ -2081,7 +2081,7 @@ The ERPProductKey should be *uniquely identifiable*. So, if you have an ERP syst
 <tr class="odd">
 <td><p>b ool InAssortement</p></td>
 <td><p>True for products that should currently be offered, false when the product is discontinued and should not ordinarily be offered.</p>
-<p> </p>
+<p> </p>
 <p>When false the product no longer appears in search results.</p></td>
 </tr>
 <tr class="even">
@@ -2090,8 +2090,8 @@ The ERPProductKey should be *uniquely identifiable*. So, if you have an ERP syst
 Requires the “Provide-Stock-data” capability, and that the ERP system is available.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>string Name</p></td>
@@ -2119,16 +2119,16 @@ Requires the “Provide-Stock-data” capability, and that the ERP system is ava
 <td><p>Line item number, NOR: «Postnummer». Specific numbers from some hierarchy, for instance “1.4.3.2P”. Typically used to sort the items in the quote by some standard way.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>string Url</p></td>
 <td><p>URL to product information web page</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>string ERPProductCategoryKey</p></td>
@@ -2143,8 +2143,8 @@ Requires the “Provide-Stock-data” capability, and that the ERP system is ava
 <td><p>Either a List id to an id from a connector provided list, or, if the connection doesn’t support lists, a text with the actual product type.</p></td>
 </tr>
 <tr class="even">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="odd">
 <td><p>string Supplier</p></td>
@@ -2155,8 +2155,8 @@ Requires the “Provide-Stock-data” capability, and that the ERP system is ava
 <td><p>Suppliers part code/number or other key-like field</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>string Thumbnail</p></td>
@@ -2176,8 +2176,8 @@ Requires the “Provide-Thumbnail” capability.</p></td>
 <p>This is just to help out the layout of the quote in a document, but SuperOffice will not try to calculate this value.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>Decimal UnitCost</p></td>
@@ -2196,32 +2196,32 @@ Requires the “Provide-Thumbnail” capability.</p></td>
 <p>The ListPrice will stay the same even when a larger amount is ordered.</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>ProductExtraDataFieldInfo[] ExtraData</p></td>
 <td><p><a href="" id="OLE_LINK57">Extra data (fields with labels). Shall be shown in the quoteline dialog.</a></p>
 <p>Additional info that the ERP system would like to store and show in the user interface.</p>
-<p> </p>
+<p> </p>
 <p>Information placed here is shown in the GUI if the “provide-extra-data” capability is true.</p>
 <p>Different products can have different fields.</p>
 <p>It will not be possible to directly put info here into the quote document.</p>
-<p> </p>
+<p> </p>
 <p>BTW, this will be stored in the SuperOffice database as an xml field, like this:</p>
 <p>&lt;Fields&gt;</p>
-<p>  &lt;Field Name=&quot;Weight&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[[F:16.6] tons]]&gt;&lt;/Field&gt;</p>
-<p>  &lt;Field Name=&quot;Height&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[ [F:44.0]cm]]&gt;&lt;/Field&gt;</p>
-<p>  &lt;Field Name=&quot;Arms&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[ [I:2]]]&gt;&lt;/Field&gt;</p>
-<p>  &lt;Field Name=&quot;Certification&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[AB-ICE]]&gt;&lt;/Field&gt;</p>
-<p>  &lt;Field Name=&quot;Weight&quot; Type=&quot;String&quot;&gt;&lt;![CDATA40°C]]&gt;&lt;/Field&gt;</p>
-<p>  &lt;Field Name=&quot;Security info&quot; Type=&quot;Url&quot; &gt;&lt;![CDATA[http://www.armystudyguide.com/content/army_board_study_guide_topics/hand_grenades/throwing-of-hand-grenades.shtml]]&gt;&lt;/Field&gt;</p>
-<p>   &lt;Field Name=&quot;Security image &gt;&lt;![CDATA[http://upload.wikimedia.org/wikipedia/commons/thumb/8/80/MK2_grenade_DoD.jpg/220px-MK2_grenade_DoD.jpg&lt;/Field]]&gt;</p>
+<p>  &lt;Field Name=&quot;Weight&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[[F:16.6] tons]]&gt;&lt;/Field&gt;</p>
+<p>  &lt;Field Name=&quot;Height&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[ [F:44.0]cm]]&gt;&lt;/Field&gt;</p>
+<p>  &lt;Field Name=&quot;Arms&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[ [I:2]]]&gt;&lt;/Field&gt;</p>
+<p>  &lt;Field Name=&quot;Certification&quot; Type=&quot;String&quot;&gt;&lt;![CDATA[AB-ICE]]&gt;&lt;/Field&gt;</p>
+<p>  &lt;Field Name=&quot;Weight&quot; Type=&quot;String&quot;&gt;&lt;![CDATA40°C]]&gt;&lt;/Field&gt;</p>
+<p>  &lt;Field Name=&quot;Security info&quot; Type=&quot;Url&quot; &gt;&lt;![CDATA[http://www.armystudyguide.com/content/army_board_study_guide_topics/hand_grenades/throwing-of-hand-grenades.shtml]]&gt;&lt;/Field&gt;</p>
+<p>   &lt;Field Name=&quot;Security image &gt;&lt;![CDATA[http://upload.wikimedia.org/wikipedia/commons/thumb/8/80/MK2_grenade_DoD.jpg/220px-MK2_grenade_DoD.jpg&lt;/Field]]&gt;</p>
 <p>&lt;/Fields&gt;</p></td>
 </tr>
 <tr class="odd">
-<td><p> </p></td>
-<td><p> </p></td>
+<td><p> </p></td>
+<td><p> </p></td>
 </tr>
 <tr class="even">
 <td><p>string Rights</p></td>
@@ -2259,7 +2259,7 @@ Requires the “Provide-Thumbnail” capability.</p></td>
 </tbody>
 </table>
 
- 
+ 
 
 []() <a href="" id="OLE_LINK56">ProductExtraDataField</a> Info
 ------------------------------------------------------------------------------------------------------------------
@@ -2288,7 +2288,7 @@ How the value should be interpreted.</p></td>
 </tbody>
 </table>
 
- 
+ 
 
 To ensure that values in the value field is correctly displayed according to the user’s culture setup, we have a little system for making this work correctly. You just wrap the values in \[\] brackets with a format specifier, like this:
 
@@ -2327,7 +2327,7 @@ To ensure that values in the value field is correctly displayed according to the
 <tr class="odd">
 <td><p><strong>Integer</strong></p></td>
 <td><p>I</p></td>
-<td><p> </p></td>
+<td><p> </p></td>
 <td><p>[I:123]</p></td>
 </tr>
 <tr class="even">
@@ -2339,26 +2339,26 @@ To ensure that values in the value field is correctly displayed according to the
 </tbody>
 </table>
 
- 
+ 
 
 Which means that you can show several values in a field, like this: “ *Between \[D:12/01/2012\] and \[D:12/25/2012\] it is a \[F:99.5\]% chance of meeting a Santa Clause.*” Which will translate into “ *Between 01.12.2012 and 25.12.2012 it is a 99,5% chance of meeting a Santa Clause.*” with a Norwegian PC setup, for instance.
 
-Or “Should be used in temperatures between \[F:-30.0\]°C  and \[F:50.0\] °C.” -&gt; “Should be used in temperatures between 30,0°C  and 50,0 °C.”
+Or “Should be used in temperatures between \[F:-30.0\]°C  and \[F:50.0\] °C.” -&gt; “Should be used in temperatures between 30,0°C  and 50,0 °C.”
 
- 
+ 
 
 [ExtraDataFieldTypeInfo]()
 ----------------------------------------------------
 
 How should the ProductExtraDataFieldInfo value be interpreted?
 
-*          String
+* String
 
-*          Url
+* Url
 
-*          Image (URL to image or Base64 encoded string)
+* Image (URL to image or Base64 encoded string)
 
- 
+ 
 
 []() [QuoteConnectorExtender]()
 ---------------------------------------------------------
@@ -2413,4 +2413,4 @@ Fundamentally, this new connector puts itself between the ERPConnector and Super
 </tbody>
 </table>
 
- 
+ 

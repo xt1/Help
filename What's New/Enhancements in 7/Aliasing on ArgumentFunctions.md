@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 31
+<properties date="2016-05-10"
+SortOrder="31"
+/>
 
 You can now set an alias name on an ArgumentFunction
 

@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 3
+<properties date="2016-05-10"
+SortOrder="3"
+/>
 
-As the word implies a dynamic selection is a selection that is bound to change dynamically and it’s based on search criteria and not just static members A typical criteria would be ”Add all contacts with a specific business type”. This would cause the member count of this selection to increase each time a new contact is added to the database that match the business type specified as a search criterion for this selection. You may have as many search criterions as you want. In the following section lets discuss how we can create a this type of a selection. This section will only focus on using the entities to create a dynamic selection.  
+As the word implies a dynamic selection is a selection that is bound to change dynamically and it’s based on search criteria and not just static members A typical criteria would be ”Add all contacts with a specific business type”. This would cause the member count of this selection to increase each time a new contact is added to the database that match the business type specified as a search criterion for this selection. You may have as many search criterions as you want. In the following section lets discuss how we can create a this type of a selection. This section will only focus on using the entities to create a dynamic selection.  
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Entities;
@@ -56,7 +57,7 @@ retrictions);
 }
 ```
 
- 
+ 
 
 In the above example we have created a selection using entities and then we have used the providers to add the restriction for the members that should be added to the created selection. The creation of the selection is pretty straight forward so we will just explain how to add search criterions.
 
@@ -66,4 +67,4 @@ Once we have the restrictions ready we need to store them against the selection 
 
  <img src="Creating%20a%20dynamic%20selection%20with%20a%20couple%20of%20criteria._files/image001.jpg" id="Picture 1" width="420" height="416" /> 
 
- 
+ 

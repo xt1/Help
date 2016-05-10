@@ -1,11 +1,12 @@
-Date: 2016-05-10
-SortOrder: 106
+<properties date="2016-05-10"
+SortOrder="106"
+/>
 
 If you want to log all access grants you have to set this value to true.
 
- 
+ 
 
- 
+ 
 
 ```
 <add key="LogSuccessAudit" value="True"/>  

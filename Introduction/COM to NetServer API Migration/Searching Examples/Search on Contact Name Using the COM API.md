@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 52
+<properties date="2016-05-10"
+SortOrder="52"
+/>
 
-The following method demonstates how to use the SOFind.ContactsByName() method. This method is used to retrieve an SOContact collection, SOContacts, and is filtered by Name. The returned collection is meant to be iterated over to retrieve a specific SOContact object.
+The following method demonstates how to use the SOFind.ContactsByName() method. This method is used to retrieve an SOContact collection, SOContacts, and is filtered by Name. The returned collection is meant to be iterated over to retrieve a specific SOContact object.
 
     using SuperOffice.COM.SuperOfficeDB;
      

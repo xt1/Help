@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 20
+<properties date="2016-05-10"
+SortOrder="20"
+/>
 
 Disconnecting a Company
 -----------------------

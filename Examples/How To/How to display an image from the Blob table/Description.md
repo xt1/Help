@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 5
+<properties date="2016-05-10"
+SortOrder="5"
+/>
 
 Following is the code segment that relates to retrieve and displaying the image list in the ListBox.
 
@@ -29,7 +30,7 @@ BinaryObjectRows.GetFromIdxMimeType("image/jpeg");
 }
 ```
 
- 
+ 
 
 We have retrieve image related information by using BinaryObjectRows class. Since we are retrieve images that are of “image/jpeg” we have used the GetFromIdxMimeType() method. By iterating on the retrieved row collection we have displayed the Description of each image row in the list box.
 
@@ -80,7 +81,7 @@ display it
 }
 ```
 
- 
+ 
 
 Since we are retrieving BinaryObjectRow based on the image description, we need to create a CustomSearch first to select the user selected row. The search’s restriction should be applied to the MimeType and Description columns. This is done by using the following statement.
 
@@ -90,7 +91,7 @@ S.Parameter(listBox1.SelectedItem.ToString())).
 And(newBinObjTabInf.MimeType.Equal(S.Parameter("image/jpeg")));
 ```
 
- 
+ 
 
 Once we have defined the CustomSearch we can use it with the GetFromCustomSearch() method available in the BinaryObjectRow class. We use the BinaryData property of the BinaryObjectRow class to fill our image into the Stream and then displaying it using the following statement.
 

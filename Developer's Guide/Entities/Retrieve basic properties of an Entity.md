@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 61
+<properties date="2016-05-10"
+SortOrder="61"
+/>
 
 Retrieving basic properties of a Contact Entity implies obtaining properties which are neither Entities nor Rows. The following example will demonstrate how to retrieve properties of basic data type of an Entity.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Entities;
@@ -31,4 +32,4 @@ using(SoSession mySession = SoSession.Authenticate("SAL0", ""))
 
 Here the values of basic properties of Contact Entity such as Department, Kananame, Name, Number1, Number2, OrgNr and Registered are retrieved. Other than the Registered property which is of Datetime data type, all the other properties are of string data type.
 
- 
+ 

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 9
+<properties date="2016-05-10"
+SortOrder="9"
+/>
 
 The web-services layer is described in a separate help file. When you are calling a web-service, you typically don’t have direct access to the database. This is the highest level for working with NetServer.
 
@@ -23,4 +24,4 @@ myContactAgent.GetContactEntity(1234);
 }
 ```
 
- 
+ 

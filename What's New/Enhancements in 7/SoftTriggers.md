@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 36
+<properties date="2016-05-10"
+SortOrder="36"
+/>
 
 NetServer has its own OSQL interception system
 

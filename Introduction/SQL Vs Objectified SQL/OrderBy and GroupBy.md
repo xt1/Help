@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 14
+<properties date="2016-05-10"
+SortOrder="14"
+/>
 
- 
+ 
 
 When retrieving data it is necessary to group and order the data. The example below shows how to write the following SQL query in SuperOffice Objectified SQL.
 
@@ -11,7 +12,7 @@ ORDER BY a.AssociateId asc
 
 GROUP BY a.AssociateId, a.Name
 
- 
+ 
 
 ```
 using SuperOffice.Data;
@@ -63,4 +64,4 @@ associateInfo.Name);
 }
 ```
 
- 
+ 

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 11
+<properties date="2016-05-10"
+SortOrder="11"
+/>
 
 Creating a Contact Entity through an entity can be done in two different ways, i.e. if you create an Entity called “A” and assign it to an Entity called “B”, when saving Entity “B” entity will be saved through NestedPersistent, or you could create an Entity which is a property of another Entity. Then when saving the main Entity the Entity created as the property of it will be saved as well. Both these would give the same results.
 
@@ -53,7 +54,7 @@ using(SoSession mySession = SoSession.Authenticate("sam", "sam"))
 }
 ```
 
- 
+ 
 
 Here we create a new Contact as explained in Create Contact Entity. The different is that we do not save the Contact created. Instead we assign the created Contact to another Entity such as The Person Entity as shown above and Save the Person Entity with the use of its Save() method as show in the below code segment.
 
@@ -62,7 +63,7 @@ Here we create a new Contact as explained in Create Contact Entity. The differen
       newPerson.Save();
 ```
 
- 
+ 
 
 Below is the example of creating a Contact Entity, which is a property of another Entity, such Person that is explained below.
 
@@ -105,7 +106,7 @@ using(SoSession mySession = SoSession.Authenticate("sam", "sam"))
 }
 ```
 
- 
+ 
 
 The difference of the above code to the one before that is that the properties of the Contact Entity are accessed through the instance of the Person Entity as The Contact entity is exposed as a property of the Person Entity. The properties of the Contact entity are accessed with statement similar to the once shown below. However, the statements may vary a little depending on the data type as shown in the example above.
 
@@ -113,7 +114,7 @@ The difference of the above code to the one before that is that the properties o
             newPerson.Contact.Name = "EuroCenter";
 ```
 
- 
+ 
 
 When saving the Person Entity with the use of the Save() method the New Contact is also saved. This is called NestedPersistent.
 

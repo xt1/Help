@@ -1,11 +1,12 @@
-Date: 2016-05-10
-SortOrder: 11
+<properties date="2016-05-10"
+SortOrder="11"
+/>
 
 The person name formatter class that exists in the SuperOffice.CRM.Globalization namespace is designed to format the names of person that exists in the database or a name that we specify. This class contains two main methods
 
-*          GetFormalName
+* GetFormalName
 
-*          GetFullName
+* GetFullName
 
 The GetFormalName method has three overloads and the GetFullName method has six overloads. Let’s take each overload of each method and discuss further based on an example.
 
@@ -30,7 +31,7 @@ name fromat
 }
 ```
 
- 
+ 
 
 Here we format the name of the person according to the formal name format that should appear in a label. Though the above person has a title of Dr and Mr. both of them are ignored in the formal name since a normal label that carries the name in Norway does not have them. This is all determined by the properties of the personal address format. If the personal address format specifies that the title should be added to the name this method will return it, but in the above case the Norwegian personal address format does not specify that title should appear with the name. To make it clear lets change the country of origin for the person and see what happens to the name format.
 
@@ -61,11 +62,11 @@ visible
 }
 ```
 
- 
+ 
 
 Here you see the difference it makes from country to country. Since we changed the country of origin of the person to Germany now we get the Mr. prefix in front of the name and the Dr title at the end of the name separated by a new line character. If you assign the return string to the text property of a label control you will have the Dr title as new line after the name. All this is determined by the accepted personal address format of the country that the person belongs to.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Globalization;
@@ -84,11 +85,11 @@ using(SoSession session = SoSession.Authenticate("SAL0", ""))
 }
 ```
 
- 
+ 
 
 This example demonstrates overload method of the GetFormalName method where it accepts a person row as the parameter. It also behaves in the same way as the overload method where it accepts a person entity as the parameter. The format of the name will be determined by the properties of the personal address format of the country the person belongs to.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Globalization;
@@ -106,11 +107,11 @@ PersonNameFormatter.GetFormalName("Kent",
 }
 ```
 
- 
+ 
 
 The above overload of the method lets you specify the name you want without getting it from the database. The name components you pass in as parameters will be formatted according to the properties of the personal address format of the country that you specify. Here we format the name according to the Norwegian rules, and it does not include the title or Mr. prefix before the name hence it explains the output we have got in example.
 
- 
+ 
 
 Now let’s focus on the other method that exists in the personal name formatter calls that will help us to get the formatted full name of a person. The GetFullName method which has six overloads will format the person’s full name according to a style that we specify or according to the style that is stored in the user preference.
 
@@ -139,7 +140,7 @@ PersonNameFormatter.GetFullName(formatPerson);
 
 The above overloaded of the GetFullName method accepts a person entity as a parameter. When you use this method the method will format the name of the person according to the style that is stored in the user preference cache, if it is not stored in the cache the user preference will retrieved from the database. Here the cached name format preference of the user is FirstNameLastName.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Globalization;
@@ -160,7 +161,7 @@ PersonNameFormatter.GetFullName(personRow);
 }
 ```
 
- 
+ 
 
 Here we use the overload GetFullName that accepts a person row as the parameter. The method will format the name of the person according to the name format style preference that is stored in the cache, if it is not present in the cache the preference will be retrieved from the database.
 
@@ -184,11 +185,11 @@ PersonNameFormatter.NameFormatStylePreference.LastNameFirstName);
 }
 ```
 
- 
+ 
 
 The above overload of the GetFullName method accepts a person entity and a name format style preference. The NameFormatStylePreference is an enum where different name format styles are defined so you can give the style you want the person name to be formatted with out of the defined styles. Here we use the LastNameFirstName style which explains the output we have got.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Globalization;
@@ -209,7 +210,7 @@ PersonNameFormatter.GetFullName(personRow,
 }
 ```
 
- 
+ 
 
 Here the method accepts a person row and a name format style. We have specified the FirstNameOnly as the name format style, and we therefor get the output “Kent” which is the first name of the person.
 
@@ -229,11 +230,11 @@ using(SoSession session = SoSession.Authenticate("SAL0", ""))
 }
 ```
 
- 
+ 
 
 The above demonstrated overload of the GetFullName method lets us specify the name components and the method will format the full name out of the name components that we specify according to the name style format stored in the user preference cache.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Globalization;
@@ -252,6 +253,6 @@ using(SoSession session = SoSession.Authenticate("SAL0", ""))
 }
 ```
 
- 
+ 
 
 Here we use the overload that lets us specify the name components and the name format style of the GetFullName method. Here the method will format the name components that we specify according to the name style format that we specify. In the above case we have given the LastNameOnly style as the name format style preference so we get Larsen Karlsen as the output.

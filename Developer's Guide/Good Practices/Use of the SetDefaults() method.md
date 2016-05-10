@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 5
+<properties date="2016-05-10"
+SortOrder="5"
+/>
 
 When using the SetDefaults() method when inserting data either to Entity or Row types it could be identified as a good practice. Since if the SetDefault() method was not used the programmer would have to make use of flow control structures such as “if-else” blocks to handle situations where the user doesn’t enter any values. The example below shows the use of the SetDefault() method.
 
@@ -40,6 +41,6 @@ SuperOffice.SoSession.Authenticate("sam", "sam"))
 }
 ```
 
- 
+ 
 
 With the above example we have created a new Contact Entity and have made use of the SetDefaults() method. With the use of the method, the NetServer will fill certain properties of the Entity such as Updated date, Updated Associate, and more.

@@ -1,20 +1,21 @@
-Date: 2016-05-10
-SortOrder: 42
+<properties date="2016-05-10"
+SortOrder="42"
+/>
 
 A collection of static methods for manipulation of collections
 
-*          To/from Dictionary&lt;&gt;
+* To/from Dictionary&lt;&gt;
 
-*          NamedValue strings
+* NamedValue strings
 
-*          Compare and massage arrays
+* Compare and massage arrays
 
 Generally very null-tolerant, simplifying your code a lot
 
- 
+ 
 
 1. autolist
 
- 
+ 
 
 See: CollectionOps

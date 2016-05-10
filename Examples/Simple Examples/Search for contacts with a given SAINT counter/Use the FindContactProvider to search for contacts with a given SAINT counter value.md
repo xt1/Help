@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 7
+<properties date="2016-05-10"
+SortOrder="7"
+/>
 
- 
+ 
 
 With the use of FindContactProvider you can search for contacts with a given SAINT counter value. The following example demonstrates how it is done.
 
@@ -54,12 +55,12 @@ column.Value.ToString() : "-";
 }
 ```
 
- 
+ 
 
  <img src="../Search%20for%20contacts%20with%20a%20given%20SAINT%20counter_files/image001.jpg" width="577" height="145" /> 
 
- 
+ 
 
-Initially we have created an instance of the FindContactProvider class. You can set the return fields of the contact provider via the SetDesiredColumns() method. The FindContactProvider contains fields that belong to other tables than contact like person, countervalue and etc. Hence you can add a restriction to a field in the table.  Thus we want to retrieve the ids of all the contacts with saintsalestatus value equal to 2. They are displayed in the console window and the latter part of the code is used to display the results.
+Initially we have created an instance of the FindContactProvider class. You can set the return fields of the contact provider via the SetDesiredColumns() method. The FindContactProvider contains fields that belong to other tables than contact like person, countervalue and etc. Hence you can add a restriction to a field in the table.  Thus we want to retrieve the ids of all the contacts with saintsalestatus value equal to 2. They are displayed in the console window and the latter part of the code is used to display the results.
 
- 
+ 

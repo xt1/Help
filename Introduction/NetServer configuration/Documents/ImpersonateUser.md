@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 116
+<properties date="2016-05-10"
+SortOrder="116"
+/>
 
 This key is used to impersonate a user when accessing the document archive or the temporary folder. Based on the defined Boolean values, you can allow or not allow an impersonate user to access the document archive or the temporary folder.
 

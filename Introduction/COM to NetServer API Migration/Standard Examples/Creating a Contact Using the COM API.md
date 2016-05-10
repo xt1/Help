@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 33
+<properties date="2016-05-10"
+SortOrder="33"
+/>
 
 The following is an example of how to create a new Contact using the Database object, located in the SuperOffice.COM.SuperOfficeDB namespace of the SuperOfficeDB.Interop.dll assembly.
 
@@ -38,4 +39,4 @@ else
     Console.WriteLine("Incorrect Username or Password");
 ```
 
-When the new Contact instance is first created, it contains mostly null values. Therefore, we use the SetDefaults() method to assign default values to all of the Contact properties. The next step is to assign values to the contact, such as Name, email address, phone, and so on. In this example, we assign values to different property types, including string, SOEmails, IListTextItem, and more. After populating all relevant contact properties, save the contact by using the contact Save() method.
+When the new Contact instance is first created, it contains mostly null values. Therefore, we use the SetDefaults() method to assign default values to all of the Contact properties. The next step is to assign values to the contact, such as Name, email address, phone, and so on. In this example, we assign values to different property types, including string, SOEmails, IListTextItem, and more. After populating all relevant contact properties, save the contact by using the contact Save() method.

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 32
+<properties date="2016-05-10"
+SortOrder="32"
+/>
 
 A utility class that handles connections and commands
 

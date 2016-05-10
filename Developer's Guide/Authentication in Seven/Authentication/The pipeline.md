@@ -1,21 +1,22 @@
-Date: 2016-05-10
-SortOrder: 43
+<properties date="2016-05-10"
+SortOrder="43"
+/>
 
 NetServer contains seven (7) different plugins, for as many different ways of authenticating
 
-–       SoCredentials (ticket string)
+–       SoCredentials (ticket string)
 
-–       Username+password (superoffice user, not AD)
+–       Username+password (superoffice user, not AD)
 
-–       Windows/AD user, who is a person (not System, Guest etc)
+–       Windows/AD user, who is a person (not System, Guest etc)
 
-–       Impersonation identity
+–       Impersonation identity
 
-–       Anonymous identity
+–       Anonymous identity
 
-–       Username+password, matched against Windows/AD
+–       Username+password, matched against Windows/AD
 
-–       Windows/AD user, who is not a person
+–       Windows/AD user, who is not a person
 
 The plugins are called in this order. Each plugin is given all the available evidence (credentials)
 
@@ -25,11 +26,11 @@ The post-vote is also interesting – for instance, one could have a policy sayi
 
 Each plugin looks for credentials it understands
 
-*        Such credentials are evaluated, for instance, a password is checked against stored information
+* Such credentials are evaluated, for instance, a password is checked against stored information
 
-*        Success results in an associate id
+* Success results in an associate id
 
 The first one to resolve the identity breaks the loop.
-”Expensive” plugins should come late in the order!   Expensive = any kind of Internet lookup
+”Expensive” plugins should come late in the order!   Expensive = any kind of Internet lookup
 
 You may be used to having the Internet a few milliseconds away. But – especially on a laptop in some odd place – it may look like you have connectivity, but not have it; or you may have connectivity, but it’s slow or blocked. Unless you aboslutely need to look up something, don’t; and do put such plugins at the end of the queue.

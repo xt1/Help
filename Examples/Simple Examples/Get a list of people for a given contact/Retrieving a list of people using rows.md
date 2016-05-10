@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 8
+<properties date="2016-05-10"
+SortOrder="8"
+/>
 
 In the below example let’s explore the ways of retrieving a list of persons using rows.
 
@@ -26,8 +27,8 @@ properties
 }
 ```
 
- 
+ 
 
 In the above example also we have done the same thing as in the [retrieving a list of persons using entities example](Retrieve%20a%20list%20of%20people%20using%20entities.htm) the only difference is we have use rows to do the operation for us. In the above example we retrieve the list of persons as a person rows collection to a PersonRows object using the contact id of the contact that the people we want belongs to. Once we have the person row collection it is matter of iterating through the collection to access the individual properties of a PersonRow like we have done above in the example.
 
- 
+ 

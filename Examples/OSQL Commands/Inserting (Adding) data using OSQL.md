@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 10
+<properties date="2016-05-10"
+SortOrder="10"
+/>
 
 This section describes how we may add a new Contact to the Contact table. In order to insert data using OSQL we would need to make use of the Insert class, which is located in the SuperOffice.Data namespace. The INSERT statement is used in a similar manner in which the above SELECT statement has being used. [OSQL Data](../OSQL%20Data/OSQL%20Data.htm)
 
@@ -82,7 +83,7 @@ S.Parameter(Sequence.GetNext(newConTab)));
 S.Parameter("Will Hammond"));
 ```
 
- 
+ 
 
 Special attention should be given when inserting the ContactId. In the above code segment with the use of the Sequence class’s GetNext() method the next ContactId is retrieved and assigned to the ContactId of the inserting record.
 
@@ -97,4 +98,4 @@ Once all the required fields are filled, add a Connection to the database. Then 
       myComm.ExecuteNonQuery();
 ```
 
- 
+ 

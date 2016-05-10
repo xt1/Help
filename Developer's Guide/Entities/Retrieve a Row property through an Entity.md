@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 63
+<properties date="2016-05-10"
+SortOrder="63"
+/>
 
 A property which is of Row type directly refers to a particular row of a table. For example in the Sale Entity the Currency property would refer to the Currency table and would contain the columns that are in the Currency Table as its properties.
 
@@ -37,4 +38,4 @@ newSale.Currency.Registered.ToString();
 
 Here we have retrieved the properties of the currency Row of the currency table through a Sale Entity.
 
- 
+ 

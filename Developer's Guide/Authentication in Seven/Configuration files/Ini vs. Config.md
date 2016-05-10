@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 60
+<properties date="2016-05-10"
+SortOrder="60"
+/>
 
 The SuperOffice web client uses **web.config** as before, with database user specified there.
 
@@ -9,7 +10,7 @@ The SuperOffice windows client now uses **superoffice.config** in addition to **
 
 The database user & password are stored in **superoffice.config** - encrypted and set by the MSI installer.
 
-Without a correct db user/password  in there, nothing will work
+Without a correct db user/password  in there, nothing will work
 
 **ODBC data source** and **archive path** are taken from **superoffice.ini** automatically – the superoffice.config does not need to specify the database server/type unless the ODBC source is non-standard.
 

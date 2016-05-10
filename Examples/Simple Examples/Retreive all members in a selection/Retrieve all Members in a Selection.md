@@ -1,13 +1,14 @@
-Date: 2016-05-10
-SortOrder: 3
+<properties date="2016-05-10"
+SortOrder="3"
+/>
 
- 
+ 
 
 This section shows how we may retrieve members of a specific selection. There can be two ways of retrieving such: -
 
-*          With the use of the Selection Entity
+* With the use of the Selection Entity
 
-*          With the use of the SelectionProvider
+* With the use of the SelectionProvider
 
 The first example shows how we may retrieve a Members Collection with the use of an instance of the Selection Class.
 
@@ -50,7 +51,7 @@ ContactRow.GetFromIdxContactId(selMem.ContactId);
 }
 ```
 
- 
+ 
 
 An instance of the Selection class is created from selection\_id 58. The Selection instance is an entity object for the selection table in the database and the objects represent full entities with both the base table objects and all related objects. With the use of the GetFromIdxSelectionId() it creates a new instance of the Selection object by querying the database table via the index ‘IDXSelId’. The intention of the above method is to make it easy to use efficient queries that match the database index.
 
@@ -58,14 +59,14 @@ Once we have created the instance we may access the SelectionMembers property of
 
 ```
 SelectionId ContactId   Name                    NameDepartment
-58          2           StateZeroDatabase       StateZeroDatabase
-58          43          Uniformeffekter AS      Uniformeffekter AS,
+58 2           StateZeroDatabase       StateZeroDatabase
+58 43          Uniformeffekter AS      Uniformeffekter AS,
 UAvdeling
-58          123         Japanese Company        Japanese Company,
+58 123         Japanese Company        Japanese Company,
 Tokyo
 ```
 
- 
+ 
 
 The next method of retrieving all member of a Selection is with the use of the SelectionProvider that is shown in the example below.
 
@@ -125,7 +126,7 @@ column.Value.ToString() : "-";
 }
 ```
 
- 
+ 
 
 The aim of the example is to retrieve all members in a Selection with the use of the SelectionProvider.
 
@@ -133,7 +134,7 @@ The aim of the example is to retrieve all members in a Selection with the use of
 IArchiveProvider selPro = new SelectionProvider();
 ```
 
- 
+ 
 
 We have used the IArchiveProvider interface to create an instance of the SelectionProvider class since IArchiveProvider is the external standard interface that aggregates the extensible and provider properties of all Archive provider class.
 
@@ -146,7 +147,7 @@ selPro.SetRestriction(new ArchiveRestrictionInfo("selectionId",
 "=", "58"));
 ```
 
- 
+ 
 
 Here with the SetRestriction() method, we have restricted the number of rows selected by giving a SelectionId such that the related members would all belong the given Id.
 
@@ -160,6 +161,6 @@ selectionId contactId   name                    nameDepartment
 [I:58]      [I:43]     Uniformeffekter AS,     UAvdeling
 ```
 
- 
+ 
 
- 
+ 

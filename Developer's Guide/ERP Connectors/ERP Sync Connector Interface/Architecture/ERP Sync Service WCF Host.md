@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 5
+<properties date="2016-05-10"
+SortOrder="5"
+/>
 
 ERP Sync Service WCF Host
 -------------------------
@@ -51,7 +52,7 @@ c:\Samples\ErpSync\SuperOffice.EIS.DummyConnector\bin\Debug\SuperOffice.EIS.Dumm
   </applicationSettings>
 ```
 
- 
+ 
 
 The WCF Host will need to store its configuration data somewhere. This writeable folder is also specified in the web.config:
 

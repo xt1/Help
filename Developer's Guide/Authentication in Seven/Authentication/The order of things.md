@@ -1,17 +1,18 @@
-Date: 2016-05-10
-SortOrder: 42
+<properties date="2016-05-10"
+SortOrder="42"
+/>
 
 The standard flow of authentication/identity is like this:
 
-*        Try to authenticate without parameters
+* Try to authenticate without parameters
 
-–       I.e., rely on ”environment”, such as your current Windows login, and possible other implicit knowledge
+–       I.e., rely on ”environment”, such as your current Windows login, and possible other implicit knowledge
 
-*        If this does not work, present a login dialog; then try to authenticate using this username and password
+* If this does not work, present a login dialog; then try to authenticate using this username and password
 
-–       If success, then we’re in J
+–       If success, then we’re in J
 
-–       Otherwise, retry a few times and then give up
+–       Otherwise, retry a few times and then give up
 
 Note how we can authenticate without ever seeing a password in a SuperOffice dialog
 

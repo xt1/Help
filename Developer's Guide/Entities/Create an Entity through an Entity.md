@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 54
+<properties date="2016-05-10"
+SortOrder="54"
+/>
 
 One of the more complex properties that are exposed in a typical NetServer Entity is an Entity itself. An Entity will expose another Entity when the need arises to expose more data than what you can hold in a single field. There can be more than one way to assign a new Entity to a property that is exposed by an Entity. In this section we will focus on how to create a new Entity through a property exposed by another Entity.
 
- 
+ 
 
 ```
 using SuperOffice;
@@ -46,4 +47,4 @@ Here the Person property of the Sale Entity has been exposed as an Entity itself
 
 When you save the Sale Entity, NetServer will look for other newly created Entities and save them to the appropriate tables in the database. In this case NetServer will create a new record in the person table and assign the person ID to the person ID field in the sale table so now it has the link between the person table and the sale table. NetServer will also create a new row in the phone table and add the phone ID to the phone ID field of the person table. This way the NetServer maintains all the database links properly.
 
- 
+ 

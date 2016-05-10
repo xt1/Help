@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 37
+<properties date="2016-05-10"
+SortOrder="37"
+/>
 
 To delete a Contact we use the SOContact Delete() method, as shown below.
 

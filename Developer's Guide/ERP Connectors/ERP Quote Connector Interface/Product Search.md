@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 6
+<properties date="2016-05-10"
+SortOrder="6"
+/>
 
 [Product Search Provider]()
 -----------------------------------------------------
@@ -27,20 +28,20 @@ The Product Search Provider part contains two methods that need to be implemente
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><p>FieldMetadataInfo []  <strong>GetSearchableFields</strong> ()</p>
-<p> </p></td>
+<td><p>FieldMetadataInfo []  <strong>GetSearchableFields</strong> ()</p>
+<p> </p></td>
 <td><p>Called before the search dialog is opened, to determine the set of searchable fields (possible criteria).</p>
 <p>The connector can offer any fields it desires. If a “current pricelist” is implied by the GUI, then it will be included in the criteria, so connectors must always be prepared to handle erpPricelistKey=xxx .</p></td>
 </tr>
 <tr class="even">
-<td><p>ProductInfo []  <strong>GetSearchResults</strong> ( SearchRestrictionInfo []  restrictions )</p>
-<p> </p></td>
+<td><p>ProductInfo []  <strong>GetSearchResults</strong> ( SearchRestrictionInfo []  restrictions )</p>
+<p> </p></td>
 <td><p>The actual search: An array of criteria is passed in, and an array of ProductInfo results is returned. The ErpProductKey field of each returned ProductInfo <strong>must</strong> be populated; and as many as reasonable of the other fields <strong>should</strong> be populated. The user can choose which return fields to display.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 The SearchRestrictionInfo structure consists of a criterion name, an operator, and an array of values. The criteria names will be those that the connector specified as available in a preceding GetSearchableFields call (the FieldKey). Operators for all data types are: =, !=, &lt;, &gt;, &lt;=, &gt;=, **between**, **in**. Additionally, strings can use the **begins** and **contains** operators, where % is the 0-or-more wildcard character in the string value.
 
@@ -63,11 +64,11 @@ Apart from this, it **should** support a reasonable set of columns, which can be
 [Quote Dropdown List Provider]()
 ----------------------------------------------------------
 
-<img src="Quote%20Connector%20interface_files/image013.jpg" id="Picture 12" width="585" height="173" /> 
+<img src="Quote%20Connector%20interface_files/image013.jpg" id="Picture 12" width="585" height="173" /> 
 
 There are a few lists in the ERP system that we would like to show to the users: payment terms and types, delivery terms and types, and product classifications (product category, product family and product type).
 
-These lists can be supplied by the ERP connector using this function.  SuperOffice will take these values and convert the simple flat list of values into a SuperOffice list that appears in the GUI.
+These lists can be supplied by the ERP connector using this function.  SuperOffice will take these values and convert the simple flat list of values into a SuperOffice list that appears in the GUI.
 
 <img src="Quote%20Connector%20interface_files/image014.jpg" id="Picture 27" width="605" height="279" />
 
@@ -82,37 +83,37 @@ If the ERP connector wants to supply a more complex nested list, then the ERP co
 <tr class="odd">
 <td><p>QuoteListItem[] <strong>GetQuoteList</strong>( string quoteListType )</p></td>
 <td><p>Gets a named list from the connector</p>
-<p> </p>
+<p> </p>
 <p>The quoteListType parameter is case insensitive.</p>
-<p> </p>
+<p> </p>
 <p>Return array of QuoteListItems.<br />
 Return NULL if the given list is not supported.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ### [Quote List Names]()
 
 There are some lists in the system we would like the ERP system to provide data for, if it can:
 
-*          ProductCategory
+* ProductCategory
 
-*          ProductFamily
+* ProductFamily
 
-*          ProductType
+* ProductType
 
-*          PaymentTerms
+* PaymentTerms
 
-*          PaymentType
+* PaymentType
 
-*          DeliveryTerms
+* DeliveryTerms
 
-*          DeliveryType
+* DeliveryType
 
 If a quote list is NULL, then the GUI will fall back to a text input field, where the user can enter text. This text is passed to the ERP plugin unchanged.
 
 The Quote configuration API may also refer to custom list names which will be filled in by asking here. I.e. you will be asked for more lists than just the ones mentioned here, if you have added custom lists to the configuration dialog.
 
- 
+ 

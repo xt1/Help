@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 9
+<properties date="2016-05-10"
+SortOrder="9"
+/>
 
- 
+ 
 
 The final way of updating a person name, position and address is by using OSQL
 
@@ -79,6 +80,6 @@ S.Parameter("Kentucky"));
 }
 ```
 
- 
+ 
 
 In the above example we have used OSQL exclusively. If we have to update several tables we need several update instances. If you analyze the above example you can note that we have two update instances for the two tables. We have given the update values separately in the update instances we have created for the two tables. When we have more than one command to be executed against the database we have to use the batch save instance since it can hold many SQL commands.

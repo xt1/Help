@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 58
+<properties date="2016-05-10"
+SortOrder="58"
+/>
 
 At the most basic level, what we want to achieve is to carry a set of credentials (evidence of your identity) from the client into our application.
 
@@ -7,7 +8,7 @@ This involves the client OS, Browser, IIS on the Web Server, our application (in
 
 <img src="../../EW%202010%20Authentication_files/image004.gif" width="572" height="156" />
 
-Transfer-of-identity is complicated and dependent on all components.   For instance, IE will automatically send your domain credentials to the Intranet Zone only, while Firefox won’t at all.
+Transfer-of-identity is complicated and dependent on all components.   For instance, IE will automatically send your domain credentials to the Intranet Zone only, while Firefox won’t at all.
 
 The connection between a Web and an App server in a remote configuration introduces a new level of complexity and inter-dependence.
 
@@ -17,13 +18,13 @@ When you use our Web application, you interact through a Browser that provides a
 
 But there are also programs that interact directly with Services
 
-*          TrayApp, ”SuperOffice Web Extensions”
+* TrayApp, ”SuperOffice Web Extensions”
 
-*          Mail Link for Web
+* Mail Link for Web
 
-*          Pocket Server
+* Pocket Server
 
-*          Customer Service
+* Customer Service
 
 These do not involve a browser, and need to access the Web Services to get their work done
 
@@ -45,13 +46,13 @@ These do not involve a browser, and need to access the Web Services to get their
 </tr>
 </tbody>
 </table>
- </td>
+ </td>
 </tr>
 </tbody>
 </table>
 
 <img src="../../EW%202010%20Authentication_files/image005.gif" width="572" height="157" />
-IIS Authentication can be used together with Services, but not in a Remote setup: the identity cannot be transferred that many times.  This is an MS design parameter, not changeable.
+IIS Authentication can be used together with Services, but not in a Remote setup: the identity cannot be transferred that many times.  This is an MS design parameter, not changeable.
 
 <img src="../../EW%202010%20Authentication_files/image006.gif" width="572" height="187" />
 

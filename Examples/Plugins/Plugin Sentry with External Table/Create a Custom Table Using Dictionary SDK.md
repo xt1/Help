@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 13
+<properties date="2016-05-10"
+SortOrder="13"
+/>
 
 In this section the focus will be on how to generate a table in the database using the Dictionary SDK. To use the SODictionary SDK, SODictionarySDK.dll needs to be registered using regsvr32. The dll can be found in the SuperOffice installation directory. It is important to make sure the correct values are set in the Admin client replication screen because these values are used by the SODictionary whenever the manipulations are done in the database.
 

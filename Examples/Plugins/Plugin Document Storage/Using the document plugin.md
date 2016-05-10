@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 7
+<properties date="2016-05-10"
+SortOrder="7"
+/>
 
 The tricky part comes when we try to use the Plugin we developed and do some kind of operation for a document.
 
@@ -76,7 +77,7 @@ tags);
       }
 ```
 
- 
+ 
 
 From the above example we can see that we have ArchiveProvider ID of the document row as 12345678. We have done this since we had this attribute at the very top of our plugin example:
 
@@ -84,7 +85,7 @@ From the above example we can see that we have ArchiveProvider ID of the documen
 [DocumentPlugin(12345678)]
 ```
 
- 
+ 
 
 Since we have set the ArchiveProvider ID of the document row our plugin will be used to create the document that we asked to create in the above example. Now our document will be stored in the “DOC” folder of our storage. The below screen shot demonstrate how the document is stored in the storage.
 
@@ -102,15 +103,15 @@ value="C:\\TestApps\\DocPlugin\\DocPlugin\\bin\\Debug\\DocPlugin.dll"
 </Factory>
 ```
 
- 
+ 
 
 From the above example we have created a document that is attached to an appointment. Now say we want to open the attached document from the Six.Web application, in order to do this we have to add our dll to web.config file of the Six.Web application. The reason behind this is Six.Web application needs our plugin to know the way we have implemented our plugin.
 
 In our example we have set the ArchiveProvider ID as 12345678 so now the Six.Web application will search for a plugin that have the ID as 12345678. In order to provide this we have to change the below section of the web.config file.
 
- 
+ 
 
- 
+ 
 
 ```
 <Factory>
@@ -122,6 +123,6 @@ value="C:\\TestApps\\DocPlugin\\DocPlugin\\bin\\Debug\\DocPlugin.dll"
 </Factory>
 ```
 
- 
+ 
 
 This is the same change that we did in the app.config of our application.

@@ -1,9 +1,9 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 ```
     using SuperOffice;
     using SuperOffice.CRM.Rows;
-
     PersonRows personRows =
 PersonRows.GetFromIdxFirstname("Donald");
     Assert.IsTrue( personRows.Count > 0, "There are persons with
@@ -19,9 +19,7 @@ name is Donald" );
 ```
     using SuperOffice;
     using SuperOffice.CRM.Rows;
-
     PersonRows personRows = new PersonRows.IdxContactId(10);
-
     Assert.IsTrue( personRows != null, "A collection of persons
 where returned" );
     Assert.IsTrue( personRows.Count == 2, "There are persons 2 with
@@ -40,7 +38,6 @@ Custom search allows you to specify a general query and get a row collection bac
     using SuperOffice;
     using SuperOffice.Data;
     using SuperOffice.CRM.Rows;
-
                         PersonRows.CustomSearch queryPersons = new
 PersonRows.CustomSearch();
                         queryPersons.Restriction =

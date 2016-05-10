@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 127
+<properties date="2016-05-10"
+SortOrder="127"
+/>
 
- 
+ 
 
-The Services section contains four settings related to NetServer web service settings. This section is used to specify whether an application is working locally or remotely. 
+The Services section contains four settings related to NetServer web service settings. This section is used to specify whether an application is working locally or remotely. 
 
 ```
 <Services>
@@ -15,6 +16,6 @@ The Services section contains four settings related to NetServer web service set
 </Services>
 ```
 
- 
+ 
 
 1. autolist

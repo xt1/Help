@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 52
+<properties date="2016-05-10"
+SortOrder="52"
+/>
 
 The ticket stub is timestamped and valid for 6 hours (in the database)
 
@@ -9,8 +10,8 @@ We also log a bit about how it was used (client name).
 
 You can have as many tickets as you want
 
-*          We cache them and do not issue new ones every time you ask
+* We cache them and do not issue new ones every time you ask
 
-*          This keeps the number of tickets at a manageable level
+* This keeps the number of tickets at a manageable level
 
 Expired tickets cannot be renewed. They will be deleted in due course (typically when you use a valid ticket, we fire off a thread to clean up)

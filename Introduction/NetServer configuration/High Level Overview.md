@@ -1,17 +1,18 @@
-Date: 2016-05-10
-SortOrder: 68
+<properties date="2016-05-10"
+SortOrder="68"
+/>
 
- 
+ 
 
 Each application that uses the NetServer functionality should contain a well defined configuration file. This is imperative, irrespective of the fact that the application is a Windows based or Web based application. A Windows application will contain an exe.config file while a Web application contains a web.config file. An example of how these file names should be represented is given below:
 
 Windows Application : MyApplication.exe.config
 
-Web Application        : web.config
+Web Application        : web.config
 
 A typical configuration file that you have to define in your application should have a section group defined as " SuperOffice" as the main section group under the configSections of your config file. Under the main " SuperOffice" section group, you should define other sections and section groups that NetServer extracts information from.
 
- 
+ 
 
 ```
 <configSections>
@@ -76,7 +77,7 @@ PublicKeyToken=b77a5c561934e089" />
  
 ```
 
- 
+ 
 
 In the above given example, you may notice that there are section groups defined under the main " SuperOffice" section group. In a NetServer configuration file, there are three section groups that you have to define under the main " SuperOffice" section group.
 
@@ -86,9 +87,9 @@ Data
 
 Factory
 
-  Once you define the sections, then you must elaborate each key value combination in the sections that you have defined.
+  Once you define the sections, then you must elaborate each key value combination in the sections that you have defined.
 
- 
+ 
 
 ```
 <Security>
@@ -102,4 +103,4 @@ Alpha lab-testing" />
 </Security>
 ```
 
- 
+ 

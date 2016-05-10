@@ -1,15 +1,16 @@
-Date: 2016-05-10
-SortOrder: 41
+<properties date="2016-05-10"
+SortOrder="41"
+/>
 
 Authentication is based on **credentials** – evidence that the user must provide to prove identity
 
 Someone – possibly more than one system – evaluates those credentials
 
-–       Credentials must prove an identity (be verifiable)
+–       Credentials must prove an identity (be verifiable)
 
-–       The identity must be mapped to an associate id
+–       The identity must be mapped to an associate id
 
-–       In SuperOffice, **an identity is an associate id**
+–       In SuperOffice, **an identity is an associate id**
 
 During evaluation of credentials, an identity must result, and no-one must vote against admittance
 
@@ -19,18 +20,18 @@ Evaluation is performed by **NetServer** and **trusted plugins** – only. No ot
 
 The credentials are processed by plugins in a particular order:
 
-1.        Ticket
+1. Ticket
 
-2.         Username/password
+2. Username/password
 
-3.        WindowsPerson
+3. WindowsPerson
 
-4.        Impersonation
+4. Impersonation
 
-5.        Anonymous
+5. Anonymous
 
-6.        UsernameAsDomain
+6. UsernameAsDomain
 
-7.        WindowsNonPerson.
+7. WindowsNonPerson.
 
 The order is decided by the priority attribute value on the plugin, and the loop breaks on the first one to say ”I know who this is!”

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 2
+<properties date="2016-05-10"
+SortOrder="2"
+/>
 
 [Architecture]()
 =============================
@@ -10,15 +11,15 @@ The connector URL will be stored in the SuperOffice database, and there will als
 
 The connector interface declares methods to handle:
 
--   Configuring the connection to the ERP system.
--   Getting information about changes in the ERP system.
--   Sending information about changes in the SuperOffice system to the ERP system.
--   Creating, Removing and updating links between ERP entities (Actors) and SuperOffice entitites (like companies or projects)
+* Configuring the connection to the ERP system.
+* Getting information about changes in the ERP system.
+* Sending information about changes in the SuperOffice system to the ERP system.
+* Creating, Removing and updating links between ERP entities (Actors) and SuperOffice entitites (like companies or projects)
 
- 
+ 
 
 <img src="../Erp%20Sync%20Connector%20Interface_files/image001.jpg" id="Bilde 2" width="627" height="713" />
 
- 
+ 
 
 1. autolist

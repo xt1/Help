@@ -1,7 +1,8 @@
-Date: 2016-05-10
-SortOrder: 15
+<properties date="2016-05-10"
+SortOrder="15"
+/>
 
- 
+ 
 
 The following example shows how to add enum-values with IN. The following SQL query is converted in to SuperOffice Objectified SQL.
 
@@ -11,7 +12,7 @@ FROM sale s
 
 WHERE s.Status IN (1,2)
 
- 
+ 
 
 ```
 using SuperOffice.Data;
@@ -55,8 +56,8 @@ salesInfo.Saledate);
 }
 ```
 
- 
+ 
 
 The above example is also very similar to the former examples. We have added an array of argument objects to the Restrictions of the query. Argument class is inherited from the QueryElement class.
 
- 
+ 

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 33
+<properties date="2016-05-10"
+SortOrder="33"
+/>
 
 The SQL we generate may not be what you expected J
 
@@ -11,9 +12,9 @@ FROM crm7.appointment
 WHERE DATEPART(year, do_by) = 2010
 ```
 
- 
+ 
 
-           … or …
+           … or …
 
 ```
 /* DateParts */ SELECT T0."do_by", 
@@ -31,7 +32,7 @@ ON (T0."appointment_id" = T1."appointmentId")
 WHERE DATEPART(year, T0."do_by") = 2010
 ```
 
- 
+ 
 
 Sentry needs a number of fields in order to calculate rights.
 

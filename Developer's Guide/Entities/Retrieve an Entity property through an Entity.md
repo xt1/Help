@@ -1,9 +1,10 @@
-Date: 2016-05-10
-SortOrder: 62
+<properties date="2016-05-10"
+SortOrder="62"
+/>
 
 The Sale Entity contains a property which in itself is an Entity, examples of such include Contact and Person properties. These properties consist of different properties which could be of different data types such as String, Double, Integer, Row, DateTime and many more.
 
- 
+ 
 
 ```
 using SuperOffice.CRM.Entities;

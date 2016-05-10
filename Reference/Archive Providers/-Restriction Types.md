@@ -1,13 +1,14 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 The fields in an archive provider's restriction are constrained using operators. The restrictions used vary according to the ArchiveColumnInfo.RestrictionType specified by the archive provider in its available columns.
 
 You would use the the RestrictionOperations.GetOperatorsForType to find out these values at run-time, but here are the default values provided by SuperOffice.
 
--   **Name**: the programmatic name you use in the ArchiveRestrictionInfo operator property.
--   **ValueHint**: describes how many values the operator needs, and how the UI should treat them.
+* **Name**: the programmatic name you use in the ArchiveRestrictionInfo operator property.
+* **ValueHint**: describes how many values the operator needs, and how the UI should treat them.
     R=Read Only, W=Writeable, +=one or more values (multi-select)
--   **Display Name**: the english name you would show in the GUI if you converted the resource id to a string.
+* **Display Name**: the english name you would show in the GUI if you converted the resource id to a string.
 
 Name
 

@@ -1,11 +1,11 @@
-Date: 2016-05-10
+<properties date="2016-05-10"
+/>
 
 ```
     using System;
     using System.Collections.Generic;
     using SuperOffice.CRM.ArchiveLists;
     using SuperOffice.CRM.Lists;
-
         IArchiveProvider activities =
 ArchiveProviderFactory.Create( "ContactActivity" );
         ArchiveRestrictionInfo contact = new
@@ -13,7 +13,6 @@ ArchiveRestrictionInfo( "contactId", "=", "2" );
         activities.SetRestriction( contact );
         activities.SetDesiredColumns( "date", "type", "text" );
         activities.SetPagingInfo( 100, 0 );
-
         DumpResult( activities );
 
 
@@ -32,7 +31,6 @@ ArchiveColumnData> column in row.ColumnData )
 "\t" );
                                 Console.WriteLine();
                         }
-
                         Console.Write( rowNo.ToString() + ": " +
 row.EntityName + "/" + row.PrimaryKey.ToString() + "s:" +
 row.StyleHint + " l:" + row.LinkHint + "\t" );

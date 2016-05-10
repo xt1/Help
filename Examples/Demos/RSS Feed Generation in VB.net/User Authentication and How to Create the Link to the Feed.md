@@ -1,17 +1,18 @@
-Date: 2016-05-10
-SortOrder: 11
+<properties date="2016-05-10"
+SortOrder="11"
+/>
 
- 
+ 
 
 The generated feed link uses the user credentials along with the user preference for the number of items displayed in Feed contents are read and appended to the feed URL. Then the logged on user information are validated with the use of Authenticate method of SOSession. The user password has to be encrypted since it’s sent along with the URL in plain text format. The support method Rot13 is used for this data conversion as shown in the following code segment.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 ```
     ''' <summary>
@@ -98,8 +99,8 @@ Microsoft.VisualBasic.AscW(chars(i))
     End Function
 ```
 
- 
+ 
 
- 
+ 
 
- 
+ 

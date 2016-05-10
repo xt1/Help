@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 17
+<properties date="2016-05-10"
+SortOrder="17"
+/>
 
 But what if you don’t want to turn on your phone to check your SuperOffice calendar?
 
@@ -21,6 +22,6 @@ Once the gadget has been added, you need adjust the settings on the calendar. Yo
 
 Click OK and the gadget will load the appointments from the URL and display them under the week or month.
 
-<img src="../SuperOffice%20iCal_files/image013.gif" width="141" height="169" />  <img src="SuperOffice%20iCal_files/image014.gif" width="142" height="167" />
+<img src="../SuperOffice%20iCal_files/image013.gif" width="141" height="169" />  <img src="SuperOffice%20iCal_files/image014.gif" width="142" height="167" />
 
 Click on an appointment for the full description of the appointment.

@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 45
+<properties date="2016-05-10"
+SortOrder="45"
+/>
 
 This is the actual source code (stripped of comments to make it fit) of the authentication pipeline in NetServer. Included here so you can see what actually happens during authentication; a block of code equals any number of hand-waving words
 

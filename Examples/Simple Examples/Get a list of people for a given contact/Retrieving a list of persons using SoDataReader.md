@@ -1,5 +1,6 @@
-Date: 2016-05-10
-SortOrder: 9
+<properties date="2016-05-10"
+SortOrder="9"
+/>
 
 In the below example we have demonstrated the method in our list of retrieving a list of persons. In the SoDataReader method it is all OSQL so it is very important that you know about the SO database thoroughly.
 
@@ -68,16 +69,16 @@ cmbPersonName.Items.Add((string)myReader[newPerTable.Firstname] + "
             }
 ```
 
- 
+ 
 
 In order for us to get a list of persons for a given contact we need the Contact table and the Persons table. In the above example first we have created two table info objects we need. Once we have the table info objects we can start building our select statement. We start by specifying the return fields, the restriction we want (in the above case we restrict our select to Contact\_Id = 21) and then we join the two tables. In the above case we join the contact table and the persons table with contact id. Then we can order the results of our select statement, in this case we have ordered our results by the FirstName in the ascending order but this is not a must you can leave the ordering out if you prefer. Now we can execute the reader and get our results to a SoReader object. Once you have the records in the reader you can loop through the results and access individual fields returned. In the above example we have concatenated the first name and the last name of the person records returned and assigned to a combo box. For more information on OSQL please refer to [OSQL section](../../../Developer's%20Guide/OSQL/OSQL.htm)
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
- 
+ 
