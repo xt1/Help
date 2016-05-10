@@ -1,7 +1,7 @@
 Date: 2016-05-10
 SortOrder: 1
 
-![](images/devnet_logo.png) ![](expander-sdk.jpg)
+![DevNet](images/DevNet_logo.png) ![Expander SDK](expander-sdk.jpg)
 Expander SDK: Server Data .net API
 ==================================
 
