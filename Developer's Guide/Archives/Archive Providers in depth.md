@@ -5,19 +5,19 @@ Archive Providers - theory and overview
 
 The purpose of the Archive Provider system is to fulfill the following requirements:
 
-*          Translate from a highly normalized database to a flat data model, suitable for multi-column lists and reports
+*  Translate from a highly normalized database to a flat data model, suitable for multi-column lists and reports
 
-*          Contain significant business logic that affects what rows are fetched and how certain columns are calculated
+*  Contain significant business logic that affects what rows are fetched and how certain columns are calculated
 
-*          Allow columns that are more or less complexly derived from the underlying data
+*  Allow columns that are more or less complexly derived from the underlying data
 
-*          Offer searchability (i.e., the ability to use columns to restrict the rows fetched) on as many columns as possible, including some of those that have a complex relationship to the database
+*  Offer searchability (i.e., the ability to use columns to restrict the rows fetched) on as many columns as possible, including some of those that have a complex relationship to the database
 
-*          Generate minimal queries to avoid fetching unnecessary data
+*  Generate minimal queries to avoid fetching unnecessary data
 
-*          Build up complex data streams from reusable building blocks
+*  Build up complex data streams from reusable building blocks
 
-*          Be extensible, both internally and for partners, in both the row and column dimensions
+*  Be extensible, both internally and for partners, in both the row and column dimensions
 
 This is a fairly demanding set of requirements, and it reflects the fact that a lot of the functionality in SuperOffice is expressed through the two-dimensional lists, called "archives", that you find throughout the application.
 
@@ -35,13 +35,13 @@ Terminology
 
 An archive provider is a mechanism that delivers data in a form suitable for display or processing as a two-dimensional sheet, much like a spreadsheet. There are several terms that are used throughout the code that need to be precisely defined:
 
-*          A **row** is one row of data, typically displayed as one line. Data is delivered one row at a time to the client.
+*  A **row** is one row of data, typically displayed as one line. Data is delivered one row at a time to the client.
 
-*          Each row consists of one or more **columns**, where each column has a (predictable) name, and several kinds of content (display value, raw value, tooltip, ...)
+*  Each row consists of one or more **columns**, where each column has a (predictable) name, and several kinds of content (display value, raw value, tooltip, ...)
 
-*          Each row also has a name, called an **entity**. The entity name is a string and can be thought of as defining a row type. A provider will always define at least one entity.
+*  Each row also has a name, called an **entity**. The entity name is a string and can be thought of as defining a row type. A provider will always define at least one entity.
 
-*          The combination of entity and **primary key** (a 32-bit integer) uniquely identifies a row in the result from a provider
+*  The combination of entity and **primary key** (a 32-bit integer) uniquely identifies a row in the result from a provider
 
 More details on how rows, columns and entities are defined can be found elsewhere in this document.
 
@@ -52,21 +52,21 @@ The high-level interfaces for the archive provider system are shown in the follo
 
 <img src="Archive%20Providers%20in%20depth_files/image001.jpg" width="1135" height="1140" />
 There are several points to make about this diagram (which, incidentally, is sometimes used to test prospective new developers):
-*          The IArchiveProvider interface is the one that the outside world relates to; and as the names suggest, it defines an archive provider as something that has rows, columns and entities.
+* The IArchiveProvider interface is the one that the outside world relates to; and as the names suggest, it defines an archive provider as something that has rows, columns and entities.
 
-*          Internally, the interface is composed out of fragments or aspects, that each define a smaller piece of functionality. The reason for this way of defining interfaces is that different aspects are useful in different contexts; for instance, it is meaningful to talk about columns without talking about rows in some cases.
+* Internally, the interface is composed out of fragments or aspects, that each define a smaller piece of functionality. The reason for this way of defining interfaces is that different aspects are useful in different contexts; for instance, it is meaningful to talk about columns without talking about rows in some cases.
 
-*          In the diagram, the leftmost column consists of the basic aspects which do not inherit from anything else. Each interface defines one independent kind of functionality that various components of the provider system implement.
+* In the diagram, the leftmost column consists of the basic aspects which do not inherit from anything else. Each interface defines one independent kind of functionality that various components of the provider system implement.
 
-*          The centre-right column defines interfaces that are actually implemented by concrete classes. Note that in addition to inheriting various left-side aspects, these interfaces also add some properties and methods of their own. This is because the centre-right interfaces are meant to represent something it is useful to actually implement, while the left-side interfaces are more abstract and are meant to be independent of implementation - they hide that which the client does not need to know, while the centre-right interface add stuff that any reasonable implementation actually requires.
+* The centre-right column defines interfaces that are actually implemented by concrete classes. Note that in addition to inheriting various left-side aspects, these interfaces also add some properties and methods of their own. This is because the centre-right interfaces are meant to represent something it is useful to actually implement, while the left-side interfaces are more abstract and are meant to be independent of implementation - they hide that which the client does not need to know, while the centre-right interface add stuff that any reasonable implementation actually requires.
 
-*          It is quite possible to write a class that implement IArchiveProvider directly, with or without the use of various helper classes. Such implementations exist, both internally and externally. However, most concrete archive providers use NetServer to access the SuperOffice database through queries - and for those, the IArchiveQueryProvider and IArchiveMultyQueryProvider interfaces are more useful as an implementation basis.
+* It is quite possible to write a class that implement IArchiveProvider directly, with or without the use of various helper classes. Such implementations exist, both internally and externally. However, most concrete archive providers use NetServer to access the SuperOffice database through queries - and for those, the IArchiveQueryProvider and IArchiveMultyQueryProvider interfaces are more useful as an implementation basis.
 
-*          IArchiveExtend captures the extensibility dimension of the archive provider system. An archive provider can **extend another** provider, by implementing the IArchiveProviderDoesExtent interface. This works if the "parent" provider itself implements IArchiveProviderExtensible, which makes available the hooks needed to modify the parents' query.
+* IArchiveExtend captures the extensibility dimension of the archive provider system. An archive provider can **extend another** provider, by implementing the IArchiveProviderDoesExtent interface. This works if the "parent" provider itself implements IArchiveProviderExtensible, which makes available the hooks needed to modify the parents' query.
 
-*          A component that implements IArchiveExtender is itself extensible, extends some parent provider, and (through IArchiveHasColumns) adds columns to the final data set of the complete provider. This interface is the basis for the vast majority of the current code.
+* A component that implements IArchiveExtender is itself extensible, extends some parent provider, and (through IArchiveHasColumns) adds columns to the final data set of the complete provider. This interface is the basis for the vast majority of the current code.
 
-*          Finally, everything except for the left-hand column inherits the IPlugin interface, signaling that these are NetServer plugins. The essence here is that the SuperOffice-written code is not privileged relative to partner extensions, and the whole system is from the ground up designed to be extensible, internally and externally.
+* Finally, everything except for the left-hand column inherits the IPlugin interface, signaling that these are NetServer plugins. The essence here is that the SuperOffice-written code is not privileged relative to partner extensions, and the whole system is from the ground up designed to be extensible, internally and externally.
 
 Data classes
 --------------------------------------
@@ -117,15 +117,15 @@ Basic rules
 
 There are five phases in the interaction between a client and an archive provider, and one of them is optional. The basic sequence is:
 
-1.        Create a provider instance - ArchiveProviderFactory is the common creation point for all providers.
+1. Create a provider instance - ArchiveProviderFactory is the common creation point for all providers.
 
-2.        (Optional) Retrieve metadata from the provider about what it **can** do
+2. (Optional) Retrieve metadata from the provider about what it **can** do
 
-3.        Tell the provider what you **want** it to do - columns, entities, restrictions, orderby, paging; hard-coded or somehow configurable according to application needs
+3. Tell the provider what you **want** it to do - columns, entities, restrictions, orderby, paging; hard-coded or somehow configurable according to application needs
 
-4.        Fetch data, by iterating over the ArchiveRow enumerator you get from GetRows()
+4. Fetch data, by iterating over the ArchiveRow enumerator you get from GetRows()
 
-5.        Close the provider to release all resources held by it
+5. Close the provider to release all resources held by it
 
 Note that an archive provider instance is a single use object, valid for one (1) of these cycles. A client cannot re-use an existing provider instance, and those who implement providers do not need to take re-use into account.
 
@@ -134,39 +134,25 @@ Simple scenario - known data
 
 In this scenario, the client knows what it wants, and simply needs to get it with minimum fuss. For instance, suppose we want to get the **position,** **firstname** and **lastname** columns from the **Person** provider, skipping retired persons, where **lastName** contains the letters "vo". For the moment, never mind how we know all these names...
 
+```
 IArchiveProvider provider = ArchiveProviderFactory.Create( "Person" );
-
 provider.SetDesiredColumns( "position", "lastName", "firstName" );
-
 provider.SetDesiredEntities( "person" );
-
 provider.SetPagingInfo( int.MaxValue, 0 );
-
  
-
 ArchiveRestrictionInfo\[\] restrictions = new ArchiveRestrictionInfo\[1\];
-
 restrictions\[0\] = new ArchiveRestrictionInfo( "lastName", "contains", "vo");
-
 provider.SetRestrictions( restrictions );
-
  
-
 foreach( ArchiveRow row in provider.GetRows() )
-
     {
-
        //process row data, for example like this:
-
        string positionText = row.ColumnData\["position"\].DisplayText;
-
        string lastNameText = row.ColumnData\["lastName"\].DisplayText;
-
        string firstNameText = row.ColumnData\["firstName"\].DisplayText;
-
     }
-
 provider.Close();          // remember to close the provider to release resources
+```
 
 In the first line we call on the factory to create the proper provider. Given that the provider system is extensible and consists of an unknown number of plugins, a factory mechanism is the preferred way of instantiating objects; that way you are sure to pick up all available overrides and extensions. We then tell the provider what columns we want, the entity we want, and how many rows (in this case, all available as one continuous stream).
 
@@ -182,7 +168,7 @@ Columns
 
 By saying
 
-List&lt;ArchiveColumnInfo&gt; columns = provider.GetAvailableColumns();
+    List<ArchiveColumnInfo> columns = provider.GetAvailableColumns();
 
 a client can obtain a list of available columns from a provider. It can then populate a GUI based on the DisplayName, DisplayTooltip and IconHint properties of each column info object, and let the user choose whatever set of columns that should be displayed. For each such column it is the Name member that must be saved, since an array of these strings is the parameter to the necessary SetDesiredColumn call.
 
@@ -197,12 +183,13 @@ Entities
 
 The entities marked as mandatory (Optional = false) are always returned by an archive provider. However, the provider may choose to mark one or more entities as optional, and clients then have to ask for them using the SetDesiredEntities method.
 
-List&lt;ArchiveEntityInfo&gt; columns = provider.GetAvailableEntities();
+    List<ArchiveEntityInfo> columns = provider.GetAvailableEntities();
 
 In 6.Web, optional entities cause checkboxes to be shown in the archive toolbar:
 
 <img src="Archive%20Providers%20in%20depth_files/image003.jpg" width="271" height="71" />
 As with column names, the idea is that any extensions that add more optional entities will cause the GUI to automatically adapt. Entities that have Optional = false generally do not show up the GUI, since they cannot be turned off in any case.
+
 Sort order
 ------------------------------------
 
@@ -282,94 +269,59 @@ The classes that implement extenders come in two variants, bases and joiners. Jo
 
 A very simple extenderbase can look like this:
 
-    /// &lt;summary&gt;
-
+    /// <summary>
     /// Base class for fetching data from the Address table - no special processing at all
-
-    /// &lt;/summary&gt;
-
-    /// &lt;remarks&gt;
-
+    /// </summary>
+    /// <remarks>
     /// One possible feature would be to format Zip codes according to address format guidelines. Another
-
     /// one would be to provide a 'formattedAddress' column, equivalent to a multi-line label...
+    /// </remarks>
 
-    /// &lt;/remarks&gt;
-
-public abstract class AddressExtenderBase : TableExtenderBase&lt;AddressTableInfo&gt;
-
+    public abstract class AddressExtenderBase : TableExtenderBase&lt;AddressTableInfo&gt;
     {
-
        \#region Columns to be picked up by reflection
-
-       protected ArchiveColumnInfo \_colAddressId = new ArchiveColumnInfo( "addressId", RC.SR\_ADDRESS\_ID, RC.SR\_ADDRESS\_ID\_TOOLTIP, Constants.DisplayTypes.Int,
-
+        protected ArchiveColumnInfo \_colAddressId = new ArchiveColumnInfo( "addressId", RC.SR\_ADDRESS\_ID, RC.SR\_ADDRESS\_ID\_TOOLTIP, Constants.DisplayTypes.Int,
              AllowOrderBy, Invisible, ColumnHelper.DefaultNumberWidth, Constants.RestrictionTypes.Int );
 
        protected ArchiveColumnInfo \_colLine1 = new ArchiveColumnInfo( "line1", RC.SR\_AL\_ADDRESS1, RC.SR\_ADDRESS\_LINE1\_TOOLTIP, Constants.DisplayTypes.String,
-
              AllowOrderBy, Visible, ColumnHelper.DefaultStringWidth, Constants.RestrictionTypes.String );
 
        protected ArchiveColumnInfo \_colLine2 = new ArchiveColumnInfo( "line2", RC.SR\_AL\_ADDRESS2, RC.SR\_ADDRESS\_LINE2\_TOOLTIP, Constants.DisplayTypes.String,
-
               AllowOrderBy, Visible, ColumnHelper.DefaultStringWidth, Constants.RestrictionTypes.String );
 
        protected ArchiveColumnInfo \_colLine3 = new ArchiveColumnInfo( "line3", RC.SR\_AL\_ADDRESS3, RC.SR\_ADDRESS\_LINE3\_TOOLTIP, Constants.DisplayTypes.String,
-
              AllowOrderBy, Visible, ColumnHelper.DefaultStringWidth, Constants.RestrictionTypes.String );
 
        protected ArchiveColumnInfo \_colCounty = new ArchiveColumnInfo( "county", RC.SR\_SEARCH\_COUNTY, RC.SR\_SEARCH\_CRITERION\_CONTACT\_COUNTY\_TOOLTIP, Constants.DisplayTypes.String,
-
              AllowOrderBy, Visible, ColumnHelper.DefaultStringWidth, Constants.RestrictionTypes.String );
 
        protected ArchiveColumnInfo \_colCity = new ArchiveColumnInfo( "city", RC.SR\_SEARCH\_CITY, RC.SR\_SEARCH\_CRITERION\_CONTACT\_CITY\_TOOLTIP, Constants.DisplayTypes.String,
-
              AllowOrderBy, Visible, ColumnHelper.DefaultStringWidth, Constants.RestrictionTypes.String );
 
        protected ArchiveColumnInfo \_colZip = new ArchiveColumnInfo( "zip", RC.SR\_SEARCH\_ZIP, RC.SR\_SEARCH\_CRITERION\_CONTACT\_ZIP\_TOOLTIP, Constants.DisplayTypes.String,
-
              AllowOrderBy, Visible, ColumnHelper.DefaultStringWidth, Constants.RestrictionTypes.String );
 
        protected ArchiveColumnInfo \_colState = new ArchiveColumnInfo( "state", RC.SR\_SEARCH\_STATE, RC.SR\_SEARCH\_CRITERION\_CONTACT\_STATE\_TOOLTIP, Constants.DisplayTypes.String,
-
              AllowOrderBy, Visible, ColumnHelper.DefaultStringWidth, Constants.RestrictionTypes.String );
 
        \#endregion
 
- 
-
        protected override void InnerModifyQuery()
-
        {
-
              MapIdField( \_ourTable.AddressId );
-
              MapSimpleReturnField( \_ourTable.AddressId, \_colAddressId );
-
              MapSimpleReturnField( \_ourTable.Address1, \_colLine1 );
-
              MapSimpleReturnField( \_ourTable.Address2, \_colLine2 );
-
              MapSimpleReturnField( \_ourTable.Address3, \_colLine3 );
-
              MapSimpleReturnField( \_ourTable.County, \_colCounty );
-
              MapSimpleReturnField( \_ourTable.City, \_colCity );
-
              MapSimpleReturnField( \_ourTable.Zipcode, \_colZip );
-
              MapSimpleReturnField( \_ourTable.State, \_colState );
-
        }
-
- 
 
        protected override void InnerPopulateRowFromReader( SoDataReader reader, ArchiveRow row )
-
        {
-
        }
-
     }
 
 Joiners
@@ -377,11 +329,11 @@ Joiners
 
 If one draws a graph that represents a query as a hierarchy, where tables (either as return fields or restrictions) are nodes and joins are edges, then an ExtenderBase class will represent a node, and a Joiner class will be an edge. Since joiners inherit from extenderbases, an instance of a joiner is equivalent to a node plus its (single) upward-pointing edge. For instance, suppose we wish to fetch information about sales plus connected contacts and persons - the SQL query might look like
 
-SELECT s.heading, s.probability, c.name, c.department, p.firstname, p.lastname, pt.text
-FROM sale s
-LEFT OUTER JOIN contact c on s.contact\_id = c.contact\_id
-LEFT OUTER JOIN person p on s.person\_id = p.person\_id
-LEFT OUTER JOIN text pt on p.text\_id = pt.text\_id
+    SELECT s.heading, s.probability, c.name, c.department, p.firstname, p.lastname, pt.text
+    FROM sale s
+    LEFT OUTER JOIN contact c on s.contact\_id = c.contact\_id
+    LEFT OUTER JOIN person p on s.person\_id = p.person\_id
+    LEFT OUTER JOIN text pt on p.text\_id = pt.text\_id
 
 The corresponding query graph is
 
@@ -390,45 +342,20 @@ The corresponding query graph is
  
 
  
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
 The structure of the extenders involved corresponds exactly to this graph. The code handling each node is an ExtenderBase, while the code that provides the edges (the joins) is in Joiners. An instance of a Joiner inherits from the extenderbase and thus corresponds to the node and the edge going up to the parent node. As a result, joiners are typically very small classes with a standardized structure, that simply take a query and a parent table reference as input. They create a new TableInfo representing "this" and join it to the parent in the proper way (INNER, LEFT OUTER); they then return the newly created TableInfo instance up to the base class. Since the base class is an ExtenderBase it now has a concrete table to work against and can run its logic (that requests ReturnFields, sets up restrictions and picks values from the result set).
 
 Joiners are usually strongly typed objects, so there is one for each combination of tables that occurs. In the graph above, there would be one for SaleContact, one for SalePerson, and one for PersonText. Similarly we would find an AppointmentContact joiner for the case where we have an appointment row and want to add contact information. Both SaleContact and AppointmentContact inherit from ContactExtenderBase, and just add the correct join logic by implementing the abstract method SetJoin(), like this:
 
     /// &lt;summary&gt;
-
     /// Create a Contact tableinfo and join it to the parent Sale
-
     /// &lt;/summary&gt;
-
     /// &lt;returns&gt;ContactTableInfo of the newly created info instance&lt;/returns&gt;
-
-protected override ContactTableInfo SetJoin()
-
+    protected override ContactTableInfo SetJoin()
     {
-
        ContactTableInfo ourContactTable = TablesInfo.GetContactTableInfo();
-
        SaleTableInfo parentSaleTable = (SaleTableInfo)Parent.TableToExtend;
-
        SetLeftOuterOrInnerJoin( parentSaleTable.ContactId.Equal( ourContactTable.ContactId ) );
-
        return ourContactTable;
-
     }
 
  
