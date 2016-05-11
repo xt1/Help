@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="14"
 />
 
@@ -37,7 +37,7 @@ using(SoSession mySession = SoSession.Authenticate("sam", "sam"))
 
  
 
-An AppointmentRow can be created according the example shown in Creating an Appointment Row. [Create an Appointment Row](Create%20an%20Appointment%20Row.htm) the Appointment Row has being created, the next phase of the code segment is to instantiate an AppointmentRows class. After which the instance can be added to the collection with the execution of the Add() method.
+An AppointmentRow can be created according the example shown in Creating an Appointment Row. [Create an Appointment Row](Create%20an%20Appointment%20Row.md) the Appointment Row has being created, the next phase of the code segment is to instantiate an AppointmentRows class. After which the instance can be added to the collection with the execution of the Add() method.
 
 ```
             AppointmentRows newAppRows =

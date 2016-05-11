@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="3"
 />
 
@@ -36,6 +36,6 @@ In the code above once we have created an instance of the Contact entity by usin
 
 ------------------------------------------------------------------------
 
-[How to set an interest on or off for a contact](How%20to%20set%20an%20interest%20on%20or%20off%20for%20a%20contact.htm)
+[How to set an interest on or off for a contact](How%20to%20set%20an%20interest%20on%20or%20off%20for%20a%20contact.md)
 
-[How to add a new contact interest](How%20to%20add%20a%20new%20contact%20interest/How%20to%20add%20a%20new%20contact%20interest.htm)
+[How to add a new contact interest](How%20to%20add%20a%20new%20contact%20interest/How%20to%20add%20a%20new%20contact%20interest.md)

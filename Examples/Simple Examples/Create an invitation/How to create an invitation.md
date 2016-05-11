@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="5"
 />
 
@@ -12,7 +12,7 @@ using SuperOffice;
  
 using(SoSession mySession = SoSession.Authenticate("SAL0", ""))
 {
-    //Create a new Appointment
+    //Create a New Appointment
     Appointment appointmentOne = Appointment.CreateNew();
     appointmentOne.SetDefaults();
     appointmentOne.AlldayEvent = 1;

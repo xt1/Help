@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="45"
 />
 
@@ -13,7 +13,7 @@ bool isOK = newDb.Login("sam", "sam");
 if (isOK)
 {
     int rowNo = 1;
-    //create a new Contact instance
+    //Create a New Contact instance
     IListTextItems newCategorys =
 newDb.GetList(SOTableId.enTableCategory);
     Console.Write("ID" + "\t\t\t" + "Category");

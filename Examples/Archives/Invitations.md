@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 />
 
 This is the list of assignments and invitations that the user has not yet accepted. Each user has a personal list of invitations and assignments to handle.

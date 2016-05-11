@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="11"
 />
 
@@ -49,7 +49,7 @@ SuperOffice.CRM.Rows.AssociateRow.GetFromIdxAssociateId(100);
 Example 1
 ```
 
-In the example above, we have created an Appointment as explained in example creating an Appointment Entity. [Creating Entities](../../../Developer's%20Guide/Entities/Entities.htm) difference is that we do not save the created Appointment. Instead, we assign it to the Appointments property of the Contact instance created and then save the Contact instance as shown below.
+In the example above, we have created an Appointment as explained in example creating an Appointment Entity. [Creating Entities](../../../Developer's%20Guide/Entities/Entities.md) difference is that we do not save the created Appointment. Instead, we assign it to the Appointments property of the Contact instance created and then save the Contact instance as shown below.
 
 ```
             Contact newContact = Contact.GetFromIdxContactId(10);

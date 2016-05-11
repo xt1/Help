@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="54"
 />
 
@@ -12,7 +12,7 @@ bool isOK = newDb.Login("sam", "sam");
  
 if (isOK)
 {
-    //create a new Contact instance using SOFind
+    //Create a New Contact instance using SOFind
     SOContacts newContacts =
 newDb.Find.ContactsByPhone("944496325");
  

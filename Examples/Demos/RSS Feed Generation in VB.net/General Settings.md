@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="16"
 />
 
@@ -12,7 +12,7 @@ For the application to run, some modifications are required in the web configura
 protection="All" timeout="30" path="/">
       </forms>
  
-</authentication>
+</Authentication>
  
 <sessionState mode="InProc"
 stateConnectionString="tcpip=127.0.0.1:42424"

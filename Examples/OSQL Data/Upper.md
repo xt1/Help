@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 />
 
 A simple join on the associate\_field in the tables associate and contact:

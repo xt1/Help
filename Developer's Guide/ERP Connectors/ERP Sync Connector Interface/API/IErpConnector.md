@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="4"
 />
 
@@ -105,7 +105,7 @@ Interface Members:
 </tbody>
 </table>
 
-[]() []() [\*see]() [the ErpActor section](ERP%20Actor%20Carrier.htm) for details on timestamps.
+[]() []() [\*see]() [the ErpActor section](ERP%20Actor%20Carrier.md) for details on timestamps.
 
  
 
@@ -120,4 +120,4 @@ In addition to implementing the methods of IErpConnector, a Sync Connector will 
    }
 ```
 
-This connector would be compled into a DLL, and then exposed to the web using [the WCF Erp Sync Service host](../Architecture/ERP%20Sync%20Service%20WCF%20Host.htm).
+This connector would be compled into a DLL, and then exposed to the web using [the WCF Erp Sync Service host](../Architecture/ERP%20Sync%20Service%20WCF%20Host.md).

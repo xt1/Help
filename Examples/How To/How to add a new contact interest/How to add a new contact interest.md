@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="4"
 />
 
@@ -30,7 +30,7 @@ ContInt table.
       newConInt.Tooltip = "Sams Interests";
       newConInt.Save();
  
-      //Create a new ContactInterestRow. Each row represents one
+      //Create a New ContactInterestRow. Each row represents one
 row in the ContactInterest table.
       ContactInterestRow newconIntRw =
 ContactInterestRow.CreateNew();
@@ -96,6 +96,6 @@ Finally we need to create a ContIntHeadingLinkRow. This is necessary because the
 
 ------------------------------------------------------------------------
 
-[How to set an interest on or off for a contact](../How%20to%20set%20an%20interest%20on%20or%20off%20for%20a%20contact.htm)
+[How to set an interest on or off for a contact](../How%20To%20set%20an%20interest%20on%20or%20off%20for%20a%20contact.md)
 
-[How to list all selected interests for a contact](../How%20to%20list%20all%20selected%20interests%20for%20a%20contact.htm)
+[How to list all selected interests for a contact](../How%20To%20list%20all%20selected%20interests%20for%20a%20contact.md)

@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 />
 
 "ContactProjects"
@@ -120,4 +120,4 @@ This provider name is implemented by the class SuperOffice.CRM.ArchiveLists.Cont
 
 See also: ArchiveProviderFactory.
 
-[Restriction Types](-Restriction%20Types.htm)
+[Restriction Types](-Restriction%20Types.md)

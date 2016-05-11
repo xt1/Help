@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="11"
 />
 
@@ -2404,7 +2404,7 @@ Fundamentally, this new connector puts itself between the ERPConnector and Super
 </tr>
 <tr class="odd">
 <td><p>string CountryCode</p></td>
-<td><p>The ISO country code, like, “NO” or “US”. See <a href="http://www.iso.org/iso/home/standards/country_codes/iso-3166-1_decoding_table.htm#AA" class="uri">http://www.iso.org/iso/home/standards/country_codes/iso-3166-1_decoding_table.htm#AA</a> for details.</p></td>
+<td><p>The ISO country code, like, “NO” or “US”. See <a href="http://www.iso.org/iso/home/standards/country_codes/iso-3166-1_decoding_table.md#AA" class="uri">http://www.iso.org/iso/home/standards/country_codes/iso-3166-1_decoding_table.md#AA</a> for details.</p></td>
 </tr>
 <tr class="even">
 <td><p>string Country</p></td>

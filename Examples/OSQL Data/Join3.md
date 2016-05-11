@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 />
 
 TestSelectWithRestrictionBetween3Tables has a join between associate\_id in three different tables, associate, selection and contact:

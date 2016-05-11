@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 />
 
 "ParticipantsWithConflictRemoval"
@@ -144,4 +144,4 @@ This provider name is implemented by the class SuperOffice.CRM.ArchiveLists.Part
 
 See also: ArchiveProviderFactory.
 
-[Restriction Types](-Restriction%20Types.htm)
+[Restriction Types](-Restriction%20Types.md)

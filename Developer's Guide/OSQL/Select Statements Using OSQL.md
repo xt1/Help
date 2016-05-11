@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="13"
 />
 
@@ -83,7 +83,7 @@ Next it is worth m entioning the functionality of the static S class. This class
 
 Now that you have all the table information you need and you have a select object you can start building your select query. Add the return fields as shown in the example and you can add a restriction and give the restriction parameters through the select class. You can sort your results by using the functionality of SuperOffice.Util.OrderBySortType class. When you have created your query all that is left is to execute this query on the data base.
 
-In order to execute this query you have to have a connection, a command and a reader to hold the data like any other normal SQL statement. The only difference is that all these should be NetServer provided objects like in the above example. Finally when you have executed the query the data will be held in the reader and you can retrieve the data from the reader as shown in the example. The NetServer data reader will be explained in detail later.  [NetServer reader section of this doc and auto generated content](So%20Data%20Reader.htm) 
+In order to execute this query you have to have a connection, a command and a reader to hold the data like any other normal SQL statement. The only difference is that all these should be NetServer provided objects like in the above example. Finally when you have executed the query the data will be held in the reader and you can retrieve the data from the reader as shown in the example. The NetServer data reader will be explained in detail later.  [NetServer reader section of this doc and auto generated content](So%20Data%20Reader.md) 
 
 The above example of the select statement is a very simple, so now let us look at a more complex select example.
 

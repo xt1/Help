@@ -1,8 +1,8 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="10"
 />
 
-This section describes how we may add a new Contact to the Contact table. In order to insert data using OSQL we would need to make use of the Insert class, which is located in the SuperOffice.Data namespace. The INSERT statement is used in a similar manner in which the above SELECT statement has being used. [OSQL Data](../OSQL%20Data/OSQL%20Data.htm)
+This section describes how we may add a new Contact to the Contact table. In order to insert data using OSQL we would need to make use of the Insert class, which is located in the SuperOffice.Data namespace. The INSERT statement is used in a similar manner in which the above SELECT statement has being used. [OSQL Data](../OSQL%20Data/OSQL%20Data.md)
 
 An important point to remember!
 

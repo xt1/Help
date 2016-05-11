@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="35"
 />
 
@@ -11,7 +11,7 @@ Database newDb = new Database();
 bool isOK = newDb.Login("sam", "sam");
 if (isOK)
 {
-    //create a new Contact instance
+    //Create a New Contact instance
     SOContact newContact = newDb.GetContact(10);
  
     //Retieve values stored in the Contact

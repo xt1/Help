@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 />
 
 "AssignResponseInvitation"
@@ -361,4 +361,4 @@ This provider name is implemented by the class SuperOffice.CRM.ArchiveLists.Assi
 
 See also: ArchiveProviderFactory.
 
-[Restriction Types](-Restriction%20Types.htm)
+[Restriction Types](-Restriction%20Types.md)

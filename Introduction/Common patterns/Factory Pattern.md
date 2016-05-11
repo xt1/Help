@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="9"
 />
 
@@ -66,7 +66,7 @@ SuperOffice.SoSession.Authenticate("SAM", "sam"))
 
 In order for us to use the ConnectionFactory the SuperOffice.Data, namespace has being called. After a DataSet of the Contact Table have been created using OSQL statements. This will be explained in later stages of the document.
 
-[OSQL description & example](../../Developer's%20Guide/OSQL/OSQL.htm)
+[OSQL description & example](../../Developer's%20Guide/OSQL/OSQL.md)
 In order to use the connection we create an instance of the SoConnection using the ConnectionFactory, GetConnection() method.
 
 The “newConn” variable may contain a SoConnection object, or it may contain a sub-class of SoConnection. The factory controls what sort of object is returned. The factory is configured using the app.config file.

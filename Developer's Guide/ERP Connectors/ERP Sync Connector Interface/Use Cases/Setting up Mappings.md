@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="2"
 />
 
@@ -41,7 +41,7 @@ actorType)
                 DisplayName = "Standard Terms" }
 ```
 
-The configuration describes the ERP fields. The admin client will attempt to do [some automatic mapping of fields based on the FieldKey names](../Automatic%20Field%20Mapping.htm).
+The configuration describes the ERP fields. The admin client will attempt to do [some automatic mapping of fields based on the FieldKey names](../Automatic%20Field%20Mapping.md).
 
 ERP fields can be typed as text, integers, checkboxes, numbers etc. The admin client will restrict the SuperOffice fields that can be mapped to the ERP field based on these types, so if you have a checkbox field, you cannot have a bi-directional sync to a text field, since information would be lost in one direction.
 

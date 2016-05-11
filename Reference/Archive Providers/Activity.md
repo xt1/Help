@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 />
 
 "Activity"
@@ -437,4 +437,4 @@ This provider name is implemented by the class inside NetServer's SODatabase ass
 
 See also: .
 
-[Restriction Types](-Restriction%20Types.htm)
+[Restriction Types](-Restriction%20Types.md)

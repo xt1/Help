@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="5"
 />
 
@@ -113,4 +113,4 @@ NetServer will load the assembly; the TooltipProviderFactory will scan it for co
 
 See Also:
 
-[Plugin ArchiveProvider](../../../Developer's%20Guide/Plugin%20ArchiveProviders/Plugin%20ArchiveProviders.htm)
+[Plugin ArchiveProvider](../../../Developer's%20Guide/Plugin%20ArchiveProviders/Plugin%20ArchiveProviders.md)

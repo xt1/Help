@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="5"
 />
 
@@ -133,7 +133,7 @@ protected override ListTableRows.CustomSearch GetSimpleListQuery()
 
  
 
-Here we filter out only the countries that start with A. Please refer to the OSQL section of the SDK help for more information  [In depth OSQL](../OSQL/OSQL.htm) .
+Here we filter out only the countries that start with A. Please refer to the OSQL section of the SDK help for more information  [In depth OSQL](../OSQL/OSQL.md) .
 
 Now that we have developed our Plugin lets discuss how we can use our developed Plugin. How do we inform NetServer that we have developed a Plugin? We have to specify in our app.config file that NetServer should use our new Plugin instead. Below is an example of how we have to configure our Plugin in the app.config file. 
 

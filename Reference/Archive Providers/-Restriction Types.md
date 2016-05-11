@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 />
 
 The fields in an archive provider's restriction are constrained using operators. The restrictions used vary according to the ArchiveColumnInfo.RestrictionType specified by the archive provider in its available columns.

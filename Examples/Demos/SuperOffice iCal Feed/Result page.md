@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="13"
 />
 
@@ -47,4 +47,4 @@ The system user bypasses the sentry security restrictions, and is therefore allo
 
 ------------------------------------------------------------------------
 
-**See Also:** [iCal Results](../SuperOffice%20iCal%20Feed/iCal%20Results.htm)
+**See Also:** [iCal Results](../SuperOffice%20iCal%20Feed/iCal%20Results.md)

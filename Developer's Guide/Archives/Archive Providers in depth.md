@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 />
 
 Archive Providers - theory and overview
@@ -135,17 +135,26 @@ Simple scenario - known data
 
 In this scenario, the client knows what it wants, and simply needs to get it with minimum fuss. For instance, suppose we want to get the **position,** **firstname** and **lastname** columns from the **Person** provider, skipping retired persons, where **lastName** contains the letters "vo". For the moment, never mind how we know all these names...
 
-```
 IArchiveProvider provider = ArchiveProviderFactory.Create( "Person" );
+
 provider.SetDesiredColumns( "position", "lastName", "firstName" );
+
 provider.SetDesiredEntities( "person" );
+
 provider.SetPagingInfo( int.MaxValue, 0 );
 
+ 
+
 ArchiveRestrictionInfo\[\] restrictions = new ArchiveRestrictionInfo\[1\];
+
 restrictions\[0\] = new ArchiveRestrictionInfo( "lastName", "contains", "vo");
+
 provider.SetRestrictions( restrictions );
 
+ 
+
 foreach( ArchiveRow row in provider.GetRows() )
+
     {
        //process row data, for example like this:
        string positionText = row.ColumnData\["position"\].DisplayText;
@@ -154,7 +163,6 @@ foreach( ArchiveRow row in provider.GetRows() )
     }
 
 provider.Close();          // remember to close the provider to release resources
-```
 
 In the first line we call on the factory to create the proper provider. Given that the provider system is extensible and consists of an unknown number of plugins, a factory mechanism is the preferred way of instantiating objects; that way you are sure to pick up all available overrides and extensions. We then tell the provider what columns we want, the entity we want, and how many rows (in this case, all available as one continuous stream).
 
@@ -170,7 +178,7 @@ Columns
 
 By saying
 
-    List&lt;ArchiveColumnInfo&gt; columns = provider.GetAvailableColumns();
+List&lt;ArchiveColumnInfo&gt; columns = provider.GetAvailableColumns();
 
 a client can obtain a list of available columns from a provider. It can then populate a GUI based on the DisplayName, DisplayTooltip and IconHint properties of each column info object, and let the user choose whatever set of columns that should be displayed. For each such column it is the Name member that must be saved, since an array of these strings is the parameter to the necessary SetDesiredColumn call.
 
@@ -185,7 +193,7 @@ Entities
 
 The entities marked as mandatory (Optional = false) are always returned by an archive provider. However, the provider may choose to mark one or more entities as optional, and clients then have to ask for them using the SetDesiredEntities method.
 
-    List&lt;ArchiveEntityInfo&gt; columns = provider.GetAvailableEntities();
+List&lt;ArchiveEntityInfo&gt; columns = provider.GetAvailableEntities();
 
 In 6.Web, optional entities cause checkboxes to be shown in the archive toolbar:
 
@@ -277,7 +285,9 @@ A very simple extenderbase can look like this:
     /// One possible feature would be to format Zip codes according to address format guidelines. Another
     /// one would be to provide a 'formattedAddress' column, equivalent to a multi-line label...
     /// &lt;/remarks&gt;
-    public abstract class AddressExtenderBase : TableExtenderBase&lt;AddressTableInfo&gt;
+
+public abstract class AddressExtenderBase : TableExtenderBase&lt;AddressTableInfo&gt;
+
     {
        \#region Columns to be picked up by reflection
        protected ArchiveColumnInfo \_colAddressId = new ArchiveColumnInfo( "addressId", RC.SR\_ADDRESS\_ID, RC.SR\_ADDRESS\_ID\_TOOLTIP, Constants.DisplayTypes.Int,
@@ -298,6 +308,8 @@ A very simple extenderbase can look like this:
              AllowOrderBy, Visible, ColumnHelper.DefaultStringWidth, Constants.RestrictionTypes.String );
        \#endregion
 
+ 
+
        protected override void InnerModifyQuery()
        {
              MapIdField( \_ourTable.AddressId );
@@ -311,11 +323,12 @@ A very simple extenderbase can look like this:
              MapSimpleReturnField( \_ourTable.State, \_colState );
        }
 
+ 
+
        protected override void InnerPopulateRowFromReader( SoDataReader reader, ArchiveRow row )
        {
        }
     }
-
 
 Joiners
 ---------------------------------
@@ -333,6 +346,23 @@ The corresponding query graph is
 <img src="Archive%20Providers%20in%20depth_files/image004.gif" width="436" height="338" />
 
  
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
 The structure of the extenders involved corresponds exactly to this graph. The code handling each node is an ExtenderBase, while the code that provides the edges (the joins) is in Joiners. An instance of a Joiner inherits from the extenderbase and thus corresponds to the node and the edge going up to the parent node. As a result, joiners are typically very small classes with a standardized structure, that simply take a query and a parent table reference as input. They create a new TableInfo representing "this" and join it to the parent in the proper way (INNER, LEFT OUTER); they then return the newly created TableInfo instance up to the base class. Since the base class is an ExtenderBase it now has a concrete table to work against and can run its logic (that requests ReturnFields, sets up restrictions and picks values from the result set).
 
 Joiners are usually strongly typed objects, so there is one for each combination of tables that occurs. In the graph above, there would be one for SaleContact, one for SalePerson, and one for PersonText. Similarly we would find an AppointmentContact joiner for the case where we have an appointment row and want to add contact information. Both SaleContact and AppointmentContact inherit from ContactExtenderBase, and just add the correct join logic by implementing the abstract method SetJoin(), like this:
@@ -341,7 +371,9 @@ Joiners are usually strongly typed objects, so there is one for each combination
     /// Create a Contact tableinfo and join it to the parent Sale
     /// &lt;/summary&gt;
     /// &lt;returns&gt;ContactTableInfo of the newly created info instance&lt;/returns&gt;
-    protected override ContactTableInfo SetJoin()
+
+protected override ContactTableInfo SetJoin()
+
     {
        ContactTableInfo ourContactTable = TablesInfo.GetContactTableInfo();
        SaleTableInfo parentSaleTable = (SaleTableInfo)Parent.TableToExtend;

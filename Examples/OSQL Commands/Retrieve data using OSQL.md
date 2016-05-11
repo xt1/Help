@@ -1,8 +1,8 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="9"
 />
 
-The following example shows how we may use the SELECT statement of OSQL in order to retrieve a selected amount of rows and columns. The example shows how we may retrieve Contacts information. [OSQL Data](../OSQL%20Data/OSQL%20Data.htm)
+The following example shows how we may use the SELECT statement of OSQL in order to retrieve a selected amount of rows and columns. The example shows how we may retrieve Contacts information. [OSQL Data](../OSQL%20Data/OSQL%20Data.md)
 
 ```
 using SuperOffice.CRM.Data;

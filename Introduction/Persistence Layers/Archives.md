@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="10"
 />
 
@@ -52,4 +52,4 @@ column in row.ColumnData)
 
 ------------------------------------------------------------------------
 
-**See Also:** ArchiveProviderFactory, [Entities](../Persistence%20Layers/Entities.htm)
+**See Also:** ArchiveProviderFactory, [Entities](../Persistence%20Layers/Entities.md)

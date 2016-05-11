@@ -1,8 +1,8 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="42"
 />
 
-The standard flow of authentication/identity is like this:
+The standard flow of Authentication/identity is like this:
 
 * Try to authenticate without parameters
 

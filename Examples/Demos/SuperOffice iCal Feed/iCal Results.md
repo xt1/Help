@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="14"
 />
 
@@ -173,4 +173,4 @@ This non-XML format is what Outlook, Google and Apple’s calendar can use to in
 
 ------------------------------------------------------------------------
 
-**See Also:** [Outlook](../SuperOffice%20iCal%20Feed/Outlook.htm), [Google Calendar](../SuperOffice%20iCal%20Feed/Google%20Calendar.htm), [Desktop Gadget](../SuperOffice%20iCal%20Feed/Desktop%20Gadget.htm)
+**See Also:** [Outlook](../SuperOffice%20iCal%20Feed/Outlook.md), [Google Calendar](../SuperOffice%20iCal%20Feed/Google%20Calendar.md), [Desktop Gadget](../SuperOffice%20iCal%20Feed/Desktop%20Gadget.md)

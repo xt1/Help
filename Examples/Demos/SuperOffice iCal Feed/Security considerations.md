@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="11"
 />
 
@@ -18,4 +18,4 @@ So if someone steals your iCal link, just make a new one and the old one will st
 
 ------------------------------------------------------------------------
 
-**See Also:** [Logging in](../SuperOffice%20iCal%20Feed/Logging%20in.htm)
+**See Also:** [Logging in](../SuperOffice%20iCal%20Feed/Logging%20in.md)

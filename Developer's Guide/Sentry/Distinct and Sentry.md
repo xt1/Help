@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 />
 
 The automatic manipulation of queries by automatically added sentries can cause unexpected side-effects, especially when the DISTINCT operator is involved.
@@ -99,4 +99,4 @@ pe);
 }
 ```
 
-[Sentry](Sentry.htm)
+[Sentry](Sentry.md)

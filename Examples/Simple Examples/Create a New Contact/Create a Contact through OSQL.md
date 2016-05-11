@@ -1,10 +1,10 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="15"
 />
 
 OSQL, which stands for Objectified SQL, is the SuperOffice Database Interface or the SODBIF. This is similar to SQL syntax with the difference being in the keywords.
 
-[OSQL description and examples](../../../Developer's%20Guide/OSQL/OSQL.htm)
+[OSQL description and examples](../../../Developer's%20Guide/OSQL/OSQL.md)
 SuperOffice.CRM.Data, SuperOffice.Data, SuperOffice.Data.SQL namespaces should be imported in order to make use of OSQL provided by the NetServer. The following example shows how to create a Contact using OSQL.
 
 ```
@@ -118,12 +118,12 @@ Once the command has being execute with use of the following statements the tran
 
 See Also:
 
-[Entities](../../../Developer's%20Guide/Entities/Entities.htm)
+[Entities](../../../Developer's%20Guide/Entities/Entities.md)
 
-[List](../../../Developer's%20Guide/Lists/Lists.htm)
+[List](../../../Developer's%20Guide/Lists/Lists.md)
 
-[Archives](../../../Developer's%20Guide/Archives/Archives.htm)
+[Archives](../../../Developer's%20Guide/Archives/Archives.md)
 
-[Create an Appointment](../Create%20a%20New%20Appointment/Create%20a%20New%20Appointment.htm)
+[Create an Appointment](../Create%20a%20New%20Appointment/Create%20a%20New%20Appointment.md)
 
-[OSQL description and example](../../../Developer's%20Guide/OSQL/OSQL.htm)
+[OSQL description and example](../../../Developer's%20Guide/OSQL/OSQL.md)

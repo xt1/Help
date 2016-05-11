@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="11"
 />
 
@@ -8,7 +8,7 @@ The classes that can be grouped as preference caches included DataRightsCache, F
 
 In order to find an overview of the available references we may make use of methods such as GetSections() and GetKeys() exposed in the SoPreference class.
 
-[Get/Set Preferences](../../Examples/Simple%20Examples/Get%20Set%20Preferences.htm)
+[Get/Set Preferences](../../Examples/Simple%20Examples/Get%20Set%20Preferences.md)
 The example below shows how we may change the calendar start date i.e. Sunday or Monday for a given user.
 
 ```
@@ -39,7 +39,7 @@ The parameters that has being passed to it includes name of the preference secti
 
 See Also:
 
-[Get/Set Preferences](../../Examples/Simple%20Examples/Get%20Set%20Preferences.htm)
+[Get/Set Preferences](../../Examples/Simple%20Examples/Get%20Set%20Preferences.md)
  
 
  

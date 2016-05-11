@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="5"
 />
 
@@ -85,4 +85,4 @@ The .net connector interface is a little easier to work with than the raw SOAP i
 The WCF host has unpacked the parameters for us, and handles conversion between the .net types and the WS-types used in the SOAP API. Any exceptions in the `IErpConnector` plugin are caught and converted into SOAP responses.
 The `ConfigDataHelper` uses the `FileConfigDataStore` to store the settings for us.
 
-The major benefit of writing Sync services using the `IErpConnector` interface is that you can load them directly into SM.web for debugging. See the [Debugging Tips](../Tips%20for%20Development.htm) for more info.
+The major benefit of writing Sync services using the `IErpConnector` interface is that you can load them directly into SM.web for debugging. See the [Debugging Tips](../Tips%20for%20Development.md) for more info.

@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="3"
 />
 
@@ -61,6 +61,6 @@ Next we move onto setting the interest to true or false. To do this we use the S
 
 ------------------------------------------------------------------------
 
-[How to list all selected interests for a contact](How%20to%20list%20all%20selected%20interests%20for%20a%20contact.htm)
+[How to list all selected interests for a contact](How%20to%20list%20all%20selected%20interests%20for%20a%20contact.md)
 
-[How to add a new contact interest](How%20to%20add%20a%20new%20contact%20interest/How%20to%20add%20a%20new%20contact%20interest.htm)
+[How to add a new contact interest](How%20to%20add%20a%20new%20contact%20interest/How%20to%20add%20a%20new%20contact%20interest.md)

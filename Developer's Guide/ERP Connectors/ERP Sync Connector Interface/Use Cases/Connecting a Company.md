@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="10"
 />
 
@@ -9,7 +9,7 @@ Connecting a Company
 
 Connecting a SuperOffice entity (Company/Person/Project) is started by clicking EDIT and clicking the right **Actor Type** link.
 
-The list of Actor Type links is determined by the `GetSupportedActorTypes` call [made when the connection was set up](Setting%20up%20Connector.htm).
+The list of Actor Type links is determined by the `GetSupportedActorTypes` call [made when the connection was set up](Setting%20up%20Connector.md).
 
 Clicking the link shows the **Connect to ERP** dialog. The dialog calls the `GetSearchableFields` function to find out what columns to present in the results list.
 
@@ -63,7 +63,7 @@ The returned actors are displayed in the results grid in the dialog.
 
 If the user enters a different name, a new call to `SearchActors` is made, and the results are updated.
 
-If the user clicks the **Advanced Search** button, then the search dialog appears, and a call is made to `SearchActorsAdvanced` in the same way as [during Import](Importing.htm#search).
+If the user clicks the **Advanced Search** button, then the search dialog appears, and a call is made to `SearchActorsAdvanced` in the same way as [during Import](Importing.md#search).
 
 If the user selects one of the actors and clicks the CONNECT button, then the full Actor is retrieved from the ERP system using `GetActors`.
 
@@ -169,4 +169,4 @@ The SuperOffice client will update the Actor with new values depending on what t
 
 The link between the SuperOffice entity and the actor is stored in the SuperOffice database.
 
-If the user can't find a match in the ERP system, they can [create a company in ERP](Creating%20a%20Company.htm) based on the SuperOffice company.
+If the user can't find a match in the ERP system, they can [create a company in ERP](Creating%20a%20Company.md) based on the SuperOffice company.

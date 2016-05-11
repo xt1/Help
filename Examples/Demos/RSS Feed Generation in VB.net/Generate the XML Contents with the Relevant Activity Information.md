@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="12"
 />
 
@@ -242,7 +242,7 @@ Me.activityId(contactId) + "&document_id=" + Me.activityId(id)
             Dim item As String = ""
             item += "<item>"
             item += "<title>"
-            item += Server.HtmlEncode(activityMainType + ": " +
+            item += Server.mdEncode(activityMainType + ": " +
 lstActivityInfo("contact/name").ToString())
             item += "</title>"
  
@@ -250,7 +250,7 @@ lstActivityInfo("contact/name").ToString())
             item += "guid.SuperOfficeASA.appointid." + id
             item += "</guid>"
             item += "<link>"
-            item += Server.HtmlEncode(link)
+            item += Server.mdEncode(link)
             item += "</link>"
  
             item += "<description>"
@@ -269,7 +269,7 @@ newDate.ToUniversalTime().ToString("R") + "<br/>"
             desc += "<b> Activity description :</b> " +
 description + "<br/>"
             desc += "</p>"
-            item += Server.HtmlEncode(desc)
+            item += Server.mdEncode(desc)
             item += "</description>"
             item += "<pubDate>"
             item += newDate.ToString("f")

@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="52"
 />
 
@@ -16,7 +16,7 @@ The following method demonstates how to use the SOFind.ContactsByName() method. 
     if (isOK)
     {
         
-    //create a new Contact instance using
+    //Create a New Contact instance using
     SOFind
         
     SOContacts newContacts =

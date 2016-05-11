@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="10"
 />
 
@@ -38,5 +38,5 @@ The aim of the above example is to retrieve the current instance of the Category
 
 See Also:
 
-[Rows Description and Example](../Rows/Rows.htm)
+[Rows Description and Example](../Rows/Rows.md)
 Though we have made use of the Dispose() method it is not necessary to explicitly call the Dispose() method since the Caches implements the IDisposable interface which releases allocated unmanaged resources.

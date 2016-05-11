@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="15"
 />
 
@@ -98,7 +98,7 @@ In OSQL there is no method that provides default values it is necessary to inser
 
 See Also:
 
-[Entity description and example](../../../Developer's%20Guide/Entities/Entities.htm) [OSQL Description and Example](../../../Developer's%20Guide/OSQL/OSQL.htm)
+[Entity description and example](../../../Developer's%20Guide/Entities/Entities.md) [OSQL Description and Example](../../../Developer's%20Guide/OSQL/OSQL.md)
  
 
  

@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="9"
 />
 
@@ -34,7 +34,7 @@ int contactId;
  
 using (SoSession mySession = SoSession.Authenticate("SAL0",""))
 {
-//create a new contact entity
+//Create a New Contact entity
       Contact contactEntity = Contact.CreateNew();
       //set default values
       contactEntity.SetDefaults();

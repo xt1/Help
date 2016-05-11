@@ -1,8 +1,8 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="12"
 />
 
-In order to delete data using OSQL we would need to use the Delete Class. The example below shows how we may make use of the Delete command in OSQL.  [OSQL Data](../OSQL%20Data/OSQL%20Data.htm) 
+In order to delete data using OSQL we would need to use the Delete Class. The example below shows how we may make use of the Delete command in OSQL.  [OSQL Data](../OSQL%20Data/OSQL%20Data.md) 
 
 ```
 using SuperOffice.CRM.Data;
@@ -67,4 +67,4 @@ In order to execute the Delete command we would assign the created Delete class 
 
 See Also:
 
-[OSQL Data](../OSQL%20Data/OSQL%20Data.htm)
+[OSQL Data](../OSQL%20Data/OSQL%20Data.md)

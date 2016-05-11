@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="12"
 />
 
@@ -51,4 +51,4 @@ If the login is successful, we store the unique id needed to log in and send the
 
 ------------------------------------------------------------------------
 
-**See Also:** [Result page](../SuperOffice%20iCal%20Feed/Result%20page.htm)
+**See Also:** [Result page](../SuperOffice%20iCal%20Feed/Result%20page.md)

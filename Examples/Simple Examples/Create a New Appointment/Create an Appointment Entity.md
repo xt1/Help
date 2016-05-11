@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="10"
 />
 
@@ -56,7 +56,7 @@ In order to create an Appointment it is required to create an instance of the Ap
 
 The Appointment Entity exposes different types of properties, which are of types such as int string, DateTime along with SuperOffice types such as Entity and Entity Collection types, Row types and many more. The next section of the code shows how values are assigned to such properties. These assignments can be done as explained in the Entities section. However, special note should be taken on when assigning the Alarm property as show below.
 
-[Entities description and examples](../../../Developer's%20Guide/Entities/Entities.htm)
+[Entities description and examples](../../../Developer's%20Guide/Entities/Entities.md)
 ```
             newAppointment.HasAlarm = 1;
             newAppointment.Alarm = 5;

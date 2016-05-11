@@ -1,4 +1,4 @@
-<properties date="2016-05-10"
+<properties date="2016-05-11"
 SortOrder="47"
 />
 
@@ -28,7 +28,7 @@ ArchiveProviders use this format for the DisplayText return value. If you make y
 
 ------------------------------------------------------------------------
 
-**See Also:** [CultureDataFormatter](../NetServer%20Enhancements%20in%207/CultureDataFormatter.htm)
+**See Also:** [CultureDataFormatter](../NetServer%20Enhancements%20in%207/CultureDataFormatter.md)
 <img src="EW%202010%20NetServer%20Enhancements_files/image014.jpg" width="345" height="43" />
 
 fromInt = “\[I:1234\]”
