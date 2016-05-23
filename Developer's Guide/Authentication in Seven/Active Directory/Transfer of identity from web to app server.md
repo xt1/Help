@@ -25,8 +25,13 @@ But there are also programs that interact directly with Services
 
 These do not involve a browser, and need to access the Web Services to get their work done
 
+## Single Server Configuration
+
 <img src="../../EW%202010%20Authentication_files/image005.gif" width="572" height="157" />
+
 IIS Authentication can be used together with Services, but not in a Remote setup: the identity cannot be transferred that many times.  This is an MS design parameter, not changeable.
+
+## Two Server (Remote) Configuration 
 
 <img src="../../EW%202010%20Authentication_files/image006.gif" width="572" height="187" />
 
