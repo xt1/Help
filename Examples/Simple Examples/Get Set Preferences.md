@@ -70,5 +70,5 @@ GetBool() method in the SoPreference class requires three parameters namely sect
 
 See Also:
 
-[Cache list, preferences](../../Developer's%20Guide/Caching%20Lists,%20Preferen%3Cces/Caching%20Lists,%20Preferences.md)
+[Cache list, preferences](../../Developer's%20Guide/Caching%20Lists,%20Preferences/Caching%20Lists,%20Preferences.md)
 TODO link to the SuperOffice namespace
