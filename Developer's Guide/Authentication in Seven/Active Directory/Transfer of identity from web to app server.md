@@ -18,38 +18,12 @@ When you use our Web application, you interact through a Browser that provides a
 
 But there are also programs that interact directly with Services
 
-* TrayApp, ”SuperOffice Web Extensions”
-
+* TrayApp, aka "SuperOffice Web Extensions"
 * Mail Link for Web
-
 * Pocket Server
-
 * Customer Service
 
 These do not involve a browser, and need to access the Web Services to get their work done
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><div class="c49">
-<p>Db user</p>
-</div></td>
-</tr>
-</tbody>
-</table>
- </td>
-</tr>
-</tbody>
-</table>
 
 <img src="../../EW%202010%20Authentication_files/image005.gif" width="572" height="157" />
 IIS Authentication can be used together with Services, but not in a Remote setup: the identity cannot be transferred that many times.  This is an MS design parameter, not changeable.
