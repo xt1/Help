@@ -15,7 +15,7 @@ a.AssociateId<100
 
 Let’s see how this SQL statement is written in SuperOffice Objectified SQL
 
-```
+````c#
 using SuperOffice.Data;
 using SuperOffice.CRM.Data;
 using SuperOffice.Data.SQL;
@@ -52,7 +52,7 @@ TablesInfo.GetAssociateTableInfo ();
         listBox1.Items.Add (reader [0].ToString ());
     }
 }       
-```
+````
 
  
 
